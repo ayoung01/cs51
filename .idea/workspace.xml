@@ -2,15 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f30b32a5-b2ea-43fe-9d6f-e9a5228dd111" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Graph_I.java" afterPath="$PROJECT_DIR$/src/Graph_I.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Edge.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/EdgeSet.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Vertex.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/VertexSet.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/TSP_I.java" afterPath="$PROJECT_DIR$/src/TSP_I.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="TSP.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="f30b32a5-b2ea-43fe-9d6f-e9a5228dd111" time="1365798891358" ignored="false" />
-    <file path="/TSP_I.java" changelist="f30b32a5-b2ea-43fe-9d6f-e9a5228dd111" time="1365712434155" ignored="false" />
+    <file path="/Dummy.txt" changelist="f30b32a5-b2ea-43fe-9d6f-e9a5228dd111" time="1365800581102" ignored="false" />
+    <file path="/TSP_I.java" changelist="f30b32a5-b2ea-43fe-9d6f-e9a5228dd111" time="1365801146079" ignored="false" />
     <file path="/fragment.java" changelist="f30b32a5-b2ea-43fe-9d6f-e9a5228dd111" time="1365712022239" ignored="false" />
     <file path="/Graph_I.java" changelist="f30b32a5-b2ea-43fe-9d6f-e9a5228dd111" time="1365800548666" ignored="false" />
+    <file path="/Edge.java" changelist="f30b32a5-b2ea-43fe-9d6f-e9a5228dd111" time="1365800813294" ignored="false" />
+    <file path="/Vertex.java" changelist="f30b32a5-b2ea-43fe-9d6f-e9a5228dd111" time="1365800839334" ignored="false" />
+    <file path="/VertexSet.java" changelist="f30b32a5-b2ea-43fe-9d6f-e9a5228dd111" time="1365801021717" ignored="false" />
+    <file path="/EdgeSet.java" changelist="f30b32a5-b2ea-43fe-9d6f-e9a5228dd111" time="1365801055539" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,7 +82,7 @@
       <file leaf-file-name="TSP_I.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/TSP_I.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="3" selection-start="362" selection-end="362" vertical-scroll-proportion="0.0">
+            <state line="20" column="35" selection-start="436" selection-end="436" vertical-scroll-proportion="-8.4">
               <folding />
             </state>
           </provider>
@@ -83,7 +91,7 @@
       <file leaf-file-name="Graph.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Graph.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="56" selection-start="174" selection-end="174" vertical-scroll-proportion="-4.76">
+            <state line="7" column="34" selection-start="174" selection-end="174" vertical-scroll-proportion="-4.76">
               <folding />
             </state>
           </provider>
@@ -92,7 +100,43 @@
       <file leaf-file-name="Graph_I.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Graph_I.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="0" selection-start="154" selection-end="154" vertical-scroll-proportion="0.3617021">
+            <state line="46" column="29" selection-start="905" selection-end="905" vertical-scroll-proportion="0.40729484">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Vertex.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Vertex.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="9" column="22" selection-start="205" selection-end="205" vertical-scroll-proportion="-6.12">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Edge.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Edge.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="9" column="36" selection-start="204" selection-end="204" vertical-scroll-proportion="-6.12">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="VertexSet.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/VertexSet.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="9" column="22" selection-start="208" selection-end="208" vertical-scroll-proportion="-6.12">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="EdgeSet.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/EdgeSet.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="10" column="9" selection-start="218" selection-end="218" vertical-scroll-proportion="-6.8">
               <folding />
             </state>
           </provider>
@@ -116,9 +160,13 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/TSP_I.java" />
         <option value="$PROJECT_DIR$/src/Graph.java" />
         <option value="$PROJECT_DIR$/src/Graph_I.java" />
+        <option value="$PROJECT_DIR$/src/Edge.java" />
+        <option value="$PROJECT_DIR$/src/Vertex.java" />
+        <option value="$PROJECT_DIR$/src/VertexSet.java" />
+        <option value="$PROJECT_DIR$/src/EdgeSet.java" />
+        <option value="$PROJECT_DIR$/src/TSP_I.java" />
       </list>
     </option>
   </component>
@@ -343,7 +391,11 @@
       <created>1365798897081</created>
       <updated>1365798897081</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Pretty much finished graph_i methods">
+      <created>1365800589070</created>
+      <updated>1365800589070</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -414,7 +466,7 @@
     <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="aDDING SOME graph_i methods" />
+    <option name="LAST_COMMIT_MESSAGE" value="Pretty much finished graph_i methods" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -432,6 +484,7 @@
     <MESSAGE value="Creating initial files...test" />
     <MESSAGE value="Creating initial files...test Hello Marco" />
     <MESSAGE value="aDDING SOME graph_i methods" />
+    <MESSAGE value="Pretty much finished graph_i methods" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -462,23 +515,51 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/TSP_I.java">
+    <entry file="file://$PROJECT_DIR$/src/Vertex.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="3" selection-start="362" selection-end="362" vertical-scroll-proportion="0.0">
+        <state line="9" column="22" selection-start="205" selection-end="205" vertical-scroll-proportion="-6.12">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Edge.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="36" selection-start="204" selection-end="204" vertical-scroll-proportion="-6.12">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/VertexSet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="22" selection-start="208" selection-end="208" vertical-scroll-proportion="-6.12">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/EdgeSet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="9" selection-start="218" selection-end="218" vertical-scroll-proportion="-6.8">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Graph.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="56" selection-start="174" selection-end="174" vertical-scroll-proportion="-4.76">
+        <state line="7" column="34" selection-start="174" selection-end="174" vertical-scroll-proportion="-4.76">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/TSP_I.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="35" selection-start="436" selection-end="436" vertical-scroll-proportion="-8.4">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Graph_I.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="0" selection-start="154" selection-end="154" vertical-scroll-proportion="0.3617021">
+        <state line="46" column="29" selection-start="905" selection-end="905" vertical-scroll-proportion="0.40729484">
           <folding />
         </state>
       </provider>

@@ -20,4 +20,6 @@ public interface TSP_I {
     //waddup
     public void findShortestPath(Graph g);
 
+    double timeAlgorithm(Graph g);
+
 }
