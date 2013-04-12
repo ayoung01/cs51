@@ -7,10 +7,10 @@
     </list>
     <ignored path="TSP.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="f30b32a5-b2ea-43fe-9d6f-e9a5228dd111" time="1365798872899" ignored="false" />
+    <file path="/Dummy.txt" changelist="f30b32a5-b2ea-43fe-9d6f-e9a5228dd111" time="1365798891358" ignored="false" />
     <file path="/TSP_I.java" changelist="f30b32a5-b2ea-43fe-9d6f-e9a5228dd111" time="1365712434155" ignored="false" />
     <file path="/fragment.java" changelist="f30b32a5-b2ea-43fe-9d6f-e9a5228dd111" time="1365712022239" ignored="false" />
-    <file path="/Graph_I.java" changelist="f30b32a5-b2ea-43fe-9d6f-e9a5228dd111" time="1365798827947" ignored="false" />
+    <file path="/Graph_I.java" changelist="f30b32a5-b2ea-43fe-9d6f-e9a5228dd111" time="1365800548666" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -92,7 +92,7 @@
       <file leaf-file-name="Graph_I.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Graph_I.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="66" selection-start="153" selection-end="153" vertical-scroll-proportion="0.3100304">
+            <state line="7" column="0" selection-start="154" selection-end="154" vertical-scroll-proportion="0.3617021">
               <folding />
             </state>
           </provider>
@@ -339,7 +339,11 @@
       <created>1365713149459</created>
       <updated>1365713149459</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="aDDING SOME graph_i methods">
+      <created>1365798897081</created>
+      <updated>1365798897081</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -474,7 +478,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Graph_I.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="66" selection-start="153" selection-end="153" vertical-scroll-proportion="0.3100304">
+        <state line="7" column="0" selection-start="154" selection-end="154" vertical-scroll-proportion="0.3617021">
           <folding />
         </state>
       </provider>

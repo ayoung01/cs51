@@ -5,35 +5,49 @@
  * Time: 4:35 PM
  * To change this template use File | Settings | File Templates.
  */
-public interface Graph_I {
 
+public interface Graph_I {
 
     boolean containsVertex( Vertex v);
 
     boolean containsEdge( Edge e);
 
-    Edge addEdge(Vertex v1, Vertex v2, int weight);
+    boolean containsEdge(Vertex v1, Vertex v2);
 
-    boolean addVertex(Vertex v);
+    Edge addEdge(Vertex v1, Vertex v2, double weight);
+
+    Vertex addVertex(Vertex v);
+
+    boolean removeEdge(Edge e);
+
+    boolean removeVertex (Vertex v);
 
     EdgeSet edgesOf(Vertex v);
 
+    VertexSet verticesOf(Edge e);
+
     double getEdgeWeight(Edge e);
 
-    void generateRandomGraph();
-    /* hello */
+    /*void generateRandomGraph( double maxWeight);
 
-    /*
-    Graph interface
-     Methods
-    Create graph from file: Parses some text file and creates a graph from it
-    Generate random graph
-    Choose random vertex
-    Get adjacent edges to vertex
-    Return shortest edge connected to certain vertex
-    Return if edge exists between two vertices
-    Save graph to file
-    Variables: size of graph, number of edges
+    void generateGraphFromFile(File file); */
 
-     */
+    Vertex getRandomNeighborVertex( Vertex v);
+
+    Edge getRandomNeighborEdge( Vertex v);
+
+    Edge getShortestNeighborEdge (Vertex v);
+
+    VertexSet allVertices();
+
+    EdgeSet allEdges();
+
+    int numEdges();
+
+    int numVertices();
+
+    void printGraphToFile(File file);
+
+    String toString();
+
 }
