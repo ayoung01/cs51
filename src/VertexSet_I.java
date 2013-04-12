@@ -5,7 +5,7 @@
  * Time: 5:10 PM
  * To change this template use File | Settings | File Templates.
  */
-public interface VertexSet {
+public interface VertexSet_I {
 
     String toString();
 }

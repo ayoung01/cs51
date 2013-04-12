@@ -6,11 +6,27 @@
  * To change this template use File | Settings | File Templates.
  */
 public class Graph {
-    /*
-    Graph implementation (will most likely depend on actual algorithms)
-    Probably using an adjacency matrix to keep track of edge weights
-    Find adjacent edges to vertex would then just loop through all entries in a row
-    Parsing a text file can be done easily by splitting at spaces etc.
 
-     */
+    private int numVertices;
+    private double adjMat[][];
+
+    public Graph(File f)
+    {
+
+    }
+
+    /* Generate random graph */
+    public Graph(int numVertices, double maxWeight)
+    {
+
+    }
+
+    public Edge addEdge(Vertex v1, Vertex v2, double weight)
+    {
+        Edge e = new Edge(v1, v2, weight);
+
+        adjMat[v1.getId()][v2.getId()] = weight;
+
+        return e;
+    }
 }
