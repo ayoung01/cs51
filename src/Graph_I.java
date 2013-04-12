@@ -7,6 +7,20 @@
  */
 public interface Graph_I {
 
+
+    boolean containsVertex( Vertex v);
+
+    boolean containsEdge( Edge e);
+
+    Edge addEdge(Vertex v1, Vertex v2, int weight);
+
+    boolean addVertex(Vertex v);
+
+    EdgeSet edgesOf(Vertex v);
+
+    double getEdgeWeight(Edge e);
+
+    void generateRandomGraph();
     /* hello */
 
     /*
