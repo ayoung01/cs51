@@ -15,8 +15,8 @@ public class Vertex {
         return Integer.toString(id);
     }
 
-    public String test() {
-        System.out.println("Hello");
-        return "Albert";
+    public String test()
+    {
+        return "Marco";
     }
 }
