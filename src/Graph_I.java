@@ -24,9 +24,9 @@ public interface Graph_I {
 
     boolean removeVertex (Vertex v);
 
-    EdgeSet edgesOf(Vertex v);
+    Edge[] edgesOf(Vertex v);
 
-    VertexSet verticesOf(Edge e);
+    Vertex[] verticesOf(Edge e);
 
     double getEdgeWeight(Edge e);
 
@@ -40,9 +40,9 @@ public interface Graph_I {
 
     Edge getShortestNeighborEdge (Vertex v);
 
-    VertexSet allVertices();
+    Vertex[] allVertices();
 
-    EdgeSet allEdges();
+    Edge[] allEdges();
 
     int numEdges();
 
