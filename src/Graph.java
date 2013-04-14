@@ -1,3 +1,5 @@
+import java.io.File;
+
 /**
  * Created with IntelliJ IDEA.
  * User: ayoung
@@ -8,7 +10,7 @@
 public class Graph {
 
     private int numVertices;
-    private double adjMat[][];
+    private double[][] adjMat;
 
     public Graph(File f)
     {
