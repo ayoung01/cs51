@@ -5,7 +5,7 @@
  * Time: 11:50 AM
  * To change this template use File | Settings | File Templates.
  */
-public class Vertex implements Vertex_I {
+public class Vertex {
     /* Do we want to add instance variables such that the vertex occupies some position in an n-dimensional space? */
     private int id;
     public int getId() {

@@ -5,7 +5,7 @@
  * Time: 5:41 PM
  * To change this template use File | Settings | File Templates.
  */
-public class Edge {
+public class Edge implements Comparable {
     private Vertex vertex1;
     private Vertex vertex2;
     private double weight;
@@ -21,13 +21,35 @@ public class Edge {
       return weight;
     }
 
-    public Vertex getFirstVertex()
-    {
+    public Vertex getFirstVertex() {
         return vertex1;
     }
 
-    public Vertex getSecondVertex()
-    {
+    public Vertex getSecondVertex() {
         return vertex2;
     }
+
+    public void setWeight(double x) {
+        weight = x;
+    }
+
+    public void setVertex1(Vertex v) {
+        vertex1 = v;
+    }
+
+    public void setVertex2(Vertex v) {
+        vertex2 = v;
+    }
+
+    @Override
+    public int compareTo(Object o) {
+        Edge e = (Edge)(o);
+        if (e.getWeight() > weight)
+            return -1;
+        else if (e.getWeight() < weight)
+            return 1;
+        return 0;
+    }
 }
+
+
