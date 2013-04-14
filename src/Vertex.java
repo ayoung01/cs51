@@ -16,6 +16,7 @@ public class Vertex {
     }
 
     public String test() {
+        System.out.println("Hello");
         return "Albert";
     }
 }
