@@ -22,9 +22,10 @@ public class EuclideanVertex_2D extends Vertex {
     }
 
 
-    public EuclideanVertex_2D (double a, double b) {
+    public EuclideanVertex_2D (int i, double a, double b) {
         x1 = a;
         x2 = b;
+        this.setId(i);
     }
 
 }
