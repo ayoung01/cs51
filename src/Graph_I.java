@@ -10,31 +10,7 @@ import java.io.File;
 
 public interface Graph_I {
 
-    boolean containsVertex( Vertex v);
-
-    boolean containsEdge( Edge e);
-
-    boolean containsEdge(Vertex v1, Vertex v2);
-
-    Edge addEdge(Vertex v1, Vertex v2, double weight);
-
-    Vertex addVertex(Vertex v);
-
-    boolean removeEdge(Edge e);
-
-    boolean removeVertex (Vertex v);
-
     Edge[] edgesOf(Vertex v);
-
-    Vertex[] verticesOf(Edge e);
-
-    double getEdgeWeight(Edge e);
-
-    /*void generateRandomGraph( double maxWeight);
-
-    void generateGraphFromFile(File file); */
-
-    Vertex getRandomNeighborVertex( Vertex v);
 
     Edge getRandomNeighborEdge( Vertex v);
 
@@ -43,8 +19,6 @@ public interface Graph_I {
     Vertex[] allVertices();
 
     Edge[] allEdges();
-
-    int numEdges();
 
     int numVertices();
 

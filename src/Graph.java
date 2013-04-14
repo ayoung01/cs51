@@ -12,23 +12,47 @@ public class Graph {
     private int numVertices;
     private double[][] adjMat;
 
-    public Graph(File f)
+    public Graph(Vertex[] vertices)
     {
-
+        numVertices = vertices.length;
+        adjMat = new double [numVertices][numVertices] ;
+        for(int i = 0; i < numVertices; i++)
+        {
+            for(int j = 0; j <= i; j++ )
+            {
+                double val = vertices[i].dist(vertices[j]);
+                adjMat[i][j] = val;
+                adjMat[j][i] = val;
+            }
+        }
     }
 
-    /* Generate random graph */
-    public Graph(int numVertices, double maxWeight)
+    Edge[] edgesOf(Vertex v)
     {
+      int x = v.getId();
+      Edge[] edgeList = new Edge[numVertices-1];
 
+      for(int i = 0; i < numVertices; i++)
+      {
+        if(i != x)
+        {
+
+        }
+
+      }
     }
 
-    public Edge addEdge(Vertex v1, Vertex v2, double weight)
-    {
-        Edge e = new Edge(v1, v2, weight);
+    Edge getRandomNeighborEdge( Vertex v);
 
-        adjMat[v1.getId()][v2.getId()] = weight;
+    Edge getShortestNeighborEdge (Vertex v);
 
-        return e;
-    }
+    Vertex[] allVertices();
+
+    Edge[] allEdges();
+
+    int numVertices();
+
+    void printGraphToFile(File file);
+
+    String toString();
 }
