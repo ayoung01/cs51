@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f30b32a5-b2ea-43fe-9d6f-e9a5228dd111" name="Default" comment="Albert">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/EuclideanVertex.java" />
+    <list default="true" id="f30b32a5-b2ea-43fe-9d6f-e9a5228dd111" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/EuclideanVertex.java" afterPath="$PROJECT_DIR$/src/EuclideanVertex.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="TSP.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="f30b32a5-b2ea-43fe-9d6f-e9a5228dd111" time="1365966568167" ignored="false" />
+    <file path="/Dummy.txt" changelist="f30b32a5-b2ea-43fe-9d6f-e9a5228dd111" time="1365966671214" ignored="false" />
     <file path="/TSP_I.java" changelist="f30b32a5-b2ea-43fe-9d6f-e9a5228dd111" time="1365801146079" ignored="false" />
     <file path="/fragment.java" changelist="f30b32a5-b2ea-43fe-9d6f-e9a5228dd111" time="1365712022239" ignored="false" />
     <file path="/Graph_I.java" changelist="f30b32a5-b2ea-43fe-9d6f-e9a5228dd111" time="1365800548666" ignored="false" />
@@ -20,7 +20,7 @@
     <file path="/Edge_I.java" changelist="f30b32a5-b2ea-43fe-9d6f-e9a5228dd111" time="1365802789489" ignored="false" />
     <file path="/Vertex_I.java" changelist="f30b32a5-b2ea-43fe-9d6f-e9a5228dd111" time="1365802800675" ignored="false" />
     <file path="/Tour_I.java" changelist="f30b32a5-b2ea-43fe-9d6f-e9a5228dd111" time="1365802813642" ignored="false" />
-    <file path="/EuclideanVertex.java" changelist="f30b32a5-b2ea-43fe-9d6f-e9a5228dd111" time="1365966660445" ignored="false" />
+    <file path="/EuclideanVertex.java" changelist="f30b32a5-b2ea-43fe-9d6f-e9a5228dd111" time="1365966789563" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -100,7 +100,7 @@
       <file leaf-file-name="Graph.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Graph.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="44" selection-start="267" selection-end="267" vertical-scroll-proportion="0.0">
+            <state line="7" column="35" selection-start="174" selection-end="174" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -127,10 +127,8 @@
       <file leaf-file-name="EuclideanVertex.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/EuclideanVertex.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="34" selection-start="390" selection-end="390" vertical-scroll-proportion="0.71428573">
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-              </folding>
+            <state line="11" column="35" selection-start="277" selection-end="277" vertical-scroll-proportion="0.43650794">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -239,6 +237,24 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TSP" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cs51" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="EuclideanVertex.java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.ClassesTreeStructureProvider$PsiClassOwnerTreeNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
@@ -539,7 +555,11 @@
       <created>1365965832932</created>
       <updated>1365965832932</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="2D Euclidean Vertex">
+      <created>1365966678578</created>
+      <updated>1365966678578</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -606,7 +626,7 @@
     <option name="MAXIMUM_HISTORY_ROWS" value="1000" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Albert" />
+    <option name="LAST_COMMIT_MESSAGE" value="2D Euclidean Vertex" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -629,6 +649,7 @@
     <MESSAGE value="modified Edge and deleted interfaces" />
     <MESSAGE value="test" />
     <MESSAGE value="Albert" />
+    <MESSAGE value="2D Euclidean Vertex" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -680,13 +701,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Graph.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="44" selection-start="267" selection-end="267" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Graph_I.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="11" column="65" selection-start="222" selection-end="222" vertical-scroll-proportion="0.0">
@@ -708,12 +722,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Graph.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="35" selection-start="174" selection-end="174" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/EuclideanVertex.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="34" selection-start="390" selection-end="390" vertical-scroll-proportion="0.71428573">
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
+        <state line="11" column="35" selection-start="277" selection-end="277" vertical-scroll-proportion="0.43650794">
+          <folding />
         </state>
       </provider>
     </entry>

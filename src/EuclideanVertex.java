@@ -5,7 +5,7 @@
  * Time: 3:06 PM
  * To change this template use File | Settings | File Templates.
  */
-public class 2DEuclideanVertex extends Vertex {
+public class EuclideanVertex_2D extends Vertex {
     private double x1;
     private double x2;
 
@@ -17,12 +17,12 @@ public class 2DEuclideanVertex extends Vertex {
     }
 
     // returns the distance between this vertex and vertex v
-    public double dist(2DEuclideanVertex v) {
+    public double dist(EuclideanVertex_2D v) {
         return Math.sqrt((Math.pow(v.getX1()-x1, 2) + Math.pow(v.getX2()-x2, 2)));
     }
 
 
-    public 2DEuclideanVertex (double a, double b) {
+    public EuclideanVertex_2D (double a, double b) {
         x1 = a;
         x2 = b;
     }
