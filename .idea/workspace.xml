@@ -2,17 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f30b32a5-b2ea-43fe-9d6f-e9a5228dd111" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Vertex_I.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/EuclideanVertex_2D.java" afterPath="$PROJECT_DIR$/src/EuclideanVertex_2D.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Graph.java" afterPath="$PROJECT_DIR$/src/Graph.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Graph_I.java" afterPath="$PROJECT_DIR$/src/Graph_I.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/TSP_I.java" afterPath="$PROJECT_DIR$/src/TSP_I.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Vertex.java" afterPath="$PROJECT_DIR$/src/Vertex.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="TSP.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="f30b32a5-b2ea-43fe-9d6f-e9a5228dd111" time="1365982992649" ignored="false" />
+    <file path="/Dummy.txt" changelist="f30b32a5-b2ea-43fe-9d6f-e9a5228dd111" time="1365983023397" ignored="false" />
     <file path="/TSP_I.java" changelist="f30b32a5-b2ea-43fe-9d6f-e9a5228dd111" time="1365968059991" ignored="false" />
     <file path="/fragment.java" changelist="f30b32a5-b2ea-43fe-9d6f-e9a5228dd111" time="1365712022239" ignored="false" />
     <file path="/Graph_I.java" changelist="f30b32a5-b2ea-43fe-9d6f-e9a5228dd111" time="1365967868616" ignored="false" />
@@ -21,7 +16,7 @@
     <file path="/VertexSet.java" changelist="f30b32a5-b2ea-43fe-9d6f-e9a5228dd111" time="1365802743663" ignored="false" />
     <file path="/EdgeSet.java" changelist="f30b32a5-b2ea-43fe-9d6f-e9a5228dd111" time="1365802767768" ignored="false" />
     <file path="/Tour.java" changelist="f30b32a5-b2ea-43fe-9d6f-e9a5228dd111" time="1365802091848" ignored="false" />
-    <file path="/Graph.java" changelist="f30b32a5-b2ea-43fe-9d6f-e9a5228dd111" time="1365982217140" ignored="false" />
+    <file path="/Graph.java" changelist="f30b32a5-b2ea-43fe-9d6f-e9a5228dd111" time="1365983510750" ignored="false" />
     <file path="/Edge_I.java" changelist="f30b32a5-b2ea-43fe-9d6f-e9a5228dd111" time="1365802789489" ignored="false" />
     <file path="/Vertex_I.java" changelist="f30b32a5-b2ea-43fe-9d6f-e9a5228dd111" time="1365802800675" ignored="false" />
     <file path="/Tour_I.java" changelist="f30b32a5-b2ea-43fe-9d6f-e9a5228dd111" time="1365802813642" ignored="false" />
@@ -90,7 +85,7 @@
       <file leaf-file-name="TSP_I.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/TSP_I.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="0" selection-start="388" selection-end="388" vertical-scroll-proportion="0.0">
+            <state line="25" column="0" selection-start="478" selection-end="478" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -108,7 +103,7 @@
       <file leaf-file-name="Graph_I.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Graph_I.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="60" selection-start="354" selection-end="354" vertical-scroll-proportion="0.0">
+            <state line="8" column="60" selection-start="175" selection-end="175" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -135,7 +130,7 @@
       <file leaf-file-name="EuclideanVertex_2D.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/EuclideanVertex_2D.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+            <state line="21" column="0" selection-start="548" selection-end="548" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -153,7 +148,7 @@
       <file leaf-file-name="Graph.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Graph.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="43" selection-start="258" selection-end="258" vertical-scroll-proportion="0.6005435">
+            <state line="54" column="26" selection-start="1252" selection-end="1252" vertical-scroll-proportion="0.86141306">
               <folding />
             </state>
           </provider>
@@ -186,10 +181,10 @@
         <option value="$PROJECT_DIR$/src/Edge.java" />
         <option value="$PROJECT_DIR$/src/Graph_I.java" />
         <option value="$PROJECT_DIR$/src/TSP_I.java" />
-        <option value="$PROJECT_DIR$/src/Graph.java" />
         <option value="$PROJECT_DIR$/src/Vertex.java" />
         <option value="$PROJECT_DIR$/src/Vertex_I.java" />
         <option value="$PROJECT_DIR$/src/EuclideanVertex_2D.java" />
+        <option value="$PROJECT_DIR$/src/Graph.java" />
       </list>
     </option>
   </component>
@@ -459,7 +454,11 @@
       <created>1365968250341</created>
       <updated>1365968250341</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Added some graph functions, created Vertex interface">
+      <created>1365983029525</created>
+      <updated>1365983029525</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -630,16 +629,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Graph_I.java">
+    <entry file="file://$PROJECT_DIR$/src/EuclideanVertex_2D.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="60" selection-start="354" selection-end="354" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Vertex.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="4" selection-start="493" selection-end="517" vertical-scroll-proportion="0.0">
+        <state line="21" column="0" selection-start="548" selection-end="548" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -651,6 +643,27 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Vertex.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="4" selection-start="493" selection-end="517" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Graph_I.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="60" selection-start="175" selection-end="175" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/TSP_I.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="25" column="0" selection-start="478" selection-end="478" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Edge.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
@@ -658,23 +671,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/EuclideanVertex_2D.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/TSP_I.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="0" selection-start="388" selection-end="388" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Graph.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="43" selection-start="258" selection-end="258" vertical-scroll-proportion="0.6005435">
+        <state line="54" column="26" selection-start="1252" selection-end="1252" vertical-scroll-proportion="0.86141306">
           <folding />
         </state>
       </provider>

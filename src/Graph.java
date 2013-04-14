@@ -31,20 +31,29 @@ public class Graph {
     {
       int x = v.getId();
       Edge[] edgeList = new Edge[numVertices-1];
-
+      int counter = 0;
       for(int i = 0; i < numVertices; i++)
       {
         if(i != x)
         {
-
+            Vertex v2 = new Vertex(i);
+            Edge e = new Edge(v,v2,v.dist(v2));
+            edgeList[counter] = e;
+            counter++;
         }
-
       }
+
+        return edgeList;
     }
 
     Edge getRandomNeighborEdge( Vertex v);
 
-    Edge getShortestNeighborEdge (Vertex v);
+    Edge getShortestNeighborEdge (Vertex v)
+    {
+        int x = v.getId();
+        int minweight = 0;
+        for(int i = 0; i < )
+    }
 
     Vertex[] allVertices();
 
