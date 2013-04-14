@@ -14,9 +14,4 @@ public class Vertex {
     public String toString() {
         return Integer.toString(id);
     }
-
-    public String test()
-    {
-        System.out.print("Hello world");
-    }
 }
