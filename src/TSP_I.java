@@ -18,8 +18,8 @@ Length of optimal tour
  */
 public interface TSP_I {
     //waddup
-    public void findShortestPath(Graph g);
+    public Tour findShortestPath(Graph g);
 
-    double timeAlgorithm(Graph g);
+    public double timeAlgorithm(Graph g);
 
 }
