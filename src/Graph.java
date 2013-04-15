@@ -1,4 +1,6 @@
 import java.io.File;
+import java.io.FileWriter;
+import java.io.PrintWriter;
 
 /**
  * Created with IntelliJ IDEA.
@@ -51,17 +53,46 @@ public class Graph {
     Edge getShortestNeighborEdge (Vertex v)
     {
         int x = v.getId();
-        int minweight = 0;
-        for(int i = 0; i < )
+        double minweight = -1;
+        int minvertex = -1;
+        for(int i = 0; i < numVertices; i++)
+        {
+            if (x != i)
+            {
+              if(minvertex == -1 || minweight > adjMat[x][i])
+              {
+                minvertex = i;
+                minweight = adjMat[x][i];
+              }
+            }
+        }
+
+        return new Edge(v, new Vertex(minvertex), minweight);
     }
 
-    Vertex[] allVertices();
+    int numVertices()
+    {
+        return numVertices;
+    }
 
-    Edge[] allEdges();
+    void printGraphToFile(String file)
+    {
+        PrintWriter out = new PrintWriter(new FileWriter(file));
+        out.print(display());
+        out.close();
+    }
 
-    int numVertices();
+    String display()
+    {
+        String result = new String();
 
-    void printGraphToFile(File file);
+        for(int i = 0; i < numVertices; i++)
+        {
+            for(int j = 0; j < numVertices; j++)
+                result+=adjMat[i][j] + " ";
 
-    String toString();
+            result+="\n";
+        }
+        return result;
+    }
 }

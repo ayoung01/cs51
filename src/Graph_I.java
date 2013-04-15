@@ -16,14 +16,10 @@ public interface Graph_I {
 
     Edge getShortestNeighborEdge (Vertex v);
 
-    Vertex[] allVertices();
-
-    Edge[] allEdges();
-
     int numVertices();
 
-    void printGraphToFile(File file);
+    void printGraphToFile(String file);
 
-    String toString();
+    String display();
 
 }
