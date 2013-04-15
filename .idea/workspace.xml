@@ -6,7 +6,7 @@
     </list>
     <ignored path="TSP.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="f30b32a5-b2ea-43fe-9d6f-e9a5228dd111" time="1365984795195" ignored="false" />
+    <file path="/Dummy.txt" changelist="f30b32a5-b2ea-43fe-9d6f-e9a5228dd111" time="1365987054389" ignored="false" />
     <file path="/TSP_I.java" changelist="f30b32a5-b2ea-43fe-9d6f-e9a5228dd111" time="1365968059991" ignored="false" />
     <file path="/fragment.java" changelist="f30b32a5-b2ea-43fe-9d6f-e9a5228dd111" time="1365712022239" ignored="false" />
     <file path="/Graph_I.java" changelist="f30b32a5-b2ea-43fe-9d6f-e9a5228dd111" time="1365984514379" ignored="false" />
@@ -111,7 +111,7 @@
       <file leaf-file-name="Vertex.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Vertex.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="0" selection-start="155" selection-end="155" vertical-scroll-proportion="0.030357143">
+            <state line="20" column="39" selection-start="462" selection-end="517" vertical-scroll-proportion="0.425">
               <folding />
             </state>
           </provider>
@@ -466,7 +466,11 @@
       <created>1365984802133</created>
       <updated>1365984802133</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="More graph fns">
+      <created>1365987057500</created>
+      <updated>1365987057500</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -682,7 +686,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Vertex.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="0" selection-start="155" selection-end="155" vertical-scroll-proportion="0.030357143">
+        <state line="20" column="39" selection-start="462" selection-end="517" vertical-scroll-proportion="0.425">
           <folding />
         </state>
       </provider>
