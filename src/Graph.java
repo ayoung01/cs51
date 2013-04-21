@@ -15,7 +15,7 @@ public class Graph {
     private int numVertices;
     private double[][] adjMat;
 
-    public Graph(Vertex[] vertices)
+    public Graph(EuclideanVertex_2D[] vertices)
     {
         numVertices = vertices.length;
         adjMat = new double [numVertices][numVertices] ;

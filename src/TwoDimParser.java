@@ -12,16 +12,17 @@ import java.io.FileReader;
 import java.io.IOException;
 public class TwoDimParser {
 
-    Vertex[] vertices;
+    EuclideanVertex_2D[] vertices;
 
     public static void main(String[] args){
 
-    TwoDimParser hello = new TwoDimParser("test.txt", 20);
+    TwoDimParser hello = new TwoDimParser("test.txt", 131);
     hello.printEverything();
     Greedy greedisgood = new Greedy();
     Graph g = new Graph(hello.allVertices());
     g.printGraphToFile("lala.txt");
-    //System.out.printf("%.2f", greedisgood.findShortestPath(g).getLength());
+    Tour best = greedisgood.findShortestPath(g);
+    System.out.printf("%.2f\n%s\n%d", best.getLength(),best.toString(), best.verticesSoFar().length);
 
 
     }
@@ -38,7 +39,7 @@ public class TwoDimParser {
             while ((sCurrentLine = br.readLine()) != null && i < numEntries) {
                 System.out.println(sCurrentLine);
                 xy = sCurrentLine.trim().split("\\s+");
-                vertices[i] = new EuclideanVertex_2D(i, Double.parseDouble(xy[0]), Double.parseDouble(xy[1]));
+                vertices[i] = new EuclideanVertex_2D(i, Double.parseDouble(xy[1]), Double.parseDouble(xy[2]));
                 i++;
             }
 
@@ -48,10 +49,11 @@ public class TwoDimParser {
 
     }
 
-    Vertex[] allVertices()
+    EuclideanVertex_2D[] allVertices()
     {
         return vertices;
     }
+
     void printEverything()
     {
         String mystring = "";

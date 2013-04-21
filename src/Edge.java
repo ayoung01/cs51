@@ -50,6 +50,11 @@ public class Edge implements Comparable {
             return 1;
         return 0;
     }
+
+    public String toString()
+    {
+        return getFirstVertex().toString() + " " + getSecondVertex().toString() + " " + weight;
+    }
 }
 
 

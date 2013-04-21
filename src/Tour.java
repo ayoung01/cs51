@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 /**
  * Created with IntelliJ IDEA.
  * User: Brian
@@ -22,6 +24,7 @@ public class Tour {
         this.length = 0;
         num = numVertices;
         touredges = new Edge[num];
+        vertices = new Vertex[num+1];
         vertices[0] = v;
         currpos = 0;
     }
@@ -42,11 +45,11 @@ public class Tour {
 
     boolean addEdge(Edge e)
     {
-        if( e.getFirstVertex().getId() != vertices[currpos].getId()
-                || containsVertex(e.getSecondVertex())
-                || currpos == num)
+        if( (e.getFirstVertex().getId() != vertices[currpos].getId()
+                || containsVertex(e.getSecondVertex()))
+                && currpos != num - 1)
         {
-          return false;
+            return false;
         }
         else
         {
@@ -63,14 +66,27 @@ public class Tour {
         return vertices[currpos];
     }
 
+    Edge[] allEdges()
+    {
+        return touredges;
+    }
+
     Vertex[] verticesSoFar()
     {
-        return vertices;
+        return Arrays.copyOfRange(vertices, 0, currpos + 1);
     }
 
     double getLength() {
         return length;
     }
 
+    public String toString() {
+        String mystring = "";
+        for(int i = 0; i < currpos; i++)
+        {
+            mystring+=touredges[i].toString() + "\n";
+        }
 
+        return mystring;
+    }
 }
