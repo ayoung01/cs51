@@ -12,9 +12,14 @@ public interface Graph_I {
 
     Edge[] edgesOf(Vertex v);
 
+    Edge edgeBetween(Vertex v1, Vertex v2);
+
+
     Edge getRandomNeighborEdge( Vertex v);
 
-    Edge getShortestNeighborEdge (Vertex v);
+    Edge getShortestNeighborEdge (Vertex v,Vertex[] already);
+
+    Vertex getRandomVertex();
 
     int numVertices();
 

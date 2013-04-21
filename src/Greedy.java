@@ -1,0 +1,33 @@
+/**
+ * Created with IntelliJ IDEA.
+ * User: mgentili
+ * Date: 4/20/13
+ * Time: 7:59 PM
+ * To change this template use File | Settings | File Templates.
+ */
+public class Greedy implements TSP_I {
+
+    public Tour findShortestPath(Graph g) {
+        Vertex start = g.getRandomVertex();
+        int numVertices = g.numVertices();
+        Tour t = new Tour(start, numVertices);
+        for(int i = 0; i < numVertices; i++)
+        {
+            Edge e = g.getShortestNeighborEdge(t.getCurrentVertex(),t.verticesSoFar());
+            if(!t.addEdge(e))
+            {
+                System.out.print("Error");
+            }
+        }
+
+        t.addEdge(g.edgeBetween(t.getCurrentVertex(),start));
+
+        return t;
+    }
+
+    public double timeAlgorithm(Graph g) {
+        return 0;
+    }
+}
+
+

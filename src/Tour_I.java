@@ -8,6 +8,10 @@
 public interface Tour_I {
 
     double getLength();
+    boolean addEdge(Edge e);
+    Vertex getCurrentVertex();
+    Vertex[] verticesSoFar();
+
 
     String toString();
 }
