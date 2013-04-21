@@ -23,8 +23,6 @@ public interface Graph_I {
 
     Tour getRandomTour();
 
-    Tour getNeighborTour(Tour t);
-
     int numVertices();
 
     void printGraphToFile(String file);

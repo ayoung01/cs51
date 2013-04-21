@@ -1,3 +1,6 @@
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.Arrays;
 
 /**
@@ -88,5 +91,18 @@ public class Tour {
         }
 
         return mystring;
+    }
+
+    void printGraphToFile(String file)
+    {
+        try
+        {
+            PrintWriter out = new PrintWriter(new FileWriter(file));
+            out.print(toString());
+            out.close();
+        }
+        catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }

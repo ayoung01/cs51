@@ -9,7 +9,7 @@ public class Christofides implements TSP_I {
 
     public Tour findShortestPath(Graph g)
     {
-        Tour t = new Tour();
+        Tour t = new Tour(g.getRandomVertex(),g.numVertices());
 
         return t;
     }

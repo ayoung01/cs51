@@ -12,7 +12,6 @@ public interface Tour_I {
     Vertex getCurrentVertex();
     Vertex[] verticesSoFar();
     Edge[] allEdges();
-
-
     String toString();
+    void printGraphToFile(String file);
 }

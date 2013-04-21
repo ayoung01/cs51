@@ -22,7 +22,8 @@ public class TwoDimParser {
     Graph g = new Graph(hello.allVertices());
     g.printGraphToFile("lala.txt");
     Tour best = greedisgood.findShortestPath(g);
-    System.out.printf("%.2f\n%s\n%d", best.getLength(),best.toString(), best.verticesSoFar().length);
+    System.out.printf("%.2f\n", best.getLength());
+    best.printGraphToFile("Greedybest.txt");
 
 
     }
