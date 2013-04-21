@@ -11,7 +11,7 @@ public class Greedy implements TSP_I {
         Vertex start = g.getRandomVertex();
         int numVertices = g.numVertices();
         Tour t = new Tour(start, numVertices);
-        for(int i = 0; i < numVertices; i++)
+        for(int i = 0; i < numVertices - 1; i++)
         {
             Edge e = g.getShortestNeighborEdge(t.getCurrentVertex(),t.verticesSoFar());
             if(!t.addEdge(e))

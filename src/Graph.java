@@ -1,7 +1,8 @@
 import java.io.File;
 import java.io.FileWriter;
 import java.io.PrintWriter;
-
+import java.util.Random;
+import java.io.IOException;
 /**
  * Created with IntelliJ IDEA.
  * User: ayoung
@@ -69,7 +70,7 @@ public class Graph {
 
     Vertex getRandomVertex()
     {
-        java.util.Random rand = new java.util.Random();
+        Random rand = new Random();
         int randomNum = rand.nextInt(numVertices);
 
         return new Vertex(randomNum);
@@ -120,7 +121,7 @@ public class Graph {
             out.print(display());
             out.close();
         }
-        catch (java.io.IOException e) {
+        catch (IOException e) {
             e.printStackTrace();
         }
     }

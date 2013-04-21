@@ -28,4 +28,8 @@ public class EuclideanVertex_2D extends Vertex {
         this.setId(i);
     }
 
+    public String toString() {
+        return Integer.toString(getId()) + " " + Double.toString(x1) + " " + Double.toString(x2);
+    }
+
 }

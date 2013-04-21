@@ -67,8 +67,10 @@ public class Tour {
     {
         return vertices;
     }
+
     double getLength() {
         return length;
     }
+
 
 }
