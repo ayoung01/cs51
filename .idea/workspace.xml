@@ -2,18 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f30b32a5-b2ea-43fe-9d6f-e9a5228dd111" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Christofides.java" afterPath="$PROJECT_DIR$/src/Christofides.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Graph.java" afterPath="$PROJECT_DIR$/src/Graph.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Graph_I.java" afterPath="$PROJECT_DIR$/src/Graph_I.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SimulatedAnnealing.java" afterPath="$PROJECT_DIR$/src/SimulatedAnnealing.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Tour.java" afterPath="$PROJECT_DIR$/src/Tour.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Tour_I.java" afterPath="$PROJECT_DIR$/src/Tour_I.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/TwoDimParser.java" afterPath="$PROJECT_DIR$/src/TwoDimParser.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="TSP.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="f30b32a5-b2ea-43fe-9d6f-e9a5228dd111" time="1366558952948" ignored="false" />
+    <file path="/Dummy.txt" changelist="f30b32a5-b2ea-43fe-9d6f-e9a5228dd111" time="1366571928241" ignored="false" />
     <file path="/TSP_I.java" changelist="f30b32a5-b2ea-43fe-9d6f-e9a5228dd111" time="1366502890654" ignored="false" />
     <file path="/fragment.java" changelist="f30b32a5-b2ea-43fe-9d6f-e9a5228dd111" time="1365712022239" ignored="false" />
     <file path="/Graph_I.java" changelist="f30b32a5-b2ea-43fe-9d6f-e9a5228dd111" time="1366506045304" ignored="false" />
@@ -21,16 +17,16 @@
     <file path="/Vertex.java" changelist="f30b32a5-b2ea-43fe-9d6f-e9a5228dd111" time="1365982941725" ignored="false" />
     <file path="/VertexSet.java" changelist="f30b32a5-b2ea-43fe-9d6f-e9a5228dd111" time="1365802743663" ignored="false" />
     <file path="/EdgeSet.java" changelist="f30b32a5-b2ea-43fe-9d6f-e9a5228dd111" time="1365802767768" ignored="false" />
-    <file path="/Tour.java" changelist="f30b32a5-b2ea-43fe-9d6f-e9a5228dd111" time="1366571233899" ignored="false" />
-    <file path="/Graph.java" changelist="f30b32a5-b2ea-43fe-9d6f-e9a5228dd111" time="1366570479314" ignored="false" />
+    <file path="/Tour.java" changelist="f30b32a5-b2ea-43fe-9d6f-e9a5228dd111" time="1366574803225" ignored="false" />
+    <file path="/Graph.java" changelist="f30b32a5-b2ea-43fe-9d6f-e9a5228dd111" time="1366572645158" ignored="false" />
     <file path="/Edge_I.java" changelist="f30b32a5-b2ea-43fe-9d6f-e9a5228dd111" time="1365802789489" ignored="false" />
     <file path="/Vertex_I.java" changelist="f30b32a5-b2ea-43fe-9d6f-e9a5228dd111" time="1365802800675" ignored="false" />
     <file path="/Tour_I.java" changelist="f30b32a5-b2ea-43fe-9d6f-e9a5228dd111" time="1366552627787" ignored="false" />
     <file path="/EuclideanVertex.java" changelist="f30b32a5-b2ea-43fe-9d6f-e9a5228dd111" time="1365966789563" ignored="false" />
     <file path="/EuclideanVertex_2D.java" changelist="f30b32a5-b2ea-43fe-9d6f-e9a5228dd111" time="1366508640486" ignored="false" />
-    <file path="/SimulatedAnnealing.java" changelist="f30b32a5-b2ea-43fe-9d6f-e9a5228dd111" time="1366571680210" ignored="false" />
+    <file path="/SimulatedAnnealing.java" changelist="f30b32a5-b2ea-43fe-9d6f-e9a5228dd111" time="1366574508473" ignored="false" />
     <file path="/Greedy.java" changelist="f30b32a5-b2ea-43fe-9d6f-e9a5228dd111" time="1366569879663" ignored="false" />
-    <file path="/TwoDimParser.java" changelist="f30b32a5-b2ea-43fe-9d6f-e9a5228dd111" time="1366571291997" ignored="false" />
+    <file path="/TwoDimParser.java" changelist="f30b32a5-b2ea-43fe-9d6f-e9a5228dd111" time="1366573689055" ignored="false" />
     <file path="/main.java" changelist="f30b32a5-b2ea-43fe-9d6f-e9a5228dd111" time="1366508803656" ignored="false" />
     <file path="/Christofides.java" changelist="f30b32a5-b2ea-43fe-9d6f-e9a5228dd111" time="1366571334541" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -96,7 +92,7 @@
       <file leaf-file-name="TwoDimParser.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/TwoDimParser.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="25" column="41" selection-start="725" selection-end="725" vertical-scroll-proportion="0.0">
+            <state line="21" column="53" selection-start="555" selection-end="555" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="n#!!doc" expanded="true" />
                 <element signature="imports" expanded="true" />
@@ -114,19 +110,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TSP_I.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/TSP_I.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="40" selection-start="422" selection-end="429" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="Edge.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Edge.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="56" column="91" selection-start="1162" selection-end="1162" vertical-scroll-proportion="0.0">
+            <state line="18" column="91" selection-start="429" selection-end="429" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -135,7 +122,7 @@
       <file leaf-file-name="Tour.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Tour.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="95" column="4" selection-start="1985" selection-end="2019" vertical-scroll-proportion="0.0">
+            <state line="68" column="43" selection-start="1563" selection-end="1563" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -152,12 +139,23 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SimulatedAnnealing.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="SimulatedAnnealing.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/SimulatedAnnealing.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+            <state line="29" column="0" selection-start="765" selection-end="765" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="n#!!doc" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Graph.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Graph.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="84" column="0" selection-start="1998" selection-end="1998" vertical-scroll-proportion="0.05029586">
+              <folding>
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -210,12 +208,12 @@
         <option value="$PROJECT_DIR$/src/Graph_I.java" />
         <option value="$PROJECT_DIR$/src/Greedy.java" />
         <option value="$PROJECT_DIR$/src/TSP_I.java" />
-        <option value="$PROJECT_DIR$/src/Graph.java" />
-        <option value="$PROJECT_DIR$/src/Tour.java" />
         <option value="$PROJECT_DIR$/src/Tour_I.java" />
-        <option value="$PROJECT_DIR$/src/TwoDimParser.java" />
         <option value="$PROJECT_DIR$/src/Christofides.java" />
+        <option value="$PROJECT_DIR$/src/Graph.java" />
+        <option value="$PROJECT_DIR$/src/TwoDimParser.java" />
         <option value="$PROJECT_DIR$/src/SimulatedAnnealing.java" />
+        <option value="$PROJECT_DIR$/src/Tour.java" />
       </list>
     </option>
   </component>
@@ -546,7 +544,11 @@
       <created>1366558978479</created>
       <updated>1366558978479</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="Working on Simulated Annealing now">
+      <created>1366571933613</created>
+      <updated>1366571933613</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TodoView" selected-index="4">
@@ -637,7 +639,7 @@
     <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Made getRandomTour method in Graph. Working on getNeighborTour, which should return the tour when random vertices in the tour are swapped" />
+    <option name="LAST_COMMIT_MESSAGE" value="Working on Simulated Annealing now" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -670,6 +672,7 @@
     <MESSAGE value="Made a file parser, trying to make graph work properly" />
     <MESSAGE value="Graph should be working properly. I think greedy works now. Tried it on a 131-city data set and got 631.01 vs optimal of 564." />
     <MESSAGE value="Made getRandomTour method in Graph. Working on getNeighborTour, which should return the tour when random vertices in the tour are swapped" />
+    <MESSAGE value="Working on Simulated Annealing now" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -679,15 +682,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Graph.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="88" selection-start="489" selection-end="489" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Vertex_I.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="11" column="29" selection-start="239" selection-end="239" vertical-scroll-proportion="0.0">
@@ -705,20 +699,6 @@
     <entry file="file://$PROJECT_DIR$/lala.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state line="10" column="57" selection-start="3574" selection-end="3574" vertical-scroll-proportion="0.5105105">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Vertex.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="6" selection-start="614" selection-end="683" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Edge.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="56" column="91" selection-start="1162" selection-end="1162" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -744,38 +724,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Graph.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="146" column="5" selection-start="3288" selection-end="3570" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Tour.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="95" column="4" selection-start="1985" selection-end="2019" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Tour_I.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="11" column="54" selection-start="266" selection-end="266" vertical-scroll-proportion="0.0">
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/TwoDimParser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="41" selection-start="725" selection-end="725" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -793,11 +745,60 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/SimulatedAnnealing.java">
+    <entry file="file://$PROJECT_DIR$/src/Vertex.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+        <state line="36" column="6" selection-start="614" selection-end="683" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Edge.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="91" selection-start="429" selection-end="429" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/TwoDimParser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="53" selection-start="555" selection-end="555" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="n#!!doc" expanded="true" />
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Tour.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="68" column="43" selection-start="1563" selection-end="1563" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SimulatedAnnealing.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="29" column="0" selection-start="765" selection-end="765" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/simbest.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-5.8905325">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Graph.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="84" column="0" selection-start="1998" selection-end="1998" vertical-scroll-proportion="0.05029586">
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -17,9 +17,29 @@ public class Tour {
     private int currpos;
     private int num;
 
-    public Tour (Edge[] edges, double length) {
-        this.length = length;
+    public Tour (Edge[] edges) {
+        length = 0;
         touredges = edges;
+        num = edges.length;
+        vertices = new Vertex[num];
+        for(int i = 0; i < num; i++)
+        {
+            vertices[i] = edges[i].getFirstVertex();
+            length+= edges[i].getWeight();
+        }
+    }
+
+    public Tour(Vertex[] allVertices, Graph g)
+    {
+        length = 0;
+        touredges = new Edge[num];
+        vertices = allVertices;
+
+        for(int i = 0; i < num; i++)
+        {
+          touredges[i] = g.edgeBetween(vertices[(i%num)],vertices[(i+1)%num]);
+          length+=touredges[i].getWeight();
+        }
     }
 
     public Tour (Vertex v, int numVertices)
@@ -27,7 +47,7 @@ public class Tour {
         this.length = 0;
         num = numVertices;
         touredges = new Edge[num];
-        vertices = new Vertex[num+1];
+        vertices = new Vertex[num];
         vertices[0] = v;
         currpos = 0;
     }
@@ -57,7 +77,10 @@ public class Tour {
         else
         {
             touredges[currpos] = e;
-            vertices[currpos+1] = e.getSecondVertex();
+            if(currpos < num - 1)
+            {
+                vertices[currpos+1] = e.getSecondVertex();
+            }
             currpos++;
             length+=e.getWeight();
             return true;

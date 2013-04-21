@@ -22,7 +22,8 @@ public class SimulatedAnnealing implements TSP_I {
       Tour best = start;
       for(int i = 0; i < maxIter; i++)
       {
-        Tour comparison = getNeighborTour(start, g);
+          System.out.printf("%.2f\n", start.getLength());
+          Tour comparison = getNeighborTour(start, g);
         double a = comparison.getLength();
         double b = start.getLength();
         if(a < b)
@@ -45,31 +46,37 @@ public class SimulatedAnnealing implements TSP_I {
 
     Tour getNeighborTour(Tour t, Graph g)
     {
-        Random rand = new Random();
         Vertex[] vertices = t.verticesSoFar();
-        int len = g.numVertices();
+        return new Tour(neighborVertexSet(vertices), g);
+    }
+
+    Vertex[] neighborVertexSet(Vertex[] vertices)
+    {
+        int len = vertices.length;
         Vertex[] newv = new Vertex[len];
 
         int random1 = rand.nextInt(len);
         int random2 = rand.nextInt(len);
         while(random1 == random2)
             random2 = rand.nextInt(len);
-        if(random2 < random1)
-        {
-            int temp = random1;
-            random1 = random2;
-            random2 = temp;
-        }
 
         for(int i = 0; i < len; i++)
         {
-          if(random1 == i)
+            if(i == random1)
+            {
+                newv[i] = vertices[random2];
+            }
+            else if(i == random2)
+            {
+                newv[i] = vertices[random1];
+            }
+            else
+            {
+                newv[i] = vertices[i];
+            }
         }
 
-
-
-
-        return t;
+        return newv;
     }
 
     double anneal(int iter, double a, double b)
