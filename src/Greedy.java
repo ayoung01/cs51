@@ -27,10 +27,6 @@ public class Greedy implements TSP_I {
 
         return t;
     }
-
-    public double timeAlgorithm(Graph g) {
-        return 0;
-    }
 }
 
 

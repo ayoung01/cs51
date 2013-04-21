@@ -108,6 +108,33 @@ public class Graph {
         return new Edge(v, new Vertex(minvertex), minweight);
     }
 
+    Tour getRandomTour()
+    {
+        Vertex v = getRandomVertex();
+        Tour t = new Tour(v, numVertices);
+        Random rand = new Random();
+        int randomNum = rand.nextInt(numVertices);
+        int tourlength = 0;
+        while(tourlength < numVertices - 1)
+        {
+            Vertex curr = t.getCurrentVertex();
+            if(t.addEdge(new Edge(curr,new Vertex(randomNum), adjMat[curr.getId()][randomNum])))
+            {
+                tourlength++;
+            }
+            randomNum = rand.nextInt(numVertices);
+        }
+
+        t.addEdge(new Edge(t.getCurrentVertex(),v,adjMat[t.getCurrentVertex().getId()][v.getId()]));
+
+        return t;
+    }
+
+    Tour getNeighborTour(Tour t)
+    {
+
+    }
+
     int numVertices()
     {
         return numVertices;
