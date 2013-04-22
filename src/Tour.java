@@ -27,10 +27,12 @@ public class Tour {
             vertices[i] = edges[i].getFirstVertex();
             length+= edges[i].getWeight();
         }
+        currpos = num;
     }
 
     public Tour(Vertex[] allVertices, Graph g)
     {
+        num = g.numVertices();
         length = 0;
         touredges = new Edge[num];
         vertices = allVertices;
@@ -40,6 +42,8 @@ public class Tour {
           touredges[i] = g.edgeBetween(vertices[(i%num)],vertices[(i+1)%num]);
           length+=touredges[i].getWeight();
         }
+
+        currpos = num;
     }
 
     public Tour (Vertex v, int numVertices)
@@ -99,7 +103,12 @@ public class Tour {
 
     Vertex[] verticesSoFar()
     {
-        return Arrays.copyOfRange(vertices, 0, currpos + 1);
+        Vertex[] soFar = new Vertex[currpos];
+        for(int i = 0; i < currpos; i++)
+        {
+            soFar[i] = vertices[i];
+        }
+        return soFar;
     }
 
     double getLength() {

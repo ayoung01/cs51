@@ -18,11 +18,11 @@ public class SimulatedAnnealing implements TSP_I {
 
     public Tour findShortestPath(Graph g)
     {
-      Tour start = g.getRandomTour();
+        Greedy gree = new Greedy();
+        Tour start = gree.findShortestPath(g);
       Tour best = start;
       for(int i = 0; i < maxIter; i++)
       {
-          System.out.printf("%.2f\n", start.getLength());
           Tour comparison = getNeighborTour(start, g);
         double a = comparison.getLength();
         double b = start.getLength();
@@ -43,7 +43,6 @@ public class SimulatedAnnealing implements TSP_I {
         return best;
     }
 
-
     Tour getNeighborTour(Tour t, Graph g)
     {
         Vertex[] vertices = t.verticesSoFar();
@@ -54,7 +53,6 @@ public class SimulatedAnnealing implements TSP_I {
     {
         int len = vertices.length;
         Vertex[] newv = new Vertex[len];
-
         int random1 = rand.nextInt(len);
         int random2 = rand.nextInt(len);
         while(random1 == random2)
