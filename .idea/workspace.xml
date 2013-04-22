@@ -2,14 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f30b32a5-b2ea-43fe-9d6f-e9a5228dd111" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SimulatedAnnealing.java" afterPath="$PROJECT_DIR$/src/SimulatedAnnealing.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Tour.java" afterPath="$PROJECT_DIR$/src/Tour.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/TwoDimParser.java" afterPath="$PROJECT_DIR$/src/TwoDimParser.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="TSP.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="f30b32a5-b2ea-43fe-9d6f-e9a5228dd111" time="1366575002090" ignored="false" />
+    <file path="/Dummy.txt" changelist="f30b32a5-b2ea-43fe-9d6f-e9a5228dd111" time="1366595049821" ignored="false" />
     <file path="/TSP_I.java" changelist="f30b32a5-b2ea-43fe-9d6f-e9a5228dd111" time="1366502890654" ignored="false" />
     <file path="/fragment.java" changelist="f30b32a5-b2ea-43fe-9d6f-e9a5228dd111" time="1365712022239" ignored="false" />
     <file path="/Graph_I.java" changelist="f30b32a5-b2ea-43fe-9d6f-e9a5228dd111" time="1366506045304" ignored="false" />
@@ -89,10 +87,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="TwoDimParser.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="TwoDimParser.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/TwoDimParser.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="29" column="11" selection-start="918" selection-end="918" vertical-scroll-proportion="0.86507934">
+            <state line="18" column="57" selection-start="431" selection-end="431" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="n#!!doc" expanded="true" />
                 <element signature="imports" expanded="true" />
@@ -153,16 +151,16 @@
       <file leaf-file-name="Greedybest.txt" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Greedybest.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="131" column="0" selection-start="2099" selection-end="2099" vertical-scroll-proportion="0.0">
+            <state line="436" column="0" selection-start="7349" selection-end="7349" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Graph.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="Graph.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Graph.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="64" column="79" selection-start="1584" selection-end="1584" vertical-scroll-proportion="0.0">
+            <state line="94" column="79" selection-start="2235" selection-end="2235" vertical-scroll-proportion="0.9100529">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -552,7 +550,11 @@
       <created>1366575008728</created>
       <updated>1366575008728</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="simulated annealing should be working.">
+      <created>1366595055173</created>
+      <updated>1366595055173</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TodoView" selected-index="4">
@@ -643,7 +645,7 @@
     <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Simanneal seems to be working, but not returning correct value..." />
+    <option name="LAST_COMMIT_MESSAGE" value="simulated annealing should be working." />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -678,6 +680,7 @@
     <MESSAGE value="Made getRandomTour method in Graph. Working on getNeighborTour, which should return the tour when random vertices in the tour are swapped" />
     <MESSAGE value="Working on Simulated Annealing now" />
     <MESSAGE value="Simanneal seems to be working, but not returning correct value..." />
+    <MESSAGE value="simulated annealing should be working." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -736,15 +739,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Graph.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="64" column="79" selection-start="1584" selection-end="1584" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Vertex.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="40" column="0" selection-start="688" selection-end="688" vertical-scroll-proportion="0.0">
@@ -761,16 +755,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Greedy.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="40" selection-start="34" selection-end="34" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Greedybest.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="131" column="0" selection-start="2099" selection-end="2099" vertical-scroll-proportion="0.0">
+        <state line="436" column="0" selection-start="7349" selection-end="7349" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -800,9 +787,25 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/TwoDimParser.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="11" selection-start="918" selection-end="918" vertical-scroll-proportion="0.86507934">
+        <state line="18" column="57" selection-start="431" selection-end="431" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="n#!!doc" expanded="true" />
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Greedy.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="40" selection-start="34" selection-end="34" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Graph.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="94" column="79" selection-start="2235" selection-end="2235" vertical-scroll-proportion="0.9100529">
+          <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>

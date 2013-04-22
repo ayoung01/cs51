@@ -16,7 +16,7 @@ public class TwoDimParser {
 
     public static void main(String[] args){
 
-    TwoDimParser hello = new TwoDimParser("test.txt", 131);
+    TwoDimParser hello = new TwoDimParser("test.txt", 436);
     hello.printEverything();
     Greedy greedisgood = new Greedy();
     SimulatedAnnealing sim = new SimulatedAnnealing(2000000);
