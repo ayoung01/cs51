@@ -5,7 +5,7 @@ import java.util.Random;
 import java.io.IOException;
 /**
  * Created with IntelliJ IDEA.
- * User: ayoung
+ * User: Albert Young
  * Date: 4/11/13
  * Time: 4:35 PM
  * To change this template use File | Settings | File Templates.
