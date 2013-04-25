@@ -21,6 +21,8 @@ public interface Graph_I {
 
     Vertex getRandomVertex();
 
+    Tour getRandomTour();
+
     int numVertices();
 
     void printGraphToFile(String file);

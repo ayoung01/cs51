@@ -14,9 +14,10 @@ public class Graph {
 
     private int numVertices;
     private double[][] adjMat;
-
-    public Graph(Vertex[] vertices)
+    private Random rand;
+    public Graph(EuclideanVertex_2D[] vertices)
     {
+        rand = new Random();
         numVertices = vertices.length;
         adjMat = new double [numVertices][numVertices] ;
         for(int i = 0; i < numVertices; i++)
@@ -57,7 +58,6 @@ public class Graph {
     Edge getRandomNeighborEdge( Vertex v)
     {
         int x = v.getId();
-        java.util.Random rand = new java.util.Random();
         int randomNum = rand.nextInt(numVertices);
         while(randomNum == x)
         {
@@ -70,7 +70,6 @@ public class Graph {
 
     Vertex getRandomVertex()
     {
-        Random rand = new Random();
         int randomNum = rand.nextInt(numVertices);
 
         return new Vertex(randomNum);
@@ -106,6 +105,27 @@ public class Graph {
         }
 
         return new Edge(v, new Vertex(minvertex), minweight);
+    }
+
+    Tour getRandomTour()
+    {
+        Vertex v = getRandomVertex();
+        Tour t = new Tour(v, numVertices);
+        int randomNum = rand.nextInt(numVertices);
+        int tourlength = 0;
+        while(tourlength < numVertices - 1)
+        {
+            Vertex curr = t.getCurrentVertex();
+            if(t.addEdge(new Edge(curr,new Vertex(randomNum), adjMat[curr.getId()][randomNum])))
+            {
+                tourlength++;
+            }
+            randomNum = rand.nextInt(numVertices);
+        }
+
+        t.addEdge(new Edge(t.getCurrentVertex(),v,adjMat[t.getCurrentVertex().getId()][v.getId()]));
+
+        return t;
     }
 
     int numVertices()

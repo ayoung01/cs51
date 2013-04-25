@@ -20,6 +20,5 @@ public interface TSP_I {
 
     public Tour findShortestPath(Graph g);
 
-    public double timeAlgorithm(Graph g);
 
 }

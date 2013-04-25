@@ -12,16 +12,22 @@ import java.io.FileReader;
 import java.io.IOException;
 public class TwoDimParser {
 
-    Vertex[] vertices;
+    EuclideanVertex_2D[] vertices;
 
     public static void main(String[] args){
 
-    TwoDimParser hello = new TwoDimParser("test.txt", 20);
+    TwoDimParser hello = new TwoDimParser("test.txt", 436);
     hello.printEverything();
     Greedy greedisgood = new Greedy();
+    SimulatedAnnealing sim = new SimulatedAnnealing(2000000);
     Graph g = new Graph(hello.allVertices());
     g.printGraphToFile("lala.txt");
-    //System.out.printf("%.2f", greedisgood.findShortestPath(g).getLength());
+    Tour bestgreedy = greedisgood.findShortestPath(g);
+    Tour bestsim = sim.findShortestPath(g);
+    System.out.printf("%.2f\n", bestgreedy.getLength());
+    bestgreedy.printGraphToFile("Greedybest.txt");
+    System.out.printf("%.2f\n", bestsim.getLength());
+    bestsim.printGraphToFile("simbest.txt");
 
 
     }
@@ -38,7 +44,7 @@ public class TwoDimParser {
             while ((sCurrentLine = br.readLine()) != null && i < numEntries) {
                 System.out.println(sCurrentLine);
                 xy = sCurrentLine.trim().split("\\s+");
-                vertices[i] = new EuclideanVertex_2D(i, Double.parseDouble(xy[0]), Double.parseDouble(xy[1]));
+                vertices[i] = new EuclideanVertex_2D(i, Double.parseDouble(xy[1]), Double.parseDouble(xy[2]));
                 i++;
             }
 
@@ -48,10 +54,11 @@ public class TwoDimParser {
 
     }
 
-    Vertex[] allVertices()
+    EuclideanVertex_2D[] allVertices()
     {
         return vertices;
     }
+
     void printEverything()
     {
         String mystring = "";

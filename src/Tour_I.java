@@ -11,7 +11,7 @@ public interface Tour_I {
     boolean addEdge(Edge e);
     Vertex getCurrentVertex();
     Vertex[] verticesSoFar();
-
-
+    Edge[] allEdges();
     String toString();
+    void printGraphToFile(String file);
 }

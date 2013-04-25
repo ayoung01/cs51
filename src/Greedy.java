@@ -20,13 +20,12 @@ public class Greedy implements TSP_I {
             }
         }
 
-        t.addEdge(g.edgeBetween(t.getCurrentVertex(),start));
+        if(!t.addEdge(g.edgeBetween(t.getCurrentVertex(),start)))
+        {
+            System.out.print("Error");
+        }
 
         return t;
-    }
-
-    public double timeAlgorithm(Graph g) {
-        return 0;
     }
 }
 
