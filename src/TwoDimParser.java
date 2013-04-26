@@ -19,9 +19,9 @@ public class TwoDimParser {
     TwoDimParser hello = new TwoDimParser("test.txt", 436);
     hello.printEverything();
     Greedy greedisgood = new Greedy();
-    SimulatedAnnealing sim = new SimulatedAnnealing(2000000);
+    SimulatedAnnealing sim = new SimulatedAnnealing(20000000);
     Graph g = new Graph(hello.allVertices());
-    g.printGraphToFile("lala.txt");
+    g.printGraphToFile("hello.txt");
     Tour bestgreedy = greedisgood.findShortestPath(g);
     Tour bestsim = sim.findShortestPath(g);
     System.out.printf("%.2f\n", bestgreedy.getLength());
@@ -61,12 +61,12 @@ public class TwoDimParser {
 
     void printEverything()
     {
-        String mystring = "";
+        StringBuilder builder = new StringBuilder();
         for(int i = 0; i < vertices.length; i++)
         {
-          mystring+= vertices[i].toString() + "\n";
+          builder.append(vertices[i].toString() + "\n");
         }
 
-        System.out.print(mystring);
+        System.out.print(builder.toString());
     }
 }

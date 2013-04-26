@@ -2,36 +2,33 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f30b32a5-b2ea-43fe-9d6f-e9a5228dd111" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/MinHeap.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Christofides.java" afterPath="$PROJECT_DIR$/src/Christofides.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Graph.java" afterPath="$PROJECT_DIR$/src/Graph.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Graph_I.java" afterPath="$PROJECT_DIR$/src/Graph_I.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SimulatedAnnealing.java" afterPath="$PROJECT_DIR$/src/SimulatedAnnealing.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/TwoDimParser.java" afterPath="$PROJECT_DIR$/src/TwoDimParser.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="TSP.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="f30b32a5-b2ea-43fe-9d6f-e9a5228dd111" time="1366934174902" ignored="false" />
+    <file path="/Dummy.txt" changelist="f30b32a5-b2ea-43fe-9d6f-e9a5228dd111" time="1366597025007" ignored="false" />
     <file path="/TSP_I.java" changelist="f30b32a5-b2ea-43fe-9d6f-e9a5228dd111" time="1366502890654" ignored="false" />
     <file path="/fragment.java" changelist="f30b32a5-b2ea-43fe-9d6f-e9a5228dd111" time="1365712022239" ignored="false" />
-    <file path="/Graph_I.java" changelist="f30b32a5-b2ea-43fe-9d6f-e9a5228dd111" time="1366953395007" ignored="false" />
-    <file path="/Edge.java" changelist="f30b32a5-b2ea-43fe-9d6f-e9a5228dd111" time="1366936829440" ignored="false" />
+    <file path="/Graph_I.java" changelist="f30b32a5-b2ea-43fe-9d6f-e9a5228dd111" time="1366506045304" ignored="false" />
+    <file path="/Edge.java" changelist="f30b32a5-b2ea-43fe-9d6f-e9a5228dd111" time="1366553823261" ignored="false" />
     <file path="/Vertex.java" changelist="f30b32a5-b2ea-43fe-9d6f-e9a5228dd111" time="1365982941725" ignored="false" />
     <file path="/VertexSet.java" changelist="f30b32a5-b2ea-43fe-9d6f-e9a5228dd111" time="1365802743663" ignored="false" />
     <file path="/EdgeSet.java" changelist="f30b32a5-b2ea-43fe-9d6f-e9a5228dd111" time="1365802767768" ignored="false" />
-    <file path="/Tour.java" changelist="f30b32a5-b2ea-43fe-9d6f-e9a5228dd111" time="1366574803225" ignored="false" />
-    <file path="/Graph.java" changelist="f30b32a5-b2ea-43fe-9d6f-e9a5228dd111" time="1366953365020" ignored="false" />
+    <file path="/Tour.java" changelist="f30b32a5-b2ea-43fe-9d6f-e9a5228dd111" time="1366593585895" ignored="false" />
+    <file path="/Graph.java" changelist="f30b32a5-b2ea-43fe-9d6f-e9a5228dd111" time="1366937913443" ignored="false" />
     <file path="/Edge_I.java" changelist="f30b32a5-b2ea-43fe-9d6f-e9a5228dd111" time="1365802789489" ignored="false" />
     <file path="/Vertex_I.java" changelist="f30b32a5-b2ea-43fe-9d6f-e9a5228dd111" time="1365802800675" ignored="false" />
     <file path="/Tour_I.java" changelist="f30b32a5-b2ea-43fe-9d6f-e9a5228dd111" time="1366552627787" ignored="false" />
     <file path="/EuclideanVertex.java" changelist="f30b32a5-b2ea-43fe-9d6f-e9a5228dd111" time="1365966789563" ignored="false" />
     <file path="/EuclideanVertex_2D.java" changelist="f30b32a5-b2ea-43fe-9d6f-e9a5228dd111" time="1366508640486" ignored="false" />
-    <file path="/SimulatedAnnealing.java" changelist="f30b32a5-b2ea-43fe-9d6f-e9a5228dd111" time="1366574508473" ignored="false" />
+    <file path="/SimulatedAnnealing.java" changelist="f30b32a5-b2ea-43fe-9d6f-e9a5228dd111" time="1366985883582" ignored="false" />
     <file path="/Greedy.java" changelist="f30b32a5-b2ea-43fe-9d6f-e9a5228dd111" time="1366569879663" ignored="false" />
-    <file path="/TwoDimParser.java" changelist="f30b32a5-b2ea-43fe-9d6f-e9a5228dd111" time="1366573689055" ignored="false" />
+    <file path="/TwoDimParser.java" changelist="f30b32a5-b2ea-43fe-9d6f-e9a5228dd111" time="1366937961602" ignored="false" />
     <file path="/main.java" changelist="f30b32a5-b2ea-43fe-9d6f-e9a5228dd111" time="1366508803656" ignored="false" />
-    <file path="/Christofides.java" changelist="f30b32a5-b2ea-43fe-9d6f-e9a5228dd111" time="1366953168486" ignored="false" />
-    <file path="/Genetic.java" changelist="f30b32a5-b2ea-43fe-9d6f-e9a5228dd111" time="1366602031259" ignored="false" />
-    <file path="/MinHeap.java" changelist="f30b32a5-b2ea-43fe-9d6f-e9a5228dd111" time="1366935208765" ignored="false" />
+    <file path="/Christofides.java" changelist="f30b32a5-b2ea-43fe-9d6f-e9a5228dd111" time="1366571334541" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,7 +43,6 @@
     <disable_hints />
   </component>
   <component name="DebuggerManager">
-    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true">
       <breakpoint>
         <option name="NOTIFY_CAUGHT" value="true" />
@@ -83,67 +79,26 @@
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
     </breakpoint_any>
+    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
+    <line_breakpoints>
+      <breakpoint url="file://$PROJECT_DIR$/src/SimulatedAnnealing.java" line="26" class="SimulatedAnnealing" package="">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="REMOVE_AFTER_HIT" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+    </line_breakpoints>
     <breakpoint_rules />
     <ui_properties />
-  </component>
-  <component name="DockManager">
-    <window id="2">
-      <content type="file-editors">
-        <state>
-          <leaf>
-            <file leaf-file-name="Tour_I.java" pinned="false" current="false" current-in-tab="false">
-              <entry file="file://$PROJECT_DIR$/src/Tour_I.java">
-                <provider selected="true" editor-type-id="text-editor">
-                  <state line="17" column="0" selection-start="385" selection-end="385" vertical-scroll-proportion="0.0">
-                    <folding>
-                      <element signature="docComment;class#Tour_I#0" expanded="false" />
-                    </folding>
-                  </state>
-                </provider>
-              </entry>
-            </file>
-            <file leaf-file-name="Graph.java" pinned="false" current="false" current-in-tab="true">
-              <entry file="file://$PROJECT_DIR$/src/Graph.java">
-                <provider selected="true" editor-type-id="text-editor">
-                  <state line="64" column="117" selection-start="1755" selection-end="1762" vertical-scroll-proportion="0.96351933">
-                    <folding>
-                      <element signature="docComment;class#Graph#0" expanded="false" />
-                    </folding>
-                  </state>
-                </provider>
-              </entry>
-            </file>
-            <file leaf-file-name="Graph_I.java" pinned="false" current="false" current-in-tab="false">
-              <entry file="file://$PROJECT_DIR$/src/Graph_I.java">
-                <provider selected="true" editor-type-id="text-editor">
-                  <state line="14" column="28" selection-start="262" selection-end="262" vertical-scroll-proportion="0.0">
-                    <folding />
-                  </state>
-                </provider>
-              </entry>
-            </file>
-            <file leaf-file-name="Vertex.java" pinned="false" current="false" current-in-tab="false">
-              <entry file="file://$PROJECT_DIR$/src/Vertex.java">
-                <provider selected="true" editor-type-id="text-editor">
-                  <state line="40" column="85" selection-start="688" selection-end="688" vertical-scroll-proportion="0.0">
-                    <folding />
-                  </state>
-                </provider>
-              </entry>
-            </file>
-            <file leaf-file-name="TSP_I.java" pinned="false" current="false" current-in-tab="false">
-              <entry file="file://$PROJECT_DIR$/src/TSP_I.java">
-                <provider selected="true" editor-type-id="text-editor">
-                  <state line="20" column="40" selection-start="422" selection-end="429" vertical-scroll-proportion="0.0">
-                    <folding />
-                  </state>
-                </provider>
-              </entry>
-            </file>
-          </leaf>
-        </state>
-      </content>
-    </window>
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FavoritesManager">
@@ -151,19 +106,22 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="SimulatedAnnealing.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/SimulatedAnnealing.java">
+      <file leaf-file-name="TwoDimParser.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/TwoDimParser.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="52" column="48" selection-start="1254" selection-end="1254" vertical-scroll-proportion="0.0">
-              <folding />
+            <state line="21" column="54" selection-start="556" selection-end="556" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Greedy.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Greedy.java">
+      <file leaf-file-name="Christofides.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Christofides.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="3" selection-start="155" selection-end="155" vertical-scroll-proportion="0.0">
+            <state line="19" column="50" selection-start="423" selection-end="423" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -172,19 +130,8 @@
       <file leaf-file-name="Edge.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Edge.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="32" column="84" selection-start="658" selection-end="658" vertical-scroll-proportion="0.0">
+            <state line="18" column="91" selection-start="429" selection-end="429" vertical-scroll-proportion="0.0">
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Christofides.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Christofides.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="74" column="77" selection-start="2129" selection-end="2129" vertical-scroll-proportion="0.8611435">
-              <folding>
-                <element signature="docComment;class#Christofides#0" expanded="false" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -192,7 +139,59 @@
       <file leaf-file-name="Tour.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Tour.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="58" column="13" selection-start="1365" selection-end="1366" vertical-scroll-proportion="-10.84">
+            <state line="103" column="43" selection-start="2304" selection-end="2304" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Greedy.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Greedy.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="1" column="40" selection-start="34" selection-end="34" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SimulatedAnnealing.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/SimulatedAnnealing.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Greedybest.txt" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Greedybest.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="436" column="0" selection-start="7359" selection-end="7359" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Graph.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Graph.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="171" column="33" selection-start="4395" selection-end="4395" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+                <marker date="1366985911291" expanded="true" signature="129:313" placeholder="/**...*/" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Vertex.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Vertex.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="40" column="0" selection-start="688" selection-end="688" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -217,28 +216,29 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
+        <option value="$PROJECT_DIR$/src/Edge_I.java" />
+        <option value="$PROJECT_DIR$/src/EuclideanVertex.java" />
         <option value="$PROJECT_DIR$/src/Vertex.java" />
         <option value="$PROJECT_DIR$/src/Vertex_I.java" />
         <option value="$PROJECT_DIR$/src/EuclideanVertex_2D.java" />
         <option value="$PROJECT_DIR$/src/main.java" />
+        <option value="$PROJECT_DIR$/src/Edge.java" />
+        <option value="$PROJECT_DIR$/src/Graph_I.java" />
         <option value="$PROJECT_DIR$/src/Greedy.java" />
         <option value="$PROJECT_DIR$/src/TSP_I.java" />
         <option value="$PROJECT_DIR$/src/Tour_I.java" />
+        <option value="$PROJECT_DIR$/src/Christofides.java" />
+        <option value="$PROJECT_DIR$/src/Tour.java" />
+        <option value="$PROJECT_DIR$/src/Graph.java" />
         <option value="$PROJECT_DIR$/src/TwoDimParser.java" />
         <option value="$PROJECT_DIR$/src/SimulatedAnnealing.java" />
-        <option value="$PROJECT_DIR$/src/Tour.java" />
-        <option value="$PROJECT_DIR$/src/Genetic.java" />
-        <option value="$PROJECT_DIR$/src/MinHeap.java" />
-        <option value="$PROJECT_DIR$/src/Edge.java" />
-        <option value="$PROJECT_DIR$/src/Graph.java" />
-        <option value="$PROJECT_DIR$/src/Graph_I.java" />
-        <option value="$PROJECT_DIR$/src/Christofides.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="width" value="960" />
-    <option name="height" value="1040" />
+    <option name="x" value="-2" />
+    <option name="width" value="1380" />
+    <option name="height" value="744" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -266,7 +266,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -301,27 +300,139 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
       <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="GoToFile.includeJavaFiles" value="false" />
     <property name="project.structure.last.edited" value="Modules" />
+    <property name="GoToFile.includeJavaFiles" value="false" />
     <property name="project.structure.proportion" value="0.0" />
-    <property name="options.splitter.main.proportions" value="0.3" />
-    <property name="options.lastSelected" value="editor.preferences.appearance" />
-    <property name="MemberChooser.sorted" value="false" />
-    <property name="recentsLimit" value="5" />
-    <property name="last_opened_file_path" value="$USER_HOME$/CS51" />
-    <property name="project.structure.side.proportion" value="0.0" />
-    <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
+    <property name="recentsLimit" value="5" />
+    <property name="MemberChooser.sorted" value="false" />
+    <property name="last_opened_file_path" value="$USER_HOME$/CS51" />
     <property name="MemberChooser.showClasses" value="true" />
-    <property name="FullScreen" value="false" />
+    <property name="project.structure.side.proportion" value="0.0" />
     <property name="GoToClass.includeLibraries" value="false" />
     <property name="dynamic.classpath" value="false" />
-    <property name="options.splitter.details.proportions" value="0.2" />
-    <property name="options.searchVisible" value="true" />
+    <property name="MemberChooser.copyJavadoc" value="false" />
+  </component>
+  <component name="RestoreUpdateTree">
+    <UpdateInfo date="Moments ago" ActionInfo="_Update">
+      <UpdatedFiles>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Updated from server" />
+          <option name="myStatusName" value="Changed on server" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="CHANGED_ON_SERVER" />
+          <FILE-GROUP>
+            <option name="myUpdateName" value="Updated" />
+            <option name="myStatusName" value="Changed" />
+            <option name="mySupportsDeletion" value="false" />
+            <option name="myCanBeAbsent" value="false" />
+            <option name="myId" value="UPDATED" />
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/workspace.xml</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/src/Christofides.java</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/src/Graph.java</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/src/Graph_I.java</PATH>
+          </FILE-GROUP>
+          <FILE-GROUP>
+            <option name="myUpdateName" value="Created" />
+            <option name="myStatusName" value="Created" />
+            <option name="mySupportsDeletion" value="false" />
+            <option name="myCanBeAbsent" value="false" />
+            <option name="myId" value="CREATED" />
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/src/Genetic.java</PATH>
+          </FILE-GROUP>
+          <FILE-GROUP>
+            <option name="myUpdateName" value="Deleted" />
+            <option name="myStatusName" value="Deleted" />
+            <option name="mySupportsDeletion" value="false" />
+            <option name="myCanBeAbsent" value="true" />
+            <option name="myId" value="REMOVED_FROM_REPOSITORY" />
+          </FILE-GROUP>
+          <FILE-GROUP>
+            <option name="myUpdateName" value="Restored" />
+            <option name="myStatusName" value="Will be restored" />
+            <option name="mySupportsDeletion" value="false" />
+            <option name="myCanBeAbsent" value="false" />
+            <option name="myId" value="RESTORED" />
+          </FILE-GROUP>
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Modified" />
+          <option name="myStatusName" value="Modified" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="MODIFIED" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Skipped" />
+          <option name="myStatusName" value="Skipped" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="SKIPPED" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Merged with conflicts" />
+          <option name="myStatusName" value="Will be merged with conflicts" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="MERGED_WITH_CONFLICTS" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Merged with tree conflicts" />
+          <option name="myStatusName" value="Merged with tree conflicts" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="MERGED_WITH_TREE_CONFLICT" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Merged with property conflicts" />
+          <option name="myStatusName" value="Will be merged with property conflicts" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="MERGED_WITH_PROPERTY_CONFLICT" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Merged" />
+          <option name="myStatusName" value="Will be merged" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="MERGED" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Not in repository" />
+          <option name="myStatusName" value="Not in repository" />
+          <option name="mySupportsDeletion" value="true" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="UNKNOWN" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Locally added" />
+          <option name="myStatusName" value="Locally added" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="LOCALLY_ADDED" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Locally removed" />
+          <option name="myStatusName" value="Locally removed" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="LOCALLY_REMOVED" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Switched" />
+          <option name="myStatusName" value="Switched" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="SWITCHED" />
+        </FILE-GROUP>
+      </UpdatedFiles>
+    </UpdateInfo>
   </component>
   <component name="RunManager" selected="Application.TwoDimParser">
     <configuration default="false" name="TwoDimParser" type="Application" factoryName="Application" temporary="true">
@@ -354,6 +465,19 @@
       <option name="PORT" value="5005" />
       <method />
     </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method />
+    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <module name="" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
@@ -379,19 +503,6 @@
       <envs />
       <properties />
       <listeners />
-      <method />
-    </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -570,7 +681,19 @@
       <created>1366571933613</created>
       <updated>1366571933613</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="Simanneal seems to be working, but not returning correct value...">
+      <created>1366575008728</created>
+      <updated>1366575008728</updated>
+    </task>
+    <task id="LOCAL-00028" summary="simulated annealing should be working.">
+      <created>1366595055173</created>
+      <updated>1366595055173</updated>
+    </task>
+    <task id="LOCAL-00029" summary="simulated annealing should be working@">
+      <created>1366597029004</created>
+      <updated>1366597029004</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TodoView" selected-index="4">
@@ -594,7 +717,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="960" height="1040" extended-state="0" />
+    <frame x="-2" y="0" width="1380" height="744" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -604,14 +727,14 @@
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32935154" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3270869" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3272933" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32764506" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32764506" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32935154" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2583519" sideWeight="0.6602492" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33975086" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24886191" sideWeight="0.72525597" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.27474403" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -661,7 +784,7 @@
     <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Working on Genetic Algorithm" />
+    <option name="LAST_COMMIT_MESSAGE" value="simulated annealing should be working@" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -695,7 +818,9 @@
     <MESSAGE value="Graph should be working properly. I think greedy works now. Tried it on a 131-city data set and got 631.01 vs optimal of 564." />
     <MESSAGE value="Made getRandomTour method in Graph. Working on getNeighborTour, which should return the tour when random vertices in the tour are swapped" />
     <MESSAGE value="Working on Simulated Annealing now" />
-    <MESSAGE value="Working on Genetic Algorithm" />
+    <MESSAGE value="Simanneal seems to be working, but not returning correct value..." />
+    <MESSAGE value="simulated annealing should be working." />
+    <MESSAGE value="simulated annealing should be working@" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -705,55 +830,9 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Tour_I.java">
+    <entry file="file://$PROJECT_DIR$/src/Graph_I.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="54" selection-start="266" selection-end="266" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="docComment;class#Tour_I#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Vertex_I.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="29" selection-start="239" selection-end="239" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Tour_I.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="0" selection-start="385" selection-end="385" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="docComment;class#Tour_I#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/MinHeap.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="37" selection-start="263" selection-end="263" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Genetic.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="47" column="68" selection-start="1542" selection-end="1549" vertical-scroll-proportion="-25.6">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Tour.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="58" column="13" selection-start="1365" selection-end="1366" vertical-scroll-proportion="-10.84">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/TwoDimParser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="44" column="37" selection-start="1359" selection-end="1360" vertical-scroll-proportion="-9.88">
+        <state line="23" column="25" selection-start="445" selection-end="445" vertical-scroll-proportion="0.52690166">
           <folding />
         </state>
       </provider>
@@ -765,62 +844,110 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Vertex.java">
+    <entry file="file://$PROJECT_DIR$/src/Tour_I.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="85" selection-start="688" selection-end="688" vertical-scroll-proportion="0.0">
+        <state line="11" column="54" selection-start="266" selection-end="266" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Edge.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="84" selection-start="658" selection-end="658" vertical-scroll-proportion="0.0">
+        <state line="18" column="91" selection-start="429" selection-end="429" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/SimulatedAnnealing.java">
+    <entry file="file://$PROJECT_DIR$/src/Vertex.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="52" column="48" selection-start="1254" selection-end="1254" vertical-scroll-proportion="0.0">
+        <state line="40" column="0" selection-start="688" selection-end="688" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Tour.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="103" column="43" selection-start="2304" selection-end="2304" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Greedybest.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="436" column="0" selection-start="7359" selection-end="7359" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/simbest.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Christofides.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="50" selection-start="423" selection-end="423" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Greedy.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="3" selection-start="155" selection-end="155" vertical-scroll-proportion="0.0">
+        <state line="1" column="40" selection-start="34" selection-end="34" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/EuclideanVertex_2D.java">
+    <entry file="file://$PROJECT_DIR$/test.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="46" selection-start="349" selection-end="349" vertical-scroll-proportion="0.30984205">
+        <state line="435" column="10" selection-start="4199" selection-end="4199" vertical-scroll-proportion="0.8107607">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Graph_I.java">
+    <entry file="file://$PROJECT_DIR$/lala.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="28" selection-start="262" selection-end="262" vertical-scroll-proportion="0.0">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hello.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Graph.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="64" column="117" selection-start="1755" selection-end="1762" vertical-scroll-proportion="0.96351933">
+        <state line="171" column="33" selection-start="4395" selection-end="4395" vertical-scroll-proportion="0.0">
           <folding>
-            <element signature="docComment;class#Graph#0" expanded="false" />
+            <element signature="imports" expanded="true" />
+            <marker date="1366985911291" expanded="true" signature="129:313" placeholder="/**...*/" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Christofides.java">
+    <entry file="file://$PROJECT_DIR$/src/TwoDimParser.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="74" column="77" selection-start="2129" selection-end="2129" vertical-scroll-proportion="0.8611435">
+        <state line="21" column="54" selection-start="556" selection-end="556" vertical-scroll-proportion="0.0">
           <folding>
-            <element signature="docComment;class#Christofides#0" expanded="false" />
+            <element signature="n#!!doc" expanded="true" />
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SimulatedAnnealing.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
           </folding>
         </state>
       </provider>

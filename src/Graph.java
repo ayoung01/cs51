@@ -178,15 +178,18 @@ public class Graph {
 
     String display()
     {
-        String result = new String();
+        StringBuilder builder = new StringBuilder();
 
         for(int i = 0; i < numVertices; i++)
         {
             for(int j = 0; j < numVertices; j++)
-                result+=adjMat[i][j] + " ";
+            {
+                builder.append(adjMat[i][j] + " ");
+            }
 
-            result+="\n";
+            builder.append("\n");
         }
-        return result;
+
+        return builder.toString();
     }
 }
