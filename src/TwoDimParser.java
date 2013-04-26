@@ -16,24 +16,37 @@ public class TwoDimParser {
 
     public static void main(String[] args){
 
+    long startTime;
+    long endTime;
+    double duration;
     TwoDimParser hello = new TwoDimParser("test.txt", 436);
     hello.printEverything();
     Graph g = new Graph(hello.allVertices());
 
     Greedy greedisgood = new Greedy();
+    startTime = System.nanoTime();
     Tour bestgreedy = greedisgood.findShortestPath(g);
-    System.out.printf("Greedy: %.2f\n", bestgreedy.getLength());
+    endTime = System.nanoTime();
+    duration = (endTime - startTime)/1000000000.0;
+
+    System.out.printf("Greedy: %.2f in %.5f s\n", bestgreedy.getLength(), duration);
     bestgreedy.printGraphToFile("Greedybest.txt");
 
 
-    SimulatedAnnealing sim = new SimulatedAnnealing(2000000, 5, 0.95);
+    /*SimulatedAnnealing sim = new SimulatedAnnealing(2000000, 15, 0.95);
+    startTime = System.nanoTime();
     Tour bestsim = sim.findShortestPath(g);
-    System.out.printf("Simulated Annealing: %.2f\n", bestsim.getLength());
-    bestsim.printGraphToFile("simbest.txt");
+    endTime = System.nanoTime();
+    duration = (endTime - startTime)/1000000000.0;
+    System.out.printf("Simulated Annealing: %.2f in %.5f s\n ", bestsim.getLength(), duration);
+    bestsim.printGraphToFile("simbest.txt");       */
 
-    TwoOpt twoopt = new TwoOpt(15);
+    TwoOpt twoopt = new TwoOpt();
+    startTime = System.nanoTime();
     Tour besttwoopt = twoopt.findShortestPath(g);
-    System.out.printf("Two Opt: %.2f\n", besttwoopt.getLength());
+    endTime = System.nanoTime();
+        duration = (endTime - startTime)/1000000000.0;
+    System.out.printf("Two Opt: %.2f in %.5f s\n", besttwoopt.getLength(), duration);
     besttwoopt.printGraphToFile("twooptbest.txt");
     }
 

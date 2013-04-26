@@ -7,19 +7,17 @@
  */
 public class TwoOpt {
     private int numVertices;
-    private int numloops;
-
-    public TwoOpt(int loops)
-    {
-        numloops = loops;
-    }
     public Tour findShortestPath(Graph g)
     {
+        numVertices = g.numVertices();
+
         Tour start = g.getRandomTour();
         Tour comparison;
-        numVertices = g.numVertices();
-        for(int k = 0; k < numloops; k++)
+
+        int c = 1;
+        while(c > 0)
         {
+            c = 0;
             for(int i = 1; i < numVertices; i++)
             {
                 for(int j = 1; j < i; j++)
@@ -29,6 +27,7 @@ public class TwoOpt {
                     if(comparison.getLength() < start.getLength())
                     {
                         start = comparison;
+                        c++;
                     }
                 }
             }

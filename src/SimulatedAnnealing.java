@@ -27,6 +27,7 @@ public class SimulatedAnnealing implements TSP_I {
         Tour start = g.getRandomTour();
       Tour best = start;
       Tour comparison;
+      int counter;
       for(int k = 0; k < reheat; k++)
       {
           start = best;
@@ -35,11 +36,7 @@ public class SimulatedAnnealing implements TSP_I {
               comparison = getNeighborTour(start, g);
               double a = comparison.getLength();
               double b = start.getLength();
-              if(a < b)
-              {
-                  start = comparison;
-              }
-              else if (rand.nextDouble() < anneal(i,a,b))
+              if(a < b || rand.nextDouble() < anneal(i,a,b))
               {
                   start = comparison;
               }
@@ -103,7 +100,7 @@ public class SimulatedAnnealing implements TSP_I {
 
     double anneal(int iter, double a, double b)
     {
-        double t = Math.pow(10,10)*Math.pow(annealrate,iter);
+        double t = Math.pow(10,10)*Math.pow(annealrate,iter/100);
         return Math.exp(-(a-b)/t);
     }
 
