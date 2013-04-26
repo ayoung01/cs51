@@ -10,12 +10,15 @@ import java.io.File;
 
 public interface Graph_I {
 
+    double[][] getAdjMat();
+
+    int getDegree(Vertex v);
+
     Edge[] edgesOf(Vertex v);
 
     Edge edgeBetween(Vertex v1, Vertex v2);
 
-
-    Edge getRandomNeighborEdge( Vertex v);
+    Edge getRandomNeighborEdge(Vertex v);
 
     Edge getShortestNeighborEdge (Vertex v,Vertex[] already);
 

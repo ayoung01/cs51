@@ -15,11 +15,13 @@ public class Graph {
     private int numVertices;
     private double[][] adjMat;
     private Random rand;
+
+    // each vertex must have a distinct ID between 0, numVertices - 1
     public Graph(EuclideanVertex_2D[] vertices)
     {
         rand = new Random();
         numVertices = vertices.length;
-        adjMat = new double [numVertices][numVertices] ;
+        adjMat = new double [numVertices][numVertices];
         for(int i = 0; i < numVertices; i++)
         {
             for(int j = 0; j <= i; j++ )
@@ -29,6 +31,36 @@ public class Graph {
                 adjMat[j][i] = val;
             }
         }
+    }
+
+    // generates a graph of a tree given a list of edges
+    public Graph(Edge[] edges) {
+        rand = new Random();
+        numVertices = edges.length + 1;
+        adjMat = new double [numVertices + 1][numVertices + 1];
+        for (int i = 0; i < edges.length; i++) {
+            Edge e = edges[i];
+            int v1 = e.getFirstVertex().getId();
+            int v2 = e.getSecondVertex().getId();
+            double weight = e.getWeight();
+            adjMat[v1][v2] = weight;
+            adjMat[v2][v1] = weight;
+        }
+    }
+
+    double[][] getAdjMat() {
+        return adjMat;
+    }
+
+    int getDegree(Vertex v) {
+        int id = v.getId();
+        int degree = 0;
+        for (int i = 0; i < adjMat.length; i++) {
+            if (adjMat[id][i] != 0) {
+                degree++;
+            }
+        }
+        return degree;
     }
 
     Edge[] edgesOf(Vertex v)
@@ -46,8 +78,7 @@ public class Graph {
             counter++;
         }
       }
-
-        return edgeList;
+      return edgeList;
     }
 
     Edge edgeBetween(Vertex v1, Vertex v2)
@@ -55,7 +86,7 @@ public class Graph {
         return new Edge(v1,v2,adjMat[v1.getId()][v2.getId()]);
     }
 
-    Edge getRandomNeighborEdge( Vertex v)
+    Edge getRandomNeighborEdge(Vertex v)
     {
         int x = v.getId();
         int randomNum = rand.nextInt(numVertices);
@@ -83,7 +114,6 @@ public class Graph {
           if(x == all[i].getId())
               return false;
         }
-
         return true;
     }
 
