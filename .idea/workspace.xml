@@ -2,11 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f30b32a5-b2ea-43fe-9d6f-e9a5228dd111" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/TwoOpt.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SimulatedAnnealing.java" afterPath="$PROJECT_DIR$/src/SimulatedAnnealing.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Tour.java" afterPath="$PROJECT_DIR$/src/Tour.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/TwoDimParser.java" afterPath="$PROJECT_DIR$/src/TwoDimParser.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="TSP.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="f30b32a5-b2ea-43fe-9d6f-e9a5228dd111" time="1366985975972" ignored="false" />
+    <file path="/Dummy.txt" changelist="f30b32a5-b2ea-43fe-9d6f-e9a5228dd111" time="1366985996244" ignored="false" />
     <file path="/TSP_I.java" changelist="f30b32a5-b2ea-43fe-9d6f-e9a5228dd111" time="1366502890654" ignored="false" />
     <file path="/fragment.java" changelist="f30b32a5-b2ea-43fe-9d6f-e9a5228dd111" time="1365712022239" ignored="false" />
     <file path="/Graph_I.java" changelist="f30b32a5-b2ea-43fe-9d6f-e9a5228dd111" time="1366506045304" ignored="false" />
@@ -14,18 +18,19 @@
     <file path="/Vertex.java" changelist="f30b32a5-b2ea-43fe-9d6f-e9a5228dd111" time="1365982941725" ignored="false" />
     <file path="/VertexSet.java" changelist="f30b32a5-b2ea-43fe-9d6f-e9a5228dd111" time="1365802743663" ignored="false" />
     <file path="/EdgeSet.java" changelist="f30b32a5-b2ea-43fe-9d6f-e9a5228dd111" time="1365802767768" ignored="false" />
-    <file path="/Tour.java" changelist="f30b32a5-b2ea-43fe-9d6f-e9a5228dd111" time="1366593585895" ignored="false" />
+    <file path="/Tour.java" changelist="f30b32a5-b2ea-43fe-9d6f-e9a5228dd111" time="1366988306545" ignored="false" />
     <file path="/Graph.java" changelist="f30b32a5-b2ea-43fe-9d6f-e9a5228dd111" time="1366937913443" ignored="false" />
     <file path="/Edge_I.java" changelist="f30b32a5-b2ea-43fe-9d6f-e9a5228dd111" time="1365802789489" ignored="false" />
     <file path="/Vertex_I.java" changelist="f30b32a5-b2ea-43fe-9d6f-e9a5228dd111" time="1365802800675" ignored="false" />
     <file path="/Tour_I.java" changelist="f30b32a5-b2ea-43fe-9d6f-e9a5228dd111" time="1366552627787" ignored="false" />
     <file path="/EuclideanVertex.java" changelist="f30b32a5-b2ea-43fe-9d6f-e9a5228dd111" time="1365966789563" ignored="false" />
     <file path="/EuclideanVertex_2D.java" changelist="f30b32a5-b2ea-43fe-9d6f-e9a5228dd111" time="1366508640486" ignored="false" />
-    <file path="/SimulatedAnnealing.java" changelist="f30b32a5-b2ea-43fe-9d6f-e9a5228dd111" time="1366985883582" ignored="false" />
+    <file path="/SimulatedAnnealing.java" changelist="f30b32a5-b2ea-43fe-9d6f-e9a5228dd111" time="1366996684778" ignored="false" />
     <file path="/Greedy.java" changelist="f30b32a5-b2ea-43fe-9d6f-e9a5228dd111" time="1366569879663" ignored="false" />
-    <file path="/TwoDimParser.java" changelist="f30b32a5-b2ea-43fe-9d6f-e9a5228dd111" time="1366937961602" ignored="false" />
+    <file path="/TwoDimParser.java" changelist="f30b32a5-b2ea-43fe-9d6f-e9a5228dd111" time="1366990122723" ignored="false" />
     <file path="/main.java" changelist="f30b32a5-b2ea-43fe-9d6f-e9a5228dd111" time="1366508803656" ignored="false" />
     <file path="/Christofides.java" changelist="f30b32a5-b2ea-43fe-9d6f-e9a5228dd111" time="1366571334541" ignored="false" />
+    <file path="/TwoOpt.java" changelist="f30b32a5-b2ea-43fe-9d6f-e9a5228dd111" time="1366997228448" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,23 +82,6 @@
       </breakpoint>
     </breakpoint_any>
     <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
-    <line_breakpoints>
-      <breakpoint url="file://$PROJECT_DIR$/src/SimulatedAnnealing.java" line="26" class="SimulatedAnnealing" package="">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="REMOVE_AFTER_HIT" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-    </line_breakpoints>
     <breakpoint_rules />
     <ui_properties />
   </component>
@@ -103,10 +91,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="TwoDimParser.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="TwoDimParser.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/TwoDimParser.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="54" selection-start="556" selection-end="556" vertical-scroll-proportion="0.0">
+            <state line="20" column="111" selection-start="508" selection-end="508" vertical-scroll-proportion="0.8056872">
               <folding>
                 <element signature="n#!!doc" expanded="true" />
                 <element signature="imports" expanded="true" />
@@ -136,7 +124,7 @@
       <file leaf-file-name="Tour.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Tour.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="103" column="43" selection-start="2304" selection-end="2304" vertical-scroll-proportion="0.0">
+            <state line="48" column="38" selection-start="1165" selection-end="1165" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -153,10 +141,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SimulatedAnnealing.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="SimulatedAnnealing.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/SimulatedAnnealing.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="94" selection-start="359" selection-end="359" vertical-scroll-proportion="0.6467391">
+            <state line="69" column="10" selection-start="1909" selection-end="1909" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="n#!!doc" expanded="true" />
               </folding>
@@ -164,10 +152,19 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="TwoOpt.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/TwoOpt.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="20" column="35" selection-start="489" selection-end="489" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="Greedybest.txt" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Greedybest.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="436" column="0" selection-start="7359" selection-end="7359" vertical-scroll-proportion="0.0">
+            <state line="436" column="0" selection-start="7335" selection-end="7335" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -176,10 +173,9 @@
       <file leaf-file-name="Graph.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Graph.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="171" column="33" selection-start="4395" selection-end="4395" vertical-scroll-proportion="0.0">
+            <state line="73" column="33" selection-start="1974" selection-end="1974" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
-                <marker date="1366985911291" expanded="true" signature="129:313" placeholder="/**...*/" />
               </folding>
             </state>
           </provider>
@@ -213,7 +209,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/Edge_I.java" />
         <option value="$PROJECT_DIR$/src/EuclideanVertex.java" />
         <option value="$PROJECT_DIR$/src/Vertex.java" />
         <option value="$PROJECT_DIR$/src/Vertex_I.java" />
@@ -225,15 +220,16 @@
         <option value="$PROJECT_DIR$/src/TSP_I.java" />
         <option value="$PROJECT_DIR$/src/Tour_I.java" />
         <option value="$PROJECT_DIR$/src/Christofides.java" />
-        <option value="$PROJECT_DIR$/src/Tour.java" />
         <option value="$PROJECT_DIR$/src/Graph.java" />
-        <option value="$PROJECT_DIR$/src/TwoDimParser.java" />
+        <option value="$PROJECT_DIR$/src/Tour.java" />
         <option value="$PROJECT_DIR$/src/SimulatedAnnealing.java" />
+        <option value="$PROJECT_DIR$/src/TwoOpt.java" />
+        <option value="$PROJECT_DIR$/src/TwoDimParser.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-2" />
+    <option name="x" value="-13" />
     <option name="width" value="1380" />
     <option name="height" value="744" />
   </component>
@@ -694,7 +690,11 @@
       <created>1366985983279</created>
       <updated>1366985983279</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="updating annealing function">
+      <created>1366986000180</created>
+      <updated>1366986000180</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TodoView" selected-index="4">
@@ -718,7 +718,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-2" y="0" width="1380" height="744" extended-state="0" />
+    <frame x="-13" y="0" width="1380" height="744" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -728,14 +728,14 @@
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32935154" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32764506" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32764506" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32764506" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32935154" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24886191" sideWeight="0.72525597" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.27474403" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23549488" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -832,13 +832,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Graph_I.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="25" selection-start="445" selection-end="445" vertical-scroll-proportion="0.52690166">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/TSP_I.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="20" column="40" selection-start="422" selection-end="429" vertical-scroll-proportion="0.0">
@@ -853,36 +846,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Edge.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="91" selection-start="429" selection-end="429" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Vertex.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="0" selection-start="688" selection-end="688" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Tour.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="103" column="43" selection-start="2304" selection-end="2304" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Greedybest.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="436" column="0" selection-start="7359" selection-end="7359" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/simbest.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
@@ -893,13 +856,6 @@
     <entry file="file://$PROJECT_DIR$/src/Christofides.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="19" column="50" selection-start="423" selection-end="423" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Greedy.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="40" selection-start="34" selection-end="34" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -925,31 +881,74 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Graph.java">
+    <entry file="file://$PROJECT_DIR$/src/Vertex.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="171" column="33" selection-start="4395" selection-end="4395" vertical-scroll-proportion="0.0">
+        <state line="40" column="0" selection-start="688" selection-end="688" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Greedy.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="40" selection-start="34" selection-end="34" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Tour.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="48" column="38" selection-start="1165" selection-end="1165" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
-            <marker date="1366985911291" expanded="true" signature="129:313" placeholder="/**...*/" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/TwoDimParser.java">
+    <entry file="file://$PROJECT_DIR$/Greedybest.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="54" selection-start="556" selection-end="556" vertical-scroll-proportion="0.0">
+        <state line="436" column="0" selection-start="7335" selection-end="7335" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Graph.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="73" column="33" selection-start="1974" selection-end="1974" vertical-scroll-proportion="0.0">
           <folding>
-            <element signature="n#!!doc" expanded="true" />
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Edge.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="91" selection-start="429" selection-end="429" vertical-scroll-proportion="0.0">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/SimulatedAnnealing.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="94" selection-start="359" selection-end="359" vertical-scroll-proportion="0.6467391">
+        <state line="69" column="10" selection-start="1909" selection-end="1909" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/TwoOpt.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="35" selection-start="489" selection-end="489" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/TwoDimParser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="111" selection-start="508" selection-end="508" vertical-scroll-proportion="0.8056872">
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>

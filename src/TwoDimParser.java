@@ -18,19 +18,25 @@ public class TwoDimParser {
 
     TwoDimParser hello = new TwoDimParser("test.txt", 436);
     hello.printEverything();
-    Greedy greedisgood = new Greedy();
-    SimulatedAnnealing sim = new SimulatedAnnealing(20000000);
     Graph g = new Graph(hello.allVertices());
-    g.printGraphToFile("hello.txt");
+
+    Greedy greedisgood = new Greedy();
     Tour bestgreedy = greedisgood.findShortestPath(g);
-    Tour bestsim = sim.findShortestPath(g);
-    System.out.printf("%.2f\n", bestgreedy.getLength());
+    System.out.printf("Greedy: %.2f\n", bestgreedy.getLength());
     bestgreedy.printGraphToFile("Greedybest.txt");
-    System.out.printf("%.2f\n", bestsim.getLength());
+
+
+    SimulatedAnnealing sim = new SimulatedAnnealing(2000000, 5, 0.95);
+    Tour bestsim = sim.findShortestPath(g);
+    System.out.printf("Simulated Annealing: %.2f\n", bestsim.getLength());
     bestsim.printGraphToFile("simbest.txt");
 
-
+    TwoOpt twoopt = new TwoOpt(15);
+    Tour besttwoopt = twoopt.findShortestPath(g);
+    System.out.printf("Two Opt: %.2f\n", besttwoopt.getLength());
+    besttwoopt.printGraphToFile("twooptbest.txt");
     }
+
     public TwoDimParser(String f, int numEntries)
     {
       vertices = new EuclideanVertex_2D[numEntries];

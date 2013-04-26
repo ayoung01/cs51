@@ -116,13 +116,13 @@ public class Tour {
     }
 
     public String toString() {
-        String mystring = "";
+        StringBuilder builder = new StringBuilder();
         for(int i = 0; i < currpos; i++)
         {
-            mystring+=touredges[i].toString() + "\n";
+            builder.append(touredges[i].toString() + "\n");
         }
 
-        return mystring;
+        return builder.toString();
     }
 
     void printGraphToFile(String file)

@@ -9,10 +9,14 @@ import java.util.Random;
 public class SimulatedAnnealing implements TSP_I {
 
     private int maxIter;
+    private int reheat;
     private Random rand;
-    public SimulatedAnnealing(int numTimes)
+    private double annealrate;
+    public SimulatedAnnealing(int numTimes, int numReheats, double annealRate)
     {
        maxIter = numTimes;
+       reheat = numReheats;
+       annealrate = annealRate;
        rand = new Random();
     }
 
@@ -22,25 +26,31 @@ public class SimulatedAnnealing implements TSP_I {
         //Tour start = gree.findShortestPath(g);
         Tour start = g.getRandomTour();
       Tour best = start;
-      for(int i = 0; i < maxIter; i++)
+      Tour comparison;
+      for(int k = 0; k < reheat; k++)
       {
-          Tour comparison = getNeighborTour(start, g);
-        double a = comparison.getLength();
-        double b = start.getLength();
-        if(a < b)
-        {
-            start = comparison;
-        }
-        else if (rand.nextDouble() < anneal(i,a,b))
-        {
-            start = comparison;
-        }
-        if(start.getLength() < best.getLength())
-        {
-            best = start;
-            System.out.printf("Iteration %d\n New best: %.2f\n", i, best.getLength());
-        }
+          start = best;
+          for(int i = 0; i < maxIter; i++)
+          {
+              comparison = getNeighborTour(start, g);
+              double a = comparison.getLength();
+              double b = start.getLength();
+              if(a < b)
+              {
+                  start = comparison;
+              }
+              else if (rand.nextDouble() < anneal(i,a,b))
+              {
+                  start = comparison;
+              }
+              if(start.getLength() < best.getLength())
+              {
+                  best = start;
+                  //System.out.printf("Iteration %d\n New best: %.2f\n", i, best.getLength());
+              }
+          }
       }
+
 
         return best;
     }
@@ -57,8 +67,16 @@ public class SimulatedAnnealing implements TSP_I {
         Vertex[] newv = new Vertex[len];
         int random1 = rand.nextInt(len);
         int random2 = rand.nextInt(len);
+        //System.out.printf("%d, %d, %d\n", len, random1, random2);
         while(random1 == random2)
             random2 = rand.nextInt(len);
+
+        if(random2 < random1)
+        {
+            int temp = random2;
+            random2 = random1;
+            random1 = temp;
+        }
 
         for(int i = 0; i < len; i++)
         {
@@ -69,6 +87,10 @@ public class SimulatedAnnealing implements TSP_I {
             else if(i == random2)
             {
                 newv[i] = vertices[random1];
+            }
+            else if(i > random1 && i < random2)
+            {
+                newv[i] = vertices[random1+random2 - i];
             }
             else
             {
@@ -81,7 +103,7 @@ public class SimulatedAnnealing implements TSP_I {
 
     double anneal(int iter, double a, double b)
     {
-        double t = Math.pow(10,10)*Math.pow(0.8,(iter/300));
+        double t = Math.pow(10,10)*Math.pow(annealrate,iter);
         return Math.exp(-(a-b)/t);
     }
 
