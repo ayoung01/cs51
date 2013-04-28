@@ -1,5 +1,7 @@
+import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.PriorityQueue;
+import java.util.Stack;
 
 /**
  * Created with IntelliJ IDEA.
@@ -140,10 +142,54 @@ public class Christofides implements TSP_I {
         return edgeList;
     }
 
-    // constructs a cycle in graph g starting from vertex v
-    private LinkedList<Edge> makeCycle(GraphL g, Vertex v) {
+    // constructs a cycle in graph g starting from vertex v_source
+    private LinkedList<Edge> makeCycle(GraphL g, Vertex v_source) {
         LinkedList<Edge> edgeList = new LinkedList<Edge>();
+        HashMap<Vertex, Boolean> discovered_v = new HashMap<Vertex, Boolean>();
+        HashMap<Edge, Boolean> discovered_e = new HashMap<Edge, Boolean>();
         // need to do DFS until return to original vertex and keep track of order visited
+        Stack<Vertex> s = new Stack<Vertex>();
+
+        // label v as discovered
+        discovered_v.put(v_source, Boolean.TRUE);
+
+        // while the stack is not empty
+        outer:
+        while(!s.empty()) {
+            Vertex v = s.pop();
+
+            // if we are back at the source vertex, return our cycle
+            if (v == v_source) {
+                return edgeList;
+            }
+
+            // for all edges e adjacent to v
+            for (Edge e : g.edgesOf(v)) {
+                // if edge e is already labeled continue with next edge
+                if (discovered_e.get(e))
+                    continue;
+
+                // if vertex w is not discovered and not explored
+                Vertex w = e.getSecondVertex();
+                if (!discovered_v.get(w)) {
+                    // label w and e as discovered
+                    discovered_v.put(w, Boolean.TRUE);
+                    discovered_e.put(e, Boolean.TRUE);
+
+                    // push w onto the stack and and e to the list
+                    s.push(w);
+                    edgeList.add(e);
+                    continue outer;
+                }
+            }
+            // label v as explored
+            discovered_v.put(v, Boolean.TRUE);
+        }
         return edgeList;
+    }
+
+    private LinkedList<Edge> mergeTours(LinkedList<Edge> list1, LinkedList<Edge> list2) {
+        LinkedList<Edge> result = new LinkedList<Edge>();
+        return result;
     }
 }
