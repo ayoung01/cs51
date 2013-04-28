@@ -10,10 +10,6 @@ import java.io.File;
 
 public interface Graph_I {
 
-    double[][] getAdjMat();
-
-    int getDegree(Vertex v);
-
     Edge[] edgesOf(Vertex v);
 
     Edge edgeBetween(Vertex v1, Vertex v2);
@@ -24,12 +20,12 @@ public interface Graph_I {
 
     Vertex getRandomVertex();
 
-    Tour getRandomTour();
+//    Tour getRandomTour();
 
     int numVertices();
 
-    void printGraphToFile(String file);
+//    void printGraphToFile(String file);
 
-    String display();
+//    String display();
 
 }
