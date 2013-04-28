@@ -1,7 +1,4 @@
-import java.util.HashMap;
-import java.util.LinkedList;
-import java.util.PriorityQueue;
-import java.util.Stack;
+import java.util.*;
 
 /**
  * Created with IntelliJ IDEA.
@@ -136,10 +133,38 @@ public class Christofides implements TSP_I {
 
     // uses Hierholzer's Algorithm to find a Eulerian circuit
     private LinkedList<Edge> Hierholzer (GraphL g) {
+        HashMap<Vertex, LinkedList<Edge>> adjList = g.getAdjList();
         LinkedList<Edge> edgeList = new LinkedList<Edge>();
         Vertex v = g.getRandomVertex();
+        LinkedList<Edge> cycle = makeCycle(g, v);
+
+        // while the cycle does not contain all edges of G
+        while(!containsAllEdges(g, cycle)) {
+            Edge neighbor = findCycleNeighborEdge(g, cycle);
+            Vertex v1 = neighbor.getFirstVertex();
+
+            // remove the edges of the cycle to avoid turning them up again
+            g.deleteEdges(cycle);
+
+            // continue building the circuit
+            cycle = mergeTours(cycle, makeCycle(g, v1));
+        }
 
         return edgeList;
+    }
+
+    private Edge findCycleNeighborEdge(GraphL g, LinkedList<Edge> cycle) {
+        // Find a vertex v1 on the cycle that is incident with an unmarked edge
+        for (Edge e : cycle) {
+            LinkedList<Edge> neighbors = g.getNeighbors(e.getFirstVertex());
+            for (Edge neighbor : neighbors) {
+                if (!(cycle.contains(neighbor))) {
+                    return neighbor;
+                }
+            }
+        }
+        System.out.println("Failed to find edge not included on cycle");
+        return null;
     }
 
     // constructs a cycle in graph g starting from vertex v_source
@@ -169,8 +194,15 @@ public class Christofides implements TSP_I {
                 if (discovered_e.get(e))
                     continue;
 
-                // if vertex w is not discovered and not explored
                 Vertex w = e.getSecondVertex();
+
+                // if we are back at the source vertex, return our cycle
+                if (w == v_source) {
+                    edgeList.add(e);
+                    return edgeList;
+                }
+
+                // if vertex w is not discovered and not the source vertex
                 if (!discovered_v.get(w)) {
                     // label w and e as discovered
                     discovered_v.put(w, Boolean.TRUE);
@@ -188,8 +220,37 @@ public class Christofides implements TSP_I {
         return edgeList;
     }
 
+    // going off example here http://web.info.uvt.ro/~mmarin/lectures/GTC/c-09-new.pdf
+    // merges tours by adding edges of list2 in order to list1
     private LinkedList<Edge> mergeTours(LinkedList<Edge> list1, LinkedList<Edge> list2) {
-        LinkedList<Edge> result = new LinkedList<Edge>();
+
+        LinkedList<Edge> result = list1;
+        Vertex start2 = list2.getFirst().getFirstVertex();
+        int index = -1;
+
+        // figures out which index we want to start adding edges to
+        ListIterator<Edge> iterator = list1.listIterator(0);
+        while (iterator.hasNext()) {
+            Edge e = iterator.next();
+            Vertex v2 = e.getSecondVertex();
+            if (v2 == start2) {
+                index = list1.indexOf(e);
+            }
+        }
+
+        result.addAll(index + 1, list2);
         return result;
+    }
+
+    // returns true if all edges in 'edges' are contained in graph 'g', false otherwise
+    private boolean containsAllEdges(GraphL g, LinkedList<Edge>edges) {
+        HashMap<Vertex, LinkedList<Edge>> adjList = g.getAdjList();
+        for (Edge e : edges) {
+            Vertex v = e.getFirstVertex();
+            if (!(adjList.get(v).contains(e))) {
+                return false;
+            }
+        }
+        return true;
     }
 }

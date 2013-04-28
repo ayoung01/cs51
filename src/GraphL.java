@@ -116,12 +116,16 @@ public class GraphL implements Graph_I {
     }
 
     public Edge getRandomNeighborEdge(Vertex v) {
-        LinkedList<Edge> edgeList = adjList.get(v);
+        LinkedList<Edge> edgeList = getNeighbors(v);
         int randomNum = rand.nextInt(numVertices);
         while(randomNum == v.getId()) {
             randomNum = rand.nextInt();
         }
         return edgeList.get(randomNum);
+    }
+
+    public LinkedList<Edge> getNeighbors(Vertex v) {
+        return adjList.get(v);
     }
 
     public boolean isNotMemberOf(Vertex v, Vertex[] all)
@@ -148,11 +152,23 @@ public class GraphL implements Graph_I {
         return minEdge;
     }
 
+    public void deleteEdges (LinkedList<Edge> edgeList) {
+        for (Edge e : edgeList) {
+            Vertex v1 = e.getFirstVertex();
+            Vertex v2 = e.getSecondVertex();
+            adjList.get(v1).remove(e);
+            LinkedList<Edge> edges = adjList.get(v2);
+            for (Edge e2 : edges) {
+                if (e2.getSecondVertex() == v1)
+                    edges.remove(e2);
+            }
+        }
+    }
+
     public Vertex getRandomVertex() {
         int randomNum = rand.nextInt(numVertices);
         return new Vertex(randomNum);
     }
-
 
     public int numVertices() {
         return numVertices;
