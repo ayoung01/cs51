@@ -14,6 +14,7 @@ public class Tour {
     private double length;
     private Edge[] touredges;
     private Vertex[] vertices;
+    // position of the current vertex of the tour
     private int currpos;
     private int num;
 
@@ -96,11 +97,13 @@ public class Tour {
         return vertices[currpos];
     }
 
+    // returns an array of length (number of vertices in graph)
     Edge[] allEdges()
     {
         return touredges;
     }
 
+    // returns a vertex list of length n where n is number of valid vertices in tour so far
     Vertex[] verticesSoFar()
     {
         Vertex[] soFar = new Vertex[currpos];

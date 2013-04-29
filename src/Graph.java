@@ -10,7 +10,7 @@ import java.io.IOException;
  * Time: 4:35 PM
  * To change this template use File | Settings | File Templates.
  */
-public class Graph {
+public class Graph implements Graph_I {
 
     private int numVertices;
     private double[][] adjMat;
@@ -33,11 +33,24 @@ public class Graph {
         }
     }
 
+    // generates a graph given an adjacency matrix
+    public Graph(double[][] matrix) {
+        rand = new Random();
+        adjMat = matrix;
+        numVertices = adjMat.length;
+    }
+
     // generates a graph of a tree given a list of edges
+    // we give the edge weight between two vertices infinity if there is no edge
     public Graph(Edge[] edges) {
         rand = new Random();
         numVertices = edges.length + 1;
-        adjMat = new double [numVertices + 1][numVertices + 1];
+        adjMat = new double [numVertices][numVertices];
+        for (int i = 0; i < numVertices; i++) {
+            for (int j = 0; j < numVertices; j++) {
+                adjMat[i][j] = Double.MAX_VALUE;
+            }
+        }
         for (int i = 0; i < edges.length; i++) {
             Edge e = edges[i];
             int v1 = e.getFirstVertex().getId();
@@ -48,12 +61,12 @@ public class Graph {
         }
     }
 
-    double[][] getAdjMat() {
+    public double[][] getAdjMat() {
         return adjMat;
     }
 
-    int getDegree(Vertex v) {
-        int id = v.getId();
+    // returns the degree of a vertex with ID id
+    public int getDegree(int id) {
         int degree = 0;
         for (int i = 0; i < adjMat.length; i++) {
             if (adjMat[id][i] != 0) {
@@ -63,7 +76,7 @@ public class Graph {
         return degree;
     }
 
-    Edge[] edgesOf(Vertex v)
+    public Edge[] edgesOf(Vertex v)
     {
       int x = v.getId();
       Edge[] edgeList = new Edge[numVertices-1];
@@ -81,12 +94,12 @@ public class Graph {
       return edgeList;
     }
 
-    Edge edgeBetween(Vertex v1, Vertex v2)
+    public Edge edgeBetween(Vertex v1, Vertex v2)
     {
         return new Edge(v1,v2,adjMat[v1.getId()][v2.getId()]);
     }
 
-    Edge getRandomNeighborEdge(Vertex v)
+    public Edge getRandomNeighborEdge(Vertex v)
     {
         int x = v.getId();
         int randomNum = rand.nextInt(numVertices);
@@ -99,14 +112,14 @@ public class Graph {
 
     }
 
-    Vertex getRandomVertex()
+    public Vertex getRandomVertex()
     {
         int randomNum = rand.nextInt(numVertices);
 
         return new Vertex(randomNum);
     }
 
-    boolean isNotMemberOf(Vertex v, Vertex[] all)
+    public boolean isNotMemberOf(Vertex v, Vertex[] all)
     {
         int x = v.getId();
         for(int i = 0; i < all.length; i++)
@@ -117,7 +130,7 @@ public class Graph {
         return true;
     }
 
-    Edge getShortestNeighborEdge (Vertex v, Vertex[] already)
+    public Edge getShortestNeighborEdge (Vertex v, Vertex[] already)
     {
         int x = v.getId();
         double minweight = -1;
@@ -137,7 +150,7 @@ public class Graph {
         return new Edge(v, new Vertex(minvertex), minweight);
     }
 
-    Tour getRandomTour()
+    public Tour getRandomTour()
     {
         Vertex v = getRandomVertex();
         Tour t = new Tour(v, numVertices);
@@ -158,12 +171,12 @@ public class Graph {
         return t;
     }
 
-    int numVertices()
+    public int numVertices()
     {
         return numVertices;
     }
 
-    void printGraphToFile(String file)
+    public void printGraphToFile(String file)
     {
         try
         {
@@ -176,7 +189,7 @@ public class Graph {
         }
     }
 
-    String display()
+    public String display()
     {
         StringBuilder builder = new StringBuilder();
 

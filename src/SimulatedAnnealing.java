@@ -43,7 +43,7 @@ public class SimulatedAnnealing implements TSP_I {
               if(start.getLength() < best.getLength())
               {
                   best = start;
-                  System.out.printf("Iteration %d\n New best: %.2f\n", i, best.getLength());
+                  //System.out.printf("Iteration %d\n New best: %.2f\n", i, best.getLength());
               }
           }
       }
