@@ -2,14 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f30b32a5-b2ea-43fe-9d6f-e9a5228dd111" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Christofides.java" afterPath="$PROJECT_DIR$/src/Christofides.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/MainWindow.java" />
+      <change type="DELETED" beforePath="C:\Users\Brian\Dropbox\CS51\Final Project\src\Controller.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Brian\Dropbox\CS51\Final Project\src\Main.java" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="TSP.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="f30b32a5-b2ea-43fe-9d6f-e9a5228dd111" time="1367193659970" ignored="false" />
+    <file path="/Dummy.txt" changelist="f30b32a5-b2ea-43fe-9d6f-e9a5228dd111" time="1367199827736" ignored="false" />
     <file path="/TSP_I.java" changelist="f30b32a5-b2ea-43fe-9d6f-e9a5228dd111" time="1366502890654" ignored="false" />
-    <file path="/fragment.java" changelist="f30b32a5-b2ea-43fe-9d6f-e9a5228dd111" time="1365712022239" ignored="false" />
+    <file path="/fragment.java" changelist="f30b32a5-b2ea-43fe-9d6f-e9a5228dd111" time="1367199621613" ignored="false" />
     <file path="/Graph_I.java" changelist="f30b32a5-b2ea-43fe-9d6f-e9a5228dd111" time="1366506045304" ignored="false" />
     <file path="/Edge.java" changelist="f30b32a5-b2ea-43fe-9d6f-e9a5228dd111" time="1366553823261" ignored="false" />
     <file path="/Vertex.java" changelist="f30b32a5-b2ea-43fe-9d6f-e9a5228dd111" time="1365982941725" ignored="false" />
@@ -30,7 +32,10 @@
     <file path="/TwoOpt.java" changelist="f30b32a5-b2ea-43fe-9d6f-e9a5228dd111" time="1367095245794" ignored="false" />
     <file path="/Timer.java" changelist="f30b32a5-b2ea-43fe-9d6f-e9a5228dd111" time="1366999854043" ignored="false" />
     <file path="/GraphL.java" changelist="f30b32a5-b2ea-43fe-9d6f-e9a5228dd111" time="1367163353532" ignored="false" />
-    <file path="/Main.java" changelist="f30b32a5-b2ea-43fe-9d6f-e9a5228dd111" time="1367193379476" ignored="false" />
+    <file path="/Main.java" changelist="f30b32a5-b2ea-43fe-9d6f-e9a5228dd111" time="1367197507580" ignored="false" />
+    <file path="/draw.java" changelist="f30b32a5-b2ea-43fe-9d6f-e9a5228dd111" time="1367198855192" ignored="false" />
+    <file path="/Draw.java" changelist="f30b32a5-b2ea-43fe-9d6f-e9a5228dd111" time="1367199854744" ignored="false" />
+    <file path="/MainWindow.java" changelist="f30b32a5-b2ea-43fe-9d6f-e9a5228dd111" time="1367200011798" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -94,53 +99,20 @@
       <file leaf-file-name="TwoDimParser.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/TwoDimParser.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="62" column="49" selection-start="2057" selection-end="2057" vertical-scroll-proportion="0.0">
+            <state line="7" column="29" selection-start="156" selection-end="156" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Christofides.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Christofides.java">
+      <file leaf-file-name="MainWindow.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/MainWindow.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="24" column="98" selection-start="996" selection-end="996" vertical-scroll-proportion="0.66790354">
+            <state line="21" column="23" selection-start="487" selection-end="487" vertical-scroll-proportion="-0.5969697">
               <folding>
-                <element signature="method#PrimMST#0;class#Christofides#0" expanded="false" />
-                <element signature="method#getMinVertex#0;class#Christofides#0" expanded="false" />
-                <element signature="method#oddVerticesOnly#0;class#Christofides#0" expanded="false" />
-                <element signature="method#greedyMatch#0;class#Christofides#0" expanded="false" />
-                <element signature="method#combineGraphs#0;class#Christofides#0" expanded="false" />
-                <element signature="method#Hierholzer#0;class#Christofides#0" expanded="false" />
-                <element signature="e#5672#5678#0" expanded="true" />
-                <element signature="method#findCycleNeighborEdge#0;class#Christofides#0" expanded="false" />
-                <element signature="method#makeCycle#0;class#Christofides#0" expanded="false" />
-                <element signature="e#6971#6977#0" expanded="true" />
-                <element signature="e#7040#7057#0" expanded="true" />
-                <element signature="e#7118#7133#0" expanded="true" />
-                <element signature="e#7262#7270#0" expanded="true" />
-                <element signature="method#mergeTours#0;class#Christofides#0" expanded="false" />
-                <element signature="method#containsAllEdges#0;class#Christofides#0" expanded="false" />
-                <element signature="method#shortcutPaths#0;class#Christofides#0" expanded="false" />
-                <element signature="e#10142#10148#0" expanded="true" />
+                <element signature="n#!!doc" expanded="true" />
+                <element signature="imports" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="GraphL.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/GraphL.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="78" column="4" selection-start="2456" selection-end="2456" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Controller.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Controller.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="28" selection-start="28" selection-end="28" vertical-scroll-proportion="0.0">
-              <folding />
             </state>
           </provider>
         </entry>
@@ -154,10 +126,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Tour.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Tour.java">
+      <file leaf-file-name="GraphL.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/GraphL.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="32" column="0" selection-start="793" selection-end="793" vertical-scroll-proportion="0.0">
+            <state line="78" column="0" selection-start="2456" selection-end="2456" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Christofides.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Christofides.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="24" column="31" selection-start="996" selection-end="996" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -182,9 +163,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/Edge.java" />
-        <option value="$PROJECT_DIR$/src/Greedy.java" />
-        <option value="$PROJECT_DIR$/src/TSP_I.java" />
         <option value="$PROJECT_DIR$/src/Tour_I.java" />
         <option value="$PROJECT_DIR$/src/Tour.java" />
         <option value="$PROJECT_DIR$/src/Timer.java" />
@@ -196,15 +174,19 @@
         <option value="$PROJECT_DIR$/src/Graph_I.java" />
         <option value="$PROJECT_DIR$/src/GraphL.java" />
         <option value="$PROJECT_DIR$/src/Controller.java" />
-        <option value="$PROJECT_DIR$/src/Main.java" />
         <option value="$PROJECT_DIR$/src/Christofides.java" />
+        <option value="$PROJECT_DIR$/src/Main.java" />
+        <option value="$PROJECT_DIR$/src/draw.java" />
+        <option value="$PROJECT_DIR$/src/Draw.java" />
+        <option value="$PROJECT_DIR$/src/MainWindow.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="y" value="22" />
-    <option name="width" value="1280" />
-    <option name="height" value="725" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1382" />
+    <option name="height" value="744" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -232,7 +214,7 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -247,7 +229,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="cs51" />
+              <option name="myItemId" value="Final Project" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -257,7 +239,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="cs51" />
+              <option name="myItemId" value="Final Project" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -267,7 +249,7 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -290,7 +272,7 @@
       <recent name="$PROJECT_DIR$/src" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="Application.TwoDimParser">
     <configuration default="false" name="TwoDimParser" type="Application" factoryName="Application" temporary="true">
       <option name="MAIN_CLASS_NAME" value="TwoDimParser" />
       <option name="VM_PARAMETERS" />
@@ -337,19 +319,6 @@
       <option name="PORT" value="5005" />
       <method />
     </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <method />
-    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <module name="" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
@@ -375,6 +344,19 @@
       <envs />
       <properties />
       <listeners />
+      <method />
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -417,8 +399,8 @@
     </list>
     <recent_temporary>
       <list size="2">
-        <item index="0" class="java.lang.String" itemvalue="Application.Main" />
-        <item index="1" class="java.lang.String" itemvalue="Application.TwoDimParser" />
+        <item index="0" class="java.lang.String" itemvalue="Application.TwoDimParser" />
+        <item index="1" class="java.lang.String" itemvalue="Application.Main" />
       </list>
     </recent_temporary>
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
@@ -427,6 +409,11 @@
     </configuration>
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="SliceManager">
+    <option name="analysisUIOptions">
+      <AnalysisUIOptions />
+    </option>
+  </component>
   <component name="SvnConfiguration" maxAnnotateRevisions="500" myUseAcceleration="nothing" myAutoUpdateAfterCommit="false" cleanupOnStartRun="false">
     <option name="USER" value="" />
     <option name="PASSWORD" value="" />
@@ -599,7 +586,7 @@
     <option name="localTasksCounter" value="37" />
     <servers />
   </component>
-  <component name="TodoView" selected-index="4">
+  <component name="TodoView" selected-index="0">
     <todo-panel id="selected-file">
       <are-packages-shown value="false" />
       <are-modules-shown value="false" />
@@ -620,7 +607,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="22" width="1280" height="725" extended-state="0" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -631,13 +618,13 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32935154" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3261944" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32764506" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32935154" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32597622" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32767403" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17098865" sideWeight="0.6214876" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39482757" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17045455" sideWeight="0.60647357" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3935264" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -735,6 +722,13 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/Graph_I.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="30" column="1" selection-start="540" selection-end="540" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/TwoOpt.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="13" column="38" selection-start="334" selection-end="334" vertical-scroll-proportion="0.019428572" />
@@ -778,36 +772,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controller.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="28" selection-start="28" selection-end="28" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.7.0_09.jdk/Contents/Home/jre/lib/jfxrt.jar!/javafx/fxml/FXMLLoader.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="484" column="0" selection-start="25168" selection-end="25168" vertical-scroll-proportion="18.178423">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="38" selection-start="207" selection-end="207" vertical-scroll-proportion="0.36923078">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/TwoDimParser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="62" column="49" selection-start="2057" selection-end="2057" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Graph.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="204" column="31" selection-start="5353" selection-end="5353" vertical-scroll-proportion="0.74003464">
@@ -817,7 +781,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/GraphL.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="78" column="4" selection-start="2456" selection-end="2456" vertical-scroll-proportion="0.0">
+        <state line="78" column="0" selection-start="2456" selection-end="2456" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -838,25 +802,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Christofides.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="98" selection-start="996" selection-end="996" vertical-scroll-proportion="0.66790354">
+        <state line="24" column="31" selection-start="996" selection-end="996" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/TwoDimParser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="29" selection-start="156" selection-end="156" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/MainWindow.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="23" selection-start="487" selection-end="487" vertical-scroll-proportion="-0.5969697">
           <folding>
-            <element signature="method#PrimMST#0;class#Christofides#0" expanded="false" />
-            <element signature="method#getMinVertex#0;class#Christofides#0" expanded="false" />
-            <element signature="method#oddVerticesOnly#0;class#Christofides#0" expanded="false" />
-            <element signature="method#greedyMatch#0;class#Christofides#0" expanded="false" />
-            <element signature="method#combineGraphs#0;class#Christofides#0" expanded="false" />
-            <element signature="method#Hierholzer#0;class#Christofides#0" expanded="false" />
-            <element signature="e#5672#5678#0" expanded="true" />
-            <element signature="method#findCycleNeighborEdge#0;class#Christofides#0" expanded="false" />
-            <element signature="method#makeCycle#0;class#Christofides#0" expanded="false" />
-            <element signature="e#6971#6977#0" expanded="true" />
-            <element signature="e#7040#7057#0" expanded="true" />
-            <element signature="e#7118#7133#0" expanded="true" />
-            <element signature="e#7262#7270#0" expanded="true" />
-            <element signature="method#mergeTours#0;class#Christofides#0" expanded="false" />
-            <element signature="method#containsAllEdges#0;class#Christofides#0" expanded="false" />
-            <element signature="method#shortcutPaths#0;class#Christofides#0" expanded="false" />
-            <element signature="e#10142#10148#0" expanded="true" />
+            <element signature="n#!!doc" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
