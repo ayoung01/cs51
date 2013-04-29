@@ -10,14 +10,24 @@ import java.util.*;
 public class Christofides implements TSP_I {
     public Tour findShortestPath(Graph g)
     {
-        int numVertices = g.numVertices();
-        Tour t = new Tour(g.getRandomVertex(), numVertices);
-        return t;
+        LinkedList<Edge> christofides_solution = Christofides(g);
+        return new Tour((Edge[])(christofides_solution.toArray()));
     }
 
     private LinkedList<Edge> Christofides(Graph g) {
+        /*
+        Create the minimum spanning tree MST T of G.
+        Let O be the set of vertices with odd degree in T and find a perfect matching M with minimum weight in the complete graph over the vertices from .
+        Combine the edges of and to form a multigraph O.
+        Form an Eulerian circuit in  (H is Eulerian because it is connected, with only even-degree vertices).
+        Make the circuit found in previous step Hamiltonian by skipping visited nodes (shortcutting).
+         */
         Graph mst = PrimMST(g);
-        return new LinkedList<Edge>();
+        Graph odd_mst = oddVerticesOnly(mst);
+        Edge[] matches = greedyMatch(odd_mst);
+        GraphL multigraph = combineGraphs(mst, matches);
+        LinkedList<Edge> euler = Hierholzer(multigraph);
+        return shortcutPaths(euler);
     }
 
     // source: http://cs.fit.edu/~ryan/java/programs/graph/Prim-java.html
