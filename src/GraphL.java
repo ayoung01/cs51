@@ -77,6 +77,24 @@ public class GraphL implements Graph_I {
         numVertices = adjList.size();
     }
 
+    public Edge getEdge(Vertex v1, Vertex v2) {
+        try {
+            double weight = -1;
+
+            LinkedList<Edge> edges = adjList.get(v1);
+            for (Edge e : edges) {
+                Vertex w = e.getSecondVertex();
+                if (w == v2) {
+                    return e;
+                }
+            }
+        }
+        catch (Exception e) {
+            System.out.println("No edge found!");
+        }
+        return null;
+    }
+
     public void addEdges(Edge[] edges) {
         for (Edge e : edges) {
             Vertex v1 = e.getFirstVertex();
