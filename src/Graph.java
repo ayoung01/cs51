@@ -1,3 +1,4 @@
+import javax.swing.plaf.BorderUIResource;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.PrintWriter;
@@ -15,11 +16,13 @@ public class Graph implements Graph_I {
     private int numVertices;
     private double[][] adjMat;
     private Random rand;
+    private EuclideanVertex_2D[] vertices;
 
     // each vertex must have a distinct ID between 0, numVertices - 1
     public Graph(EuclideanVertex_2D[] vertices)
     {
         rand = new Random();
+        this.vertices = vertices;
         numVertices = vertices.length;
         adjMat = new double [numVertices][numVertices];
         for(int i = 0; i < numVertices; i++)
@@ -175,6 +178,50 @@ public class Graph implements Graph_I {
     {
         return numVertices;
     }
+
+
+    public EuclideanVertex_2D[] getVertices() {
+        return vertices;
+    }
+    public double getX1Min() {
+        double min = vertices[0].getX1();
+
+        for(int i=0;i<vertices.length;i++) {
+            if (vertices[i].getX1()<min) {
+                min = vertices[i].getX1();
+            }
+        }
+        return min;
+    }
+    public double getX1Max() {
+        double max = vertices[0].getX1();
+        for(int i=0;i<vertices.length;i++) {
+            if (vertices[i].getX1() > max) {
+                max = vertices[i].getX1();
+            }
+        }
+        return max;
+    }
+    public double getX2Min() {
+        double min = vertices[0].getX2();
+
+        for(int i=0;i<vertices.length;i++) {
+            if (vertices[i].getX1()<min) {
+                min = vertices[i].getX2();
+            }
+        }
+        return min;
+    }
+    public double getX2Max() {
+        double max = vertices[0].getX2();
+        for(int i=0;i<vertices.length;i++) {
+            if (vertices[i].getX1() > max) {
+                max = vertices[i].getX2();
+            }
+        }
+        return max;
+    }
+
 
     public void printGraphToFile(String file)
     {
