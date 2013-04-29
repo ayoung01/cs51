@@ -15,6 +15,11 @@ public class Christofides implements TSP_I {
         return t;
     }
 
+    private LinkedList<Edge> Christofides(Graph g) {
+        Graph mst = PrimMST(g);
+        return new LinkedList<Edge>();
+    }
+
     // source: http://cs.fit.edu/~ryan/java/programs/graph/Prim-java.html
     // returns an MST
     private Graph PrimMST(Graph g) {
@@ -252,5 +257,16 @@ public class Christofides implements TSP_I {
             }
         }
         return true;
+    }
+
+    // turns a Eulerian circuit into a Hamiltonian path by skipping visited nodes
+    private LinkedList<Edge> shortcutPaths(LinkedList<Edge>edges) {
+        LinkedList<Edge> hamiltonian_path = new LinkedList<Edge>();
+        for (Edge e : edges) {
+            if (!(hamiltonian_path.contains(e))) {
+                hamiltonian_path.add(e);
+            }
+        }
+        return hamiltonian_path;
     }
 }
