@@ -17,7 +17,7 @@ import java.util.Random;
 
 public class Genetic implements TSP_I{
 
-    private final double mutationRate = 0.03;
+    private final double mutationRate = 0.05;
     private final int tournamentSize = 7;
 
 

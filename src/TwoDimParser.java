@@ -19,12 +19,12 @@ public class TwoDimParser {
     long startTime;
     long endTime;
     double duration;
-    TwoDimParser hello = new TwoDimParser("test131.txt", 131);
+    TwoDimParser hello = new TwoDimParser("test.txt", 29);
     hello.printEverything();
     Graph g = new Graph(hello.allVertices());
 
 
-    SimulatedAnnealing sim = new SimulatedAnnealing(1000000, 1, 0.995);
+    SimulatedAnnealing sim = new SimulatedAnnealing(2000000, 1, 0.995);
     startTime = System.nanoTime();
     Tour bestsim = sim.findShortestPath(g);
     endTime = System.nanoTime();
@@ -48,9 +48,15 @@ public class TwoDimParser {
     System.out.printf("Greedy: %.2f in %.5f s\n", bestgreedy.getLength(), duration);
     bestgreedy.printGraphToFile("Greedybest.txt");
 
+    Christofides christofides = new Christofides();
+    startTime = System.nanoTime();
+    Tour bestchrist = christofides.findShortestPath(g);
+    endTime = System.nanoTime();
+    duration = (endTime-startTime)/1000000000.0;
+    System.out.printf("Christofides: %.2f in %.5f s\n", bestchrist.getLength(),duration);
+    bestchrist.printGraphToFile("christbest.txt");
 
-
-    Genetic genetic = new Genetic(300,1000);
+    Genetic genetic = new Genetic(100,30000);
     startTime = System.nanoTime();
     Tour bestgenetic = genetic.findShortestPath(g);
     endTime = System.nanoTime();
