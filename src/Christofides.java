@@ -27,7 +27,7 @@ public class Christofides implements TSP_I {
         Edge[] matches = greedyMatch(odd_mst);
         GraphL multigraph = combineGraphs(mst, matches);
         LinkedList<Edge> euler = Hierholzer(multigraph);
-        return shortcutPaths(euler);
+        return shortcutPaths(euler, new GraphL(g));
     }
 
     // source: http://cs.fit.edu/~ryan/java/programs/graph/Prim-java.html
@@ -270,13 +270,35 @@ public class Christofides implements TSP_I {
     }
 
     // turns a Eulerian circuit into a Hamiltonian path by skipping visited nodes
-    private LinkedList<Edge> shortcutPaths(LinkedList<Edge>edges) {
+    private LinkedList<Edge> shortcutPaths(LinkedList<Edge>edges, GraphL g) {
+        Vertex source = edges.getFirst().getFirstVertex();
+        HashMap<Vertex, LinkedList<Edge>> adjList = g.getAdjList();
+
         LinkedList<Edge> hamiltonian_path = new LinkedList<Edge>();
+        LinkedList<Vertex> vs = new LinkedList<Vertex>();
+        LinkedList<Vertex> shortcut_vs = new LinkedList<Vertex>();
+
+        // create a list of vertices in the order in which they are visited
         for (Edge e : edges) {
-            if (!(hamiltonian_path.contains(e))) {
-                hamiltonian_path.add(e);
+            vs.add(e.getFirstVertex());
+        }
+
+        // copy the list of vertices but shortcut any nodes that have already been visited
+        for (Vertex v : vs) {
+            if (!(shortcut_vs.contains(v))) {
+                shortcut_vs.add(v);
             }
         }
+
+        // create the list of edges in the resultant Hamiltonian path
+        for (int i = 0; i < shortcut_vs.size()-1; i++) {
+            Vertex v1 = shortcut_vs.get(i);
+            Vertex v2 = shortcut_vs.get(i+1);
+            hamiltonian_path.add(g.getEdge(v1, v2));
+        }
+
+        // add the last edge to close the cycle
+        hamiltonian_path.add(g.getEdge(hamiltonian_path.getLast().getSecondVertex(), source));
         return hamiltonian_path;
     }
 }
