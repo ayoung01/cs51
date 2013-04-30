@@ -2,14 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f30b32a5-b2ea-43fe-9d6f-e9a5228dd111" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Graph.java" afterPath="$PROJECT_DIR$/src/Graph.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/MainWindow.java" afterPath="$PROJECT_DIR$/src/MainWindow.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/TwoDimParser.java" afterPath="$PROJECT_DIR$/src/TwoDimParser.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="TSP.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="f30b32a5-b2ea-43fe-9d6f-e9a5228dd111" time="1367353925690" ignored="false" />
+    <file path="/Dummy.txt" changelist="f30b32a5-b2ea-43fe-9d6f-e9a5228dd111" time="1367354795780" ignored="false" />
     <file path="/TSP_I.java" changelist="f30b32a5-b2ea-43fe-9d6f-e9a5228dd111" time="1366502890654" ignored="false" />
     <file path="/fragment.java" changelist="f30b32a5-b2ea-43fe-9d6f-e9a5228dd111" time="1367350752211" ignored="false" />
     <file path="/Graph_I.java" changelist="f30b32a5-b2ea-43fe-9d6f-e9a5228dd111" time="1366506045304" ignored="false" />
@@ -34,7 +32,7 @@
     <file path="/GraphL.java" changelist="f30b32a5-b2ea-43fe-9d6f-e9a5228dd111" time="1367201217636" ignored="false" />
     <file path="/Main.java" changelist="f30b32a5-b2ea-43fe-9d6f-e9a5228dd111" time="1367193379476" ignored="false" />
     <file path="/Graphics2Dim.java" changelist="f30b32a5-b2ea-43fe-9d6f-e9a5228dd111" time="1367350492003" ignored="false" />
-    <file path="/MainWindow.java" changelist="f30b32a5-b2ea-43fe-9d6f-e9a5228dd111" time="1367354718461" ignored="false" />
+    <file path="/MainWindow.java" changelist="f30b32a5-b2ea-43fe-9d6f-e9a5228dd111" time="1367356369141" ignored="false" />
     <file path="/EuclieanVertex.java" changelist="f30b32a5-b2ea-43fe-9d6f-e9a5228dd111" time="1367353448201" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -99,7 +97,7 @@
       <file leaf-file-name="TwoDimParser.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/TwoDimParser.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="50" column="49" selection-start="1687" selection-end="1687" vertical-scroll-proportion="0.0">
+            <state line="32" column="47" selection-start="374" selection-end="941" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -150,10 +148,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MainWindow.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="MainWindow.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/MainWindow.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="65" column="11" selection-start="2271" selection-end="2271" vertical-scroll-proportion="0.0">
+            <state line="87" column="8" selection-start="3044" selection-end="3044" vertical-scroll-proportion="0.8454546">
               <folding>
                 <element signature="e#343#370#0" expanded="true" />
               </folding>
@@ -161,10 +159,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Graph.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="Graph.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Graph.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="210" column="25" selection-start="5635" selection-end="5635" vertical-scroll-proportion="0.83278686">
+            <state line="253" column="25" selection-start="6544" selection-end="6544" vertical-scroll-proportion="-8.12">
               <folding />
             </state>
           </provider>
@@ -221,13 +219,13 @@
         <option value="$PROJECT_DIR$/src/EuclieanVertex.java" />
         <option value="$PROJECT_DIR$/src/EuclideanVertex.java" />
         <option value="$PROJECT_DIR$/src/TwoDimParser.java" />
-        <option value="$PROJECT_DIR$/src/MainWindow.java" />
         <option value="$PROJECT_DIR$/src/Graph.java" />
+        <option value="$PROJECT_DIR$/src/MainWindow.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-13" />
+    <option name="x" value="-2" />
     <option name="width" value="1380" />
     <option name="height" value="744" />
   </component>
@@ -647,7 +645,11 @@
       <created>1367353930792</created>
       <updated>1367353930792</updated>
     </task>
-    <option name="localTasksCounter" value="42" />
+    <task id="LOCAL-00042" summary="Created generalized EuclideanVertex">
+      <created>1367354803889</created>
+      <updated>1367354803889</updated>
+    </task>
+    <option name="localTasksCounter" value="43" />
     <servers />
   </component>
   <component name="TodoView" selected-index="4">
@@ -671,7 +673,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-13" y="0" width="1380" height="744" extended-state="0" />
+    <frame x="-2" y="0" width="1380" height="744" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -850,13 +852,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/TwoDimParser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="50" column="49" selection-start="1687" selection-end="1687" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Graphics2Dim.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="15" column="5" selection-start="268" selection-end="268" vertical-scroll-proportion="0.0">
@@ -878,19 +873,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/MainWindow.java">
+    <entry file="file://$PROJECT_DIR$/src/Graph.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="65" column="11" selection-start="2271" selection-end="2271" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#343#370#0" expanded="true" />
-          </folding>
+        <state line="253" column="25" selection-start="6544" selection-end="6544" vertical-scroll-proportion="-8.12">
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Graph.java">
+    <entry file="file://$PROJECT_DIR$/src/TwoDimParser.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="210" column="25" selection-start="5635" selection-end="5635" vertical-scroll-proportion="0.83278686">
+        <state line="32" column="47" selection-start="374" selection-end="941" vertical-scroll-proportion="0.0">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/MainWindow.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="87" column="8" selection-start="3044" selection-end="3044" vertical-scroll-proportion="0.8454546">
+          <folding>
+            <element signature="e#343#370#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

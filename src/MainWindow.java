@@ -20,9 +20,26 @@ import java.util.Random;
 public class MainWindow extends JPanel
 {
     Graph graph;
+    Tour besttour;
 
     public static void main(String[] args) {
-        MainWindow panel = new MainWindow(new Graph(new TwoDimParser("test.txt", 29).allVertices()));                            // window for drawing
+
+        long startTime;
+        long endTime;
+        double duration;
+        TwoDimParser hello = new TwoDimParser("test.txt", 29);
+        hello.printEverything();
+        Graph g = new Graph(hello.allVertices());
+
+        SimulatedAnnealing sim = new SimulatedAnnealing(2000000, 1, 0.995);
+        startTime = System.nanoTime();
+        Tour bestsim = sim.findShortestPath(g);
+        endTime = System.nanoTime();
+        duration = (endTime - startTime)/1000000000.0;
+        System.out.printf("Simulated Annealing: %.2f in %.5f s\n ", bestsim.getLength(), duration);
+        bestsim.printGraphToFile("simbest.txt");
+
+        MainWindow panel = new MainWindow(g, bestsim);                            // window for drawing
         JFrame application = new JFrame("Graph");                            // the program itself
 
         application.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);   // set frame to exit
@@ -33,10 +50,11 @@ public class MainWindow extends JPanel
     }
 
 
-    public MainWindow(Graph g)                       // set up graphics window
+    public MainWindow(Graph g, Tour t)                       // set up graphics window
     {
         super();
         this.graph = g;
+        this.besttour = t;
         setBackground(Color.WHITE);
 
     }
@@ -67,6 +85,7 @@ public class MainWindow extends JPanel
             Ellipse2D.Double circle = new Ellipse2D.Double(pos1+(width/20), pos2+(height/20), 5, 5);
             g2d.fill(circle);
         }
+
 
 
         // Drawing code goes here
