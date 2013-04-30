@@ -2,11 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f30b32a5-b2ea-43fe-9d6f-e9a5228dd111" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Graphics2Dim.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="TSP.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="f30b32a5-b2ea-43fe-9d6f-e9a5228dd111" time="1367201901063" ignored="false" />
+    <file path="/Dummy.txt" changelist="f30b32a5-b2ea-43fe-9d6f-e9a5228dd111" time="1367202253998" ignored="false" />
     <file path="/TSP_I.java" changelist="f30b32a5-b2ea-43fe-9d6f-e9a5228dd111" time="1366502890654" ignored="false" />
     <file path="/fragment.java" changelist="f30b32a5-b2ea-43fe-9d6f-e9a5228dd111" time="1365712022239" ignored="false" />
     <file path="/Graph_I.java" changelist="f30b32a5-b2ea-43fe-9d6f-e9a5228dd111" time="1366506045304" ignored="false" />
@@ -30,6 +31,7 @@
     <file path="/Timer.java" changelist="f30b32a5-b2ea-43fe-9d6f-e9a5228dd111" time="1366999854043" ignored="false" />
     <file path="/GraphL.java" changelist="f30b32a5-b2ea-43fe-9d6f-e9a5228dd111" time="1367201217636" ignored="false" />
     <file path="/Main.java" changelist="f30b32a5-b2ea-43fe-9d6f-e9a5228dd111" time="1367193379476" ignored="false" />
+    <file path="/Graphics2Dim.java" changelist="f30b32a5-b2ea-43fe-9d6f-e9a5228dd111" time="1367350492003" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,11 +92,31 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="TwoDimParser.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="TwoDimParser.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/TwoDimParser.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="48" column="42" selection-start="1631" selection-end="1631" vertical-scroll-proportion="0.051671732">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Main.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Main.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="2" column="46" selection-start="97" selection-end="97" vertical-scroll-proportion="0.103343464">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Graphics2Dim.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Graphics2Dim.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="15" column="8" selection-start="268" selection-end="268" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -182,7 +204,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/Edge.java" />
         <option value="$PROJECT_DIR$/src/Greedy.java" />
         <option value="$PROJECT_DIR$/src/TSP_I.java" />
         <option value="$PROJECT_DIR$/src/Tour_I.java" />
@@ -198,6 +219,7 @@
         <option value="$PROJECT_DIR$/src/GraphL.java" />
         <option value="$PROJECT_DIR$/src/Christofides.java" />
         <option value="$PROJECT_DIR$/src/TwoDimParser.java" />
+        <option value="$PROJECT_DIR$/src/Graphics2Dim.java" />
       </list>
     </option>
   </component>
@@ -604,7 +626,11 @@
       <created>1367201923171</created>
       <updated>1367201923171</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="Christofides with text again">
+      <created>1367202257801</created>
+      <updated>1367202257801</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="TodoView" selected-index="4">
@@ -695,7 +721,7 @@
     <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Christofides with text" />
+    <option name="LAST_COMMIT_MESSAGE" value="Christofides with text again" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -709,7 +735,6 @@
     <option name="UPDATE_FILTER_BY_SCOPE" value="false" />
     <option name="SHOW_FILE_HISTORY_AS_TREE" value="false" />
     <option name="FILE_HISTORY_SPLITTER_PROPORTION" value="0.6" />
-    <MESSAGE value="More interfaces! Is String/File not a built in thing?" />
     <MESSAGE value="why so many interfaces..." />
     <MESSAGE value="modified Edge and deleted interfaces" />
     <MESSAGE value="test" />
@@ -734,6 +759,7 @@
     <MESSAGE value="Added FX stuff" />
     <MESSAGE value="Finished Christofides.. maybe? Probably need to test and debug" />
     <MESSAGE value="Christofides with text" />
+    <MESSAGE value="Christofides with text again" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -743,13 +769,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Tour.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="0" selection-start="793" selection-end="793" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/TwoOpt.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="13" column="38" selection-start="334" selection-end="334" vertical-scroll-proportion="0.019428572" />
@@ -797,15 +816,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="2" column="28" selection-start="28" selection-end="28" vertical-scroll-proportion="0.0">
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="38" selection-start="207" selection-end="207" vertical-scroll-proportion="0.36923078">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -865,7 +875,23 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/TwoDimParser.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="48" column="42" selection-start="1631" selection-end="1631" vertical-scroll-proportion="0.051671732">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Graphics2Dim.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="8" selection-start="268" selection-end="268" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="46" selection-start="97" selection-end="97" vertical-scroll-proportion="0.103343464">
           <folding />
         </state>
       </provider>
