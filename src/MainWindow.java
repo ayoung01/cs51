@@ -75,6 +75,10 @@ public class MainWindow extends JPanel
         Graphics2D g2d = (Graphics2D) g;
         g.drawString("Hello", 475 , 375 );
         g2d.setColor(Color.blue);
+
+        drawGraph(graph);
+        drawTour();
+
         for(int i=0;i<vertices.length;i++) {
             System.out.println("x1 = " + vertices[i].getCoord(0));
             System.out.println("x2 = " + vertices[i].getCoord(1));
