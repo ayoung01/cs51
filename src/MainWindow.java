@@ -57,7 +57,7 @@ public class MainWindow extends JPanel
         super.paintComponent(g);            // call superclass to make panel display correctly
 
         Graphics2D g2d = (Graphics2D) g;
-        g.drawString("Hello", 100 , 100 );
+        g.drawString("Hello", 475 , 375 );
         g2d.setColor(Color.blue);
         for(int i=0;i<vertices.length;i++) {
             System.out.println("x1 = " + vertices[i].getX1());
@@ -65,6 +65,7 @@ public class MainWindow extends JPanel
             int pos1 = (int) (Math.abs((vertices[i].getX1() - graphX1Min)/(graphX1Max-graphX1Min))*(4*width/5));
             int pos2 = (int) (Math.abs((vertices[i].getX2() - graphX2Min)/(graphX2Max-graphX2Min))*(4*height/5));
             System.out.println("Min = " + graphX1Min + " Max = " + graphX1Max + " pos1 = " + pos1 +" pos2 = " + pos2);
+            System.out.println("Min = " + graphX2Min + " Max = " + graphX2Max + " pos1 = " + pos1 +" pos2 = " + pos2);
 
             Ellipse2D.Double circle = new Ellipse2D.Double(pos1+(width/20), pos2+(height/20), 5, 5);
             g2d.fill(circle);

@@ -16,10 +16,10 @@ public class Graph implements Graph_I {
     private int numVertices;
     private double[][] adjMat;
     private Random rand;
-    private EuclideanVertex_2D[] vertices;
+    private EuclideanVertex[] vertices;
 
     // each vertex must have a distinct ID between 0, numVertices - 1
-    public Graph(EuclideanVertex_2D[] vertices)
+    public Graph(EuclideanVertex[] vertices)
     {
         rand = new Random();
         this.vertices = vertices;
@@ -180,46 +180,44 @@ public class Graph implements Graph_I {
     }
 
 
-    public EuclideanVertex_2D[] getVertices() {
+    public EuclideanVertex[] getVertices() {
         return vertices;
     }
-    public double getX1Min() {
-        double min = vertices[0].getX1();
 
-        for(int i=0;i<vertices.length;i++) {
-            if (vertices[i].getX1()<min) {
-                min = vertices[i].getX1();
+    public double[] getMins()
+    {
+        double[] mins = new double[vertices[0].getDim()];
+        for(int i = 0; i < mins.length; i++)
+        {
+            double min = 0;
+            for(int j = 0; j < numVertices; j++)
+            {
+                double currcoord = vertices[j].getCoord(i);
+                if(currcoord < min)
+                    min = currcoord;
             }
+            mins[i] = min;
         }
-        return min;
-    }
-    public double getX1Max() {
-        double max = vertices[0].getX1();
-        for(int i=0;i<vertices.length;i++) {
-            if (vertices[i].getX1() > max) {
-                max = vertices[i].getX1();
-            }
-        }
-        return max;
-    }
-    public double getX2Min() {
-        double min = vertices[0].getX2();
 
-        for(int i=0;i<vertices.length;i++) {
-            if (vertices[i].getX1()<min) {
-                min = vertices[i].getX2();
-            }
-        }
-        return min;
+        return mins;
     }
-    public double getX2Max() {
-        double max = vertices[0].getX2();
-        for(int i=0;i<vertices.length;i++) {
-            if (vertices[i].getX1() > max) {
-                max = vertices[i].getX2();
+
+    public double[] getMaxes()
+    {
+        double[] maxes = new double[vertices[0].getDim()];
+        for(int i = 0; i < maxes.length; i++)
+        {
+            double max = 0;
+            for(int j = 0; j < numVertices; j++)
+            {
+                double currcoord = vertices[j].getCoord(i);
+                if(currcoord > max)
+                    max = currcoord;
             }
+            maxes[i] = max;
         }
-        return max;
+
+        return maxes;
     }
 
 
