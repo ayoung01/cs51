@@ -12,7 +12,7 @@ import java.io.FileReader;
 import java.io.IOException;
 public class TwoDimParser {
 
-    EuclideanVertex_2D[] vertices;
+    EuclideanVertex[] vertices;
 
     public static void main(String[] args){
 
@@ -48,13 +48,13 @@ public class TwoDimParser {
     System.out.printf("Greedy: %.2f in %.5f s\n", bestgreedy.getLength(), duration);
     bestgreedy.printGraphToFile("Greedybest.txt");
 
-    Christofides christofides = new Christofides();
+    /*Christofides christofides = new Christofides();
     startTime = System.nanoTime();
     Tour bestchrist = christofides.findShortestPath(g);
     endTime = System.nanoTime();
     duration = (endTime-startTime)/1000000000.0;
     System.out.printf("Christofides: %.2f in %.5f s\n", bestchrist.getLength(),duration);
-    bestchrist.printGraphToFile("christbest.txt");
+    bestchrist.printGraphToFile("christbest.txt");  */
 
     Genetic genetic = new Genetic(100,30000);
     startTime = System.nanoTime();
@@ -68,7 +68,7 @@ public class TwoDimParser {
 
     public TwoDimParser(String f, int numEntries)
     {
-      vertices = new EuclideanVertex_2D[numEntries];
+      vertices = new EuclideanVertex[numEntries];
 
         try
         {
@@ -79,7 +79,8 @@ public class TwoDimParser {
             while ((sCurrentLine = br.readLine()) != null && i < numEntries) {
                 System.out.println(sCurrentLine);
                 xy = sCurrentLine.trim().split("\\s+");
-                vertices[i] = new EuclideanVertex_2D(i, Double.parseDouble(xy[1]), Double.parseDouble(xy[2]));
+                double[] coords = {Double.parseDouble(xy[1]), Double.parseDouble(xy[2])};
+                vertices[i] = new EuclideanVertex(i, coords);
                 i++;
             }
 
@@ -89,7 +90,7 @@ public class TwoDimParser {
 
     }
 
-    EuclideanVertex_2D[] allVertices()
+    EuclideanVertex[] allVertices()
     {
         return vertices;
     }

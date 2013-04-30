@@ -47,11 +47,9 @@ public class MainWindow extends JPanel
         int width = getWidth();             // width of window in pixels
         int height = getHeight();           // height of window in pixels
 
-        EuclideanVertex_2D[] vertices = graph.getVertices();
-        double graphX1Min = graph.getX1Min();
-        double graphX1Max = graph.getX1Max();
-        double graphX2Min = graph.getX2Min();
-        double graphX2Max = graph.getX2Max();
+        EuclideanVertex[] vertices = graph.getVertices();
+        double[] mins = graph.getMins();
+        double[] maxes = graph.getMaxes();
 
 
         super.paintComponent(g);            // call superclass to make panel display correctly
@@ -60,12 +58,11 @@ public class MainWindow extends JPanel
         g.drawString("Hello", 475 , 375 );
         g2d.setColor(Color.blue);
         for(int i=0;i<vertices.length;i++) {
-            System.out.println("x1 = " + vertices[i].getX1());
-            System.out.println("x2 = " + vertices[i].getX2());
-            int pos1 = (int) (Math.abs((vertices[i].getX1() - graphX1Min)/(graphX1Max-graphX1Min))*(4*width/5));
-            int pos2 = (int) (Math.abs((vertices[i].getX2() - graphX2Min)/(graphX2Max-graphX2Min))*(4*height/5));
-            System.out.println("Min = " + graphX1Min + " Max = " + graphX1Max + " pos1 = " + pos1 +" pos2 = " + pos2);
-            System.out.println("Min = " + graphX2Min + " Max = " + graphX2Max + " pos1 = " + pos1 +" pos2 = " + pos2);
+            System.out.println("x1 = " + vertices[i].getCoord(0));
+            System.out.println("x2 = " + vertices[i].getCoord(1));
+            int pos1 = (int) (Math.abs((vertices[i].getCoord(0) - mins[0])/(maxes[0]-mins[0]))*(4*width/5));
+            int pos2 = (int) (Math.abs((vertices[i].getCoord(1) - mins[1])/(maxes[1]-mins[1]))*(4*height/5));
+            System.out.printf("Mins: %.2f,%.2f Maxes: %.2f, %.2f\n", mins[0],mins[1],maxes[0],maxes[1]);
 
             Ellipse2D.Double circle = new Ellipse2D.Double(pos1+(width/20), pos2+(height/20), 5, 5);
             g2d.fill(circle);

@@ -2,14 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f30b32a5-b2ea-43fe-9d6f-e9a5228dd111" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/EuclideanVertex.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Graph.java" afterPath="$PROJECT_DIR$/src/Graph.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/MainWindow.java" afterPath="$PROJECT_DIR$/src/MainWindow.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/TwoDimParser.java" afterPath="$PROJECT_DIR$/src/TwoDimParser.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="TSP.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="f30b32a5-b2ea-43fe-9d6f-e9a5228dd111" time="1367350701898" ignored="false" />
+    <file path="/Dummy.txt" changelist="f30b32a5-b2ea-43fe-9d6f-e9a5228dd111" time="1367353925690" ignored="false" />
     <file path="/TSP_I.java" changelist="f30b32a5-b2ea-43fe-9d6f-e9a5228dd111" time="1366502890654" ignored="false" />
     <file path="/fragment.java" changelist="f30b32a5-b2ea-43fe-9d6f-e9a5228dd111" time="1367350752211" ignored="false" />
     <file path="/Graph_I.java" changelist="f30b32a5-b2ea-43fe-9d6f-e9a5228dd111" time="1366506045304" ignored="false" />
@@ -18,7 +18,7 @@
     <file path="/VertexSet.java" changelist="f30b32a5-b2ea-43fe-9d6f-e9a5228dd111" time="1365802743663" ignored="false" />
     <file path="/EdgeSet.java" changelist="f30b32a5-b2ea-43fe-9d6f-e9a5228dd111" time="1365802767768" ignored="false" />
     <file path="/Tour.java" changelist="f30b32a5-b2ea-43fe-9d6f-e9a5228dd111" time="1366988306545" ignored="false" />
-    <file path="/Graph.java" changelist="f30b32a5-b2ea-43fe-9d6f-e9a5228dd111" time="1367353881986" ignored="false" />
+    <file path="/Graph.java" changelist="f30b32a5-b2ea-43fe-9d6f-e9a5228dd111" time="1367354779625" ignored="false" />
     <file path="/Edge_I.java" changelist="f30b32a5-b2ea-43fe-9d6f-e9a5228dd111" time="1365802789489" ignored="false" />
     <file path="/Vertex_I.java" changelist="f30b32a5-b2ea-43fe-9d6f-e9a5228dd111" time="1365802800675" ignored="false" />
     <file path="/Tour_I.java" changelist="f30b32a5-b2ea-43fe-9d6f-e9a5228dd111" time="1366552627787" ignored="false" />
@@ -26,7 +26,7 @@
     <file path="/EuclideanVertex_2D.java" changelist="f30b32a5-b2ea-43fe-9d6f-e9a5228dd111" time="1366508640486" ignored="false" />
     <file path="/SimulatedAnnealing.java" changelist="f30b32a5-b2ea-43fe-9d6f-e9a5228dd111" time="1366997754253" ignored="false" />
     <file path="/Greedy.java" changelist="f30b32a5-b2ea-43fe-9d6f-e9a5228dd111" time="1366569879663" ignored="false" />
-    <file path="/TwoDimParser.java" changelist="f30b32a5-b2ea-43fe-9d6f-e9a5228dd111" time="1367201808540" ignored="false" />
+    <file path="/TwoDimParser.java" changelist="f30b32a5-b2ea-43fe-9d6f-e9a5228dd111" time="1367354351265" ignored="false" />
     <file path="/main.java" changelist="f30b32a5-b2ea-43fe-9d6f-e9a5228dd111" time="1366508803656" ignored="false" />
     <file path="/Christofides.java" changelist="f30b32a5-b2ea-43fe-9d6f-e9a5228dd111" time="1367201592740" ignored="false" />
     <file path="/TwoOpt.java" changelist="f30b32a5-b2ea-43fe-9d6f-e9a5228dd111" time="1367095245794" ignored="false" />
@@ -34,7 +34,7 @@
     <file path="/GraphL.java" changelist="f30b32a5-b2ea-43fe-9d6f-e9a5228dd111" time="1367201217636" ignored="false" />
     <file path="/Main.java" changelist="f30b32a5-b2ea-43fe-9d6f-e9a5228dd111" time="1367193379476" ignored="false" />
     <file path="/Graphics2Dim.java" changelist="f30b32a5-b2ea-43fe-9d6f-e9a5228dd111" time="1367350492003" ignored="false" />
-    <file path="/MainWindow.java" changelist="f30b32a5-b2ea-43fe-9d6f-e9a5228dd111" time="1367351856121" ignored="false" />
+    <file path="/MainWindow.java" changelist="f30b32a5-b2ea-43fe-9d6f-e9a5228dd111" time="1367354718461" ignored="false" />
     <file path="/EuclieanVertex.java" changelist="f30b32a5-b2ea-43fe-9d6f-e9a5228dd111" time="1367353448201" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -99,7 +99,7 @@
       <file leaf-file-name="TwoDimParser.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/TwoDimParser.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="84" column="0" selection-start="2985" selection-end="2985" vertical-scroll-proportion="0.0">
+            <state line="50" column="49" selection-start="1687" selection-end="1687" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -153,7 +153,7 @@
       <file leaf-file-name="MainWindow.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/MainWindow.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="66" column="48" selection-start="2317" selection-end="2317" vertical-scroll-proportion="0.0">
+            <state line="65" column="11" selection-start="2271" selection-end="2271" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="e#343#370#0" expanded="true" />
               </folding>
@@ -164,7 +164,7 @@
       <file leaf-file-name="Graph.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Graph.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+            <state line="210" column="25" selection-start="5635" selection-end="5635" vertical-scroll-proportion="0.83278686">
               <folding />
             </state>
           </provider>
@@ -182,7 +182,7 @@
       <file leaf-file-name="EuclideanVertex.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/EuclideanVertex.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="70" selection-start="34" selection-end="34" vertical-scroll-proportion="0.0">
+            <state line="27" column="70" selection-start="592" selection-end="592" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -217,17 +217,17 @@
         <option value="$PROJECT_DIR$/src/Main.java" />
         <option value="$PROJECT_DIR$/src/GraphL.java" />
         <option value="$PROJECT_DIR$/src/Christofides.java" />
-        <option value="$PROJECT_DIR$/src/TwoDimParser.java" />
         <option value="$PROJECT_DIR$/src/Graphics2Dim.java" />
-        <option value="$PROJECT_DIR$/src/MainWindow.java" />
         <option value="$PROJECT_DIR$/src/EuclieanVertex.java" />
         <option value="$PROJECT_DIR$/src/EuclideanVertex.java" />
+        <option value="$PROJECT_DIR$/src/TwoDimParser.java" />
+        <option value="$PROJECT_DIR$/src/MainWindow.java" />
         <option value="$PROJECT_DIR$/src/Graph.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-2" />
+    <option name="x" value="-13" />
     <option name="width" value="1380" />
     <option name="height" value="744" />
   </component>
@@ -643,7 +643,11 @@
       <created>1367350686313</created>
       <updated>1367350686313</updated>
     </task>
-    <option name="localTasksCounter" value="41" />
+    <task id="LOCAL-00041" summary="Created generalized EuclideanVertex">
+      <created>1367353930792</created>
+      <updated>1367353930792</updated>
+    </task>
+    <option name="localTasksCounter" value="42" />
     <servers />
   </component>
   <component name="TodoView" selected-index="4">
@@ -667,7 +671,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-2" y="0" width="1380" height="744" extended-state="0" />
+    <frame x="-13" y="0" width="1380" height="744" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -683,7 +687,7 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1707132" sideWeight="0.60750854" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.1707132" sideWeight="0.60750854" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.39249146" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -734,7 +738,7 @@
     <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Waiting" />
+    <option name="LAST_COMMIT_MESSAGE" value="Created generalized EuclideanVertex" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -748,7 +752,6 @@
     <option name="UPDATE_FILTER_BY_SCOPE" value="false" />
     <option name="SHOW_FILE_HISTORY_AS_TREE" value="false" />
     <option name="FILE_HISTORY_SPLITTER_PROPORTION" value="0.6" />
-    <MESSAGE value="modified Edge and deleted interfaces" />
     <MESSAGE value="test" />
     <MESSAGE value="Albert" />
     <MESSAGE value="2D Euclidean Vertex" />
@@ -773,6 +776,7 @@
     <MESSAGE value="Christofides with text" />
     <MESSAGE value="Christofides with text again" />
     <MESSAGE value="Waiting" />
+    <MESSAGE value="Created generalized EuclideanVertex" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -832,39 +836,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Graphics2Dim.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="5" selection-start="268" selection-end="268" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Christofides.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="30" column="5" selection-start="1261" selection-end="1261" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/MainWindow.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="66" column="48" selection-start="2317" selection-end="2317" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#343#370#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/TwoDimParser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="84" column="0" selection-start="2985" selection-end="2985" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/EuclideanVertex_2D.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="81" selection-start="546" selection-end="546" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -876,16 +850,46 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/TwoDimParser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="50" column="49" selection-start="1687" selection-end="1687" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Graphics2Dim.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="5" selection-start="268" selection-end="268" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/EuclideanVertex_2D.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="81" selection-start="546" selection-end="546" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/EuclideanVertex.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="70" selection-start="34" selection-end="34" vertical-scroll-proportion="0.0">
+        <state line="27" column="70" selection-start="592" selection-end="592" vertical-scroll-proportion="0.0">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/MainWindow.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="65" column="11" selection-start="2271" selection-end="2271" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#343#370#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Graph.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+        <state line="210" column="25" selection-start="5635" selection-end="5635" vertical-scroll-proportion="0.83278686">
           <folding />
         </state>
       </provider>

@@ -189,8 +189,8 @@ public class Graph implements Graph_I {
         double[] mins = new double[vertices[0].getDim()];
         for(int i = 0; i < mins.length; i++)
         {
-            double min = 0;
-            for(int j = 0; j < numVertices; j++)
+            double min = vertices[0].getCoord(i);
+            for(int j = 1; j < numVertices; j++)
             {
                 double currcoord = vertices[j].getCoord(i);
                 if(currcoord < min)
@@ -207,8 +207,8 @@ public class Graph implements Graph_I {
         double[] maxes = new double[vertices[0].getDim()];
         for(int i = 0; i < maxes.length; i++)
         {
-            double max = 0;
-            for(int j = 0; j < numVertices; j++)
+            double max = vertices[0].getCoord(1);
+            for(int j = 1; j < numVertices; j++)
             {
                 double currcoord = vertices[j].getCoord(i);
                 if(currcoord > max)
