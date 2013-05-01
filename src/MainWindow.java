@@ -6,11 +6,10 @@
  * To change this template use File | Settings | File Templates.
  */
 
-import javax.swing.JFrame;
+import javax.swing.*;
 import java.awt.*;
-import javax.swing.JPanel;
-import javax.swing.JLabel;
-import javax.swing.ImageIcon;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.awt.geom.Ellipse2D;
 import java.util.Random;
 
@@ -55,6 +54,7 @@ public class MainWindow extends JPanel
         System.out.printf("Greedy: %.2f in %.5f s\n", bestgreedy.getLength(), duration);
         bestgreedy.printGraphToFile("Greedybest.txt");
 
+        /*
         Genetic genetic = new Genetic(100,30000);
         startTime = System.nanoTime();
         Tour bestgenetic = genetic.findShortestPath(g);
@@ -62,14 +62,27 @@ public class MainWindow extends JPanel
         duration = (endTime-startTime)/1000000000.0;
         System.out.printf("Genetic: %.2f in %.5f s\n", bestgenetic.getLength(),duration);
         bestgenetic.printGraphToFile("Geneticbest.txt");
+        */
+
+        MainWindow panel = new MainWindow(g, bestsim);                            // window for drawing
+        JRadioButton btn = new JRadioButton("Simulated Annealing");
+        btn.addActionListener(new SimulatedAnnealingListener());
+
+        JPanel other = new JPanel();
+        other.add(btn);
 
 
-        MainWindow panel = new MainWindow(g, bestgenetic);                            // window for drawing
-        JFrame application = new JFrame("Graph");                            // the program itself
+        JFrame application = new JFrame("Graph");
+
+        application.getContentPane().setBackground(Color.black);// the program itself
+
+        application.getContentPane().setLayout(new BorderLayout());
+        application.getContentPane().add(panel, BorderLayout.WEST);
+        application.getContentPane().add(other, BorderLayout.EAST);
 
         application.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);   // set frame to exit
         // when it is closed
-        application.add(panel);
+        //application.add(panel);
         application.setSize(500, 400);         // window is 500 pixels wide, 400 high
         application.setVisible(true);
     }
@@ -81,6 +94,9 @@ public class MainWindow extends JPanel
         this.graph = g;
         this.besttour = t;
         setBackground(Color.WHITE);
+        Dimension d1 = new Dimension(250,150);
+        this.setMaximumSize(d1);
+        this.setPreferredSize(d1);
 
     }
 
@@ -130,6 +146,15 @@ public class MainWindow extends JPanel
 
         // Drawing code goes here
     }
+
+    public class SimulatedAnnealingListener implements ActionListener {
+        public void actionPerformed(ActionEvent e) {
+
+        }
+
+    }
+
+}
 
 
 
