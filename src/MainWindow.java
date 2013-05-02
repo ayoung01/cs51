@@ -28,7 +28,7 @@ public class MainWindow extends JPanel
         double duration;
         TwoDimParser hello = new TwoDimParser("test.txt", 29);
         hello.printEverything();
-        Graph g = new Graph(hello.allVertices());
+        final Graph g = new Graph(hello.allVertices());
 
         SimulatedAnnealing sim = new SimulatedAnnealing(2000000, 1, 0.995);
         startTime = System.nanoTime();
@@ -48,7 +48,7 @@ public class MainWindow extends JPanel
 
         Greedy greedisgood = new Greedy();
         startTime = System.nanoTime();
-        Tour bestgreedy = greedisgood.findShortestPath(g);
+        final Tour bestgreedy = greedisgood.findShortestPath(g);
         endTime = System.nanoTime();
         duration = (endTime - startTime)/1000000000.0;
         System.out.printf("Greedy: %.2f in %.5f s\n", bestgreedy.getLength(), duration);
@@ -64,22 +64,33 @@ public class MainWindow extends JPanel
         bestgenetic.printGraphToFile("Geneticbest.txt");
         */
 
+        final JFrame application = new JFrame("Graph");
+
         MainWindow panel = new MainWindow(g, bestsim);                            // window for drawing
+
+
         JRadioButton btn = new JRadioButton("Simulated Annealing");
-        btn.addActionListener(new SimulatedAnnealingListener());
+        btn.addActionListener(new ActionListener() {
+
+            public void actionPerformed(ActionEvent e)
+            {
+                //Execute when button is pressed
+
+                application.removeAll();
+                application.getContentPane().add(new MainWindow(g, bestgreedy));
+            }
+        });
 
         JPanel other = new JPanel();
         other.add(btn);
 
 
-        JFrame application = new JFrame("Graph");
+
 
         application.getContentPane().setBackground(Color.black);// the program itself
-
         application.getContentPane().setLayout(new BorderLayout());
         application.getContentPane().add(panel, BorderLayout.WEST);
         application.getContentPane().add(other, BorderLayout.EAST);
-
         application.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);   // set frame to exit
         // when it is closed
         //application.add(panel);
@@ -150,12 +161,10 @@ public class MainWindow extends JPanel
     public class SimulatedAnnealingListener implements ActionListener {
         public void actionPerformed(ActionEvent e) {
 
+
         }
 
     }
 
 }
 
-
-
-}
