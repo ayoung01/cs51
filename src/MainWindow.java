@@ -21,91 +21,14 @@ public class MainWindow extends JPanel
     Graph graph;
     Tour besttour;
 
-    public static void main(String[] args) {
 
-        long startTime;
-        long endTime;
-        double duration;
-        TwoDimParser hello = new TwoDimParser("test.txt", 29);
-        hello.printEverything();
-        final Graph g = new Graph(hello.allVertices());
-
-        SimulatedAnnealing sim = new SimulatedAnnealing(2000000, 1, 0.995);
-        startTime = System.nanoTime();
-        Tour bestsim = sim.findShortestPath(g);
-        endTime = System.nanoTime();
-        duration = (endTime - startTime)/1000000000.0;
-        System.out.printf("Simulated Annealing: %.2f in %.5f s\n ", bestsim.getLength(), duration);
-        bestsim.printGraphToFile("simbest.txt");
-
-        TwoOpt twoopt = new TwoOpt();
-        startTime = System.nanoTime();
-        Tour besttwoopt = twoopt.findShortestPath(g);
-        endTime = System.nanoTime();
-        duration = (endTime - startTime)/1000000000.0;
-        System.out.printf("Two Opt: %.2f in %.5f s\n", besttwoopt.getLength(), duration);
-        besttwoopt.printGraphToFile("twooptbest.txt");
-
-        Greedy greedisgood = new Greedy();
-        startTime = System.nanoTime();
-        final Tour bestgreedy = greedisgood.findShortestPath(g);
-        endTime = System.nanoTime();
-        duration = (endTime - startTime)/1000000000.0;
-        System.out.printf("Greedy: %.2f in %.5f s\n", bestgreedy.getLength(), duration);
-        bestgreedy.printGraphToFile("Greedybest.txt");
-
-        /*
-        Genetic genetic = new Genetic(100,30000);
-        startTime = System.nanoTime();
-        Tour bestgenetic = genetic.findShortestPath(g);
-        endTime = System.nanoTime();
-        duration = (endTime-startTime)/1000000000.0;
-        System.out.printf("Genetic: %.2f in %.5f s\n", bestgenetic.getLength(),duration);
-        bestgenetic.printGraphToFile("Geneticbest.txt");
-        */
-
-        final JFrame application = new JFrame("Graph");
-
-        MainWindow panel = new MainWindow(g, bestsim);                            // window for drawing
-
-
-        JRadioButton btn = new JRadioButton("Simulated Annealing");
-        btn.addActionListener(new ActionListener() {
-
-            public void actionPerformed(ActionEvent e)
-            {
-                //Execute when button is pressed
-
-                application.removeAll();
-                application.getContentPane().add(new MainWindow(g, bestgreedy));
-            }
-        });
-
-        JPanel other = new JPanel();
-        other.add(btn);
-
-
-
-
-        application.getContentPane().setBackground(Color.black);// the program itself
-        application.getContentPane().setLayout(new BorderLayout());
-        application.getContentPane().add(panel, BorderLayout.WEST);
-        application.getContentPane().add(other, BorderLayout.EAST);
-        application.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);   // set frame to exit
-        // when it is closed
-        //application.add(panel);
-        application.setSize(500, 400);         // window is 500 pixels wide, 400 high
-        application.setVisible(true);
-    }
-
-
-    public MainWindow(Graph g, Tour t)                       // set up graphics window
+    public MainWindow(Graph g, Tour t, int height, int width)                       // set up graphics window
     {
         super();
         this.graph = g;
         this.besttour = t;
         setBackground(Color.WHITE);
-        Dimension d1 = new Dimension(250,150);
+        Dimension d1 = new Dimension(height,width);
         this.setMaximumSize(d1);
         this.setPreferredSize(d1);
 
@@ -151,19 +74,8 @@ public class MainWindow extends JPanel
         for(int i=0;i<length;i++) {
             g2d.drawLine(points[i].getX()+radius,points[i].getY()+radius,points[(i+1)%length].getX()+radius,points[(i+1)%length].getY()+radius);
         }
-
-
-
-
-        // Drawing code goes here
-    }
-
-    public class SimulatedAnnealingListener implements ActionListener {
-        public void actionPerformed(ActionEvent e) {
-
-
-        }
-
+        String mystring = "Tour length: " + besttour.getLength();
+        g2d.drawString(mystring, 12,12);// Drawing code goes here
     }
 
 }
