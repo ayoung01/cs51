@@ -2,16 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f30b32a5-b2ea-43fe-9d6f-e9a5228dd111" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test.txt" />
-      <change type="DELETED" beforePath="C:\Users\mgentili\Dropbox\CS51FinalProject\cs51\src\TSPDisplay.form" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\mgentili\Dropbox\CS51FinalProject\cs51\src\testgraphics.java" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test194.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Genetic.java" afterPath="$PROJECT_DIR$/src/Genetic.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Graph.java" afterPath="$PROJECT_DIR$/src/Graph.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/MainWindow.java" afterPath="$PROJECT_DIR$/src/MainWindow.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/TSPDisplay.java" afterPath="$PROJECT_DIR$/src/TSPDisplay.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="TSP.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="f30b32a5-b2ea-43fe-9d6f-e9a5228dd111" time="1367514520057" ignored="false" />
+    <file path="/Dummy.txt" changelist="f30b32a5-b2ea-43fe-9d6f-e9a5228dd111" time="1367524994832" ignored="false" />
     <file path="/TSP_I.java" changelist="f30b32a5-b2ea-43fe-9d6f-e9a5228dd111" time="1366502890654" ignored="false" />
     <file path="/fragment.java" changelist="f30b32a5-b2ea-43fe-9d6f-e9a5228dd111" time="1367521492573" ignored="false" />
     <file path="/Graph_I.java" changelist="f30b32a5-b2ea-43fe-9d6f-e9a5228dd111" time="1366506045304" ignored="false" />
@@ -20,7 +20,7 @@
     <file path="/VertexSet.java" changelist="f30b32a5-b2ea-43fe-9d6f-e9a5228dd111" time="1365802743663" ignored="false" />
     <file path="/EdgeSet.java" changelist="f30b32a5-b2ea-43fe-9d6f-e9a5228dd111" time="1365802767768" ignored="false" />
     <file path="/Tour.java" changelist="f30b32a5-b2ea-43fe-9d6f-e9a5228dd111" time="1366988306545" ignored="false" />
-    <file path="/Graph.java" changelist="f30b32a5-b2ea-43fe-9d6f-e9a5228dd111" time="1367354779625" ignored="false" />
+    <file path="/Graph.java" changelist="f30b32a5-b2ea-43fe-9d6f-e9a5228dd111" time="1367539170221" ignored="false" />
     <file path="/Edge_I.java" changelist="f30b32a5-b2ea-43fe-9d6f-e9a5228dd111" time="1365802789489" ignored="false" />
     <file path="/Vertex_I.java" changelist="f30b32a5-b2ea-43fe-9d6f-e9a5228dd111" time="1365802800675" ignored="false" />
     <file path="/Tour_I.java" changelist="f30b32a5-b2ea-43fe-9d6f-e9a5228dd111" time="1366552627787" ignored="false" />
@@ -36,10 +36,11 @@
     <file path="/GraphL.java" changelist="f30b32a5-b2ea-43fe-9d6f-e9a5228dd111" time="1367201217636" ignored="false" />
     <file path="/Main.java" changelist="f30b32a5-b2ea-43fe-9d6f-e9a5228dd111" time="1367193379476" ignored="false" />
     <file path="/Graphics2Dim.java" changelist="f30b32a5-b2ea-43fe-9d6f-e9a5228dd111" time="1367350492003" ignored="false" />
-    <file path="/MainWindow.java" changelist="f30b32a5-b2ea-43fe-9d6f-e9a5228dd111" time="1367524827055" ignored="false" />
+    <file path="/MainWindow.java" changelist="f30b32a5-b2ea-43fe-9d6f-e9a5228dd111" time="1367539011515" ignored="false" />
     <file path="/EuclieanVertex.java" changelist="f30b32a5-b2ea-43fe-9d6f-e9a5228dd111" time="1367353448201" ignored="false" />
     <file path="/Point.java" changelist="f30b32a5-b2ea-43fe-9d6f-e9a5228dd111" time="1367356409094" ignored="false" />
     <file path="/TSPDisplay.java" changelist="f30b32a5-b2ea-43fe-9d6f-e9a5228dd111" time="1367524562431" ignored="false" />
+    <file path="/Genetic.java" changelist="f30b32a5-b2ea-43fe-9d6f-e9a5228dd111" time="1367593831787" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -121,7 +122,7 @@
       <file leaf-file-name="Genetic.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Genetic.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="38" selection-start="715" selection-end="715" vertical-scroll-proportion="0.0">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -148,7 +149,7 @@
       <file leaf-file-name="Graph.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Graph.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="211" column="124" selection-start="5672" selection-end="5672" vertical-scroll-proportion="0.0">
+            <state line="204" column="45" selection-start="5438" selection-end="5438" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -157,7 +158,7 @@
       <file leaf-file-name="MainWindow.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/MainWindow.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="82" column="31" selection-start="2669" selection-end="2669" vertical-scroll-proportion="0.0">
+            <state line="41" column="10" selection-start="1021" selection-end="1021" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="n#!!doc" expanded="true" />
                 <element signature="imports" expanded="true" />
@@ -170,10 +171,19 @@
       <file leaf-file-name="TSPDisplay.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/TSPDisplay.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="49" column="87" selection-start="1507" selection-end="1507" vertical-scroll-proportion="0.82474226">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="test194.txt" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test194.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="193" column="25" selection-start="4935" selection-end="4935" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -197,8 +207,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/TwoOpt.java" />
-        <option value="$PROJECT_DIR$/src/Graph_I.java" />
         <option value="$PROJECT_DIR$/src/Controller.java" />
         <option value="$PROJECT_DIR$/src/Main.java" />
         <option value="$PROJECT_DIR$/src/GraphL.java" />
@@ -207,12 +215,14 @@
         <option value="$PROJECT_DIR$/src/EuclieanVertex.java" />
         <option value="$PROJECT_DIR$/src/EuclideanVertex.java" />
         <option value="$PROJECT_DIR$/src/TwoDimParser.java" />
-        <option value="$PROJECT_DIR$/src/Graph.java" />
         <option value="$PROJECT_DIR$/src/Point.java" />
         <option value="$PROJECT_DIR$/src/TSPDisplay.form" />
         <option value="$PROJECT_DIR$/src/testgraphics.java" />
-        <option value="$PROJECT_DIR$/src/TSPDisplay.java" />
+        <option value="$PROJECT_DIR$/src/test194.txt" />
+        <option value="$PROJECT_DIR$/src/Graph.java" />
         <option value="$PROJECT_DIR$/src/MainWindow.java" />
+        <option value="$PROJECT_DIR$/src/Genetic.java" />
+        <option value="$PROJECT_DIR$/src/TSPDisplay.java" />
       </list>
     </option>
   </component>
@@ -303,7 +313,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\mgentili\Dropbox\CS51FinalProject\cs51\src" />
       <recent name="$PROJECT_DIR$/src" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\mgentili\Dropbox\CS51FinalProject\cs51" />
     </key>
   </component>
   <component name="RunManager" selected="Application.TSPDisplay">
@@ -661,7 +675,11 @@
       <created>1367514527554</created>
       <updated>1367514527554</updated>
     </task>
-    <option name="localTasksCounter" value="44" />
+    <task id="LOCAL-00044" summary="Crude graphics work now">
+      <created>1367524999348</created>
+      <updated>1367524999348</updated>
+    </task>
+    <option name="localTasksCounter" value="45" />
     <servers />
   </component>
   <component name="TodoView" selected-index="4">
@@ -686,7 +704,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-2" y="0" width="1380" height="744" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32852808" sideWeight="0.67235494" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -702,8 +720,8 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16995448" sideWeight="0.41808873" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.58191127" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.16312595" sideWeight="0.41808873" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22696246" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -753,7 +771,7 @@
     <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="playing with graphics" />
+    <option name="LAST_COMMIT_MESSAGE" value="Crude graphics work now" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -767,7 +785,6 @@
     <option name="UPDATE_FILTER_BY_SCOPE" value="false" />
     <option name="SHOW_FILE_HISTORY_AS_TREE" value="false" />
     <option name="FILE_HISTORY_SPLITTER_PROPORTION" value="0.6" />
-    <MESSAGE value="2D Euclidean Vertex" />
     <MESSAGE value="EuclideanVertex_2D renamed." />
     <MESSAGE value="Changed graph" />
     <MESSAGE value="Added some graph functions, created Vertex interface" />
@@ -792,6 +809,7 @@
     <MESSAGE value="Created generalized EuclideanVertex" />
     <MESSAGE value="GUI of graph and tour" />
     <MESSAGE value="playing with graphics" />
+    <MESSAGE value="Crude graphics work now" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -864,13 +882,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Genetic.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="38" selection-start="715" selection-end="715" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/TwoDimParser.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="59" column="0" selection-start="2057" selection-end="2057" vertical-scroll-proportion="0.0">
@@ -878,16 +889,23 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/test194.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="193" column="25" selection-start="4935" selection-end="4935" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Graph.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="211" column="124" selection-start="5672" selection-end="5672" vertical-scroll-proportion="0.0">
+        <state line="204" column="45" selection-start="5438" selection-end="5438" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/MainWindow.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="82" column="31" selection-start="2669" selection-end="2669" vertical-scroll-proportion="0.0">
+        <state line="41" column="10" selection-start="1021" selection-end="1021" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="n#!!doc" expanded="true" />
             <element signature="imports" expanded="true" />
@@ -896,9 +914,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Genetic.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/TSPDisplay.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="49" column="87" selection-start="1507" selection-end="1507" vertical-scroll-proportion="0.82474226">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

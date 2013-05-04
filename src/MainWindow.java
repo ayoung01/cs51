@@ -39,6 +39,7 @@ public class MainWindow extends JPanel
     {
         int width = getWidth();             // width of window in pixels
         int height = getHeight();           // height of window in pixels
+        //System.out.printf("Width: %d, Height: %d", width, height);
         int radius = 2;
 
         EuclideanVertex[] vertices = graph.getVertices();
@@ -74,6 +75,8 @@ public class MainWindow extends JPanel
         for(int i=0;i<length;i++) {
             g2d.drawLine(points[i].getX()+radius,points[i].getY()+radius,points[(i+1)%length].getX()+radius,points[(i+1)%length].getY()+radius);
         }
+
+        g2d.setColor(Color.red);
         String mystring = "Tour length: " + besttour.getLength();
         g2d.drawString(mystring, 12,12);// Drawing code goes here
     }

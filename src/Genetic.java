@@ -276,8 +276,13 @@ public class Genetic implements TSP_I{
                 v[i] = temp;
             }
         }
+
+        double swapProbability = 0.9;
         mutated = new Tour(v,g);
-        if (mutated.getLength()<a.getLength()) {
+        if (rand.nextDouble() < swapProbability) {
+            if (mutated.getLength() < a.getLength()) {
+                return mutated;
+            }
             return mutated;
         }
         else return a;
