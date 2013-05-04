@@ -2,11 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f30b32a5-b2ea-43fe-9d6f-e9a5228dd111" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TSPReport.doc" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="TSP.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="f30b32a5-b2ea-43fe-9d6f-e9a5228dd111" time="1367656135206" ignored="false" />
+    <file path="/Dummy.txt" changelist="f30b32a5-b2ea-43fe-9d6f-e9a5228dd111" time="1367656162763" ignored="false" />
     <file path="/TSP_I.java" changelist="f30b32a5-b2ea-43fe-9d6f-e9a5228dd111" time="1366502890654" ignored="false" />
     <file path="/fragment.java" changelist="f30b32a5-b2ea-43fe-9d6f-e9a5228dd111" time="1367521492573" ignored="false" />
     <file path="/Graph_I.java" changelist="f30b32a5-b2ea-43fe-9d6f-e9a5228dd111" time="1366506045304" ignored="false" />
@@ -99,7 +100,7 @@
       <file leaf-file-name="TwoDimParser.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/TwoDimParser.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="98" column="55" selection-start="3753" selection-end="3753" vertical-scroll-proportion="0.8545781">
+            <state line="98" column="55" selection-start="3753" selection-end="3753" vertical-scroll-proportion="0.8484849">
               <folding />
             </state>
           </provider>
@@ -663,7 +664,11 @@
       <created>1367656139238</created>
       <updated>1367656139238</updated>
     </task>
-    <option name="localTasksCounter" value="47" />
+    <task id="LOCAL-00047" summary="Added to genetic part of final report">
+      <created>1367656167783</created>
+      <updated>1367656167783</updated>
+    </task>
+    <option name="localTasksCounter" value="48" />
     <servers />
   </component>
   <component name="TodoView" selected-index="4">
@@ -898,7 +903,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/TwoDimParser.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="98" column="55" selection-start="3753" selection-end="3753" vertical-scroll-proportion="0.8545781">
+        <state line="98" column="55" selection-start="3753" selection-end="3753" vertical-scroll-proportion="0.8484849">
           <folding />
         </state>
       </provider>
