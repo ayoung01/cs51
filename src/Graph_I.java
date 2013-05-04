@@ -10,7 +10,7 @@ import java.io.File;
 
 public interface Graph_I {
 
-    Edge[] edgesOf(Vertex v);
+//    Edge[] edgesOf(Vertex v);
 
     Edge edgeBetween(Vertex v1, Vertex v2);
 

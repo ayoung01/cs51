@@ -8,6 +8,7 @@ import java.util.*;
  * To change this template use File | Settings | File Templates.
  */
 public class Christofides implements TSP_I {
+
     public Tour findShortestPath(Graph g)
     {
         LinkedList<Edge> christofides_solution = Christofides(g);
@@ -22,12 +23,15 @@ public class Christofides implements TSP_I {
         Form an Eulerian circuit in  (H is Eulerian because it is connected, with only even-degree vertices).
         Make the circuit found in previous step Hamiltonian by skipping visited nodes (shortcutting).
          */
+        GraphL gL = new GraphL(g);
         Graph mst = PrimMST(g);
-        Graph odd_mst = oddVerticesOnly(mst);
-        Edge[] matches = greedyMatch(odd_mst);
-        GraphL multigraph = combineGraphs(mst, matches);
+        GraphL mstL = new GraphL(mst);
+        HashSet<Integer> oddVertices = mstL.getOddVertices();
+        GraphL matches = greedyMatch(oddVertices, gL);
+        GraphL multigraph = combineGraphs(mstL, matches);
         LinkedList<Edge> euler = Hierholzer(multigraph);
-        return shortcutPaths(euler, new GraphL(g));
+//        return shortcutPaths(euler, new GraphL(g));
+        return new LinkedList<Edge>();
     }
 
     // source: http://cs.fit.edu/~ryan/java/programs/graph/Prim-java.html
@@ -52,21 +56,25 @@ public class Christofides implements TSP_I {
             final int nextVertex = getMinVertex(dist, visited);
             visited[nextVertex] = true;
 
+            // assuming complete graph
             for (int j = 0; j < numVertices; j++) {
-                final double d = weights[i][j];
-                if (d < dist[j]) {
-                    dist[j] = d;
-                    prev[j] = nextVertex;
+                if (j != nextVertex && !visited[j]) {
+                    final double d = weights[i][j];
+                    if (d < dist[j]) {
+                        dist[j] = d;
+                        prev[j] = nextVertex;
+                    }
                 }
             }
         }
 
         // convert prev array to an Edge array
         Edge[] MST = new Edge[numVertices - 1];
-        for (int i = 0; i < prev.length; i++) {
+        for (int i = 1; i < prev.length; i++) {
             Edge e = new Edge(new Vertex(i), new Vertex(prev[i]), weights[i][prev[i]]);
-            MST[i] = e;
+            MST[i-1] = e;
         }
+        Graph graph = new Graph(MST);
         return new Graph(MST);
     }
 
@@ -83,78 +91,172 @@ public class Christofides implements TSP_I {
         return vertex_id;
     }
 
-    // returns a graph with all vertices of even degree removed
-    private Graph oddVerticesOnly(Graph g) {
-        double[][] adjMat = g.getAdjMat();
-        // set all weights of edges adjacent to even-degree vertices to zero
-        for (int i = 0; i < adjMat.length; i++) {
-            if (g.getDegree(i) % 2 == 0) {
-                for (int j = 0; j < adjMat.length; j++) {
-                    adjMat[i][j] = Double.MAX_VALUE;
-                    adjMat[j][i] = Double.MAX_VALUE;
-                }
-            }
-        }
-        return new Graph(adjMat);
-    }
-    // finds a matching with approximate minimum weight in the complete graph using the
-    // greedy approach
-    private Edge[] greedyMatch(Graph g) {
-        double[][] weights = g.getAdjMat();
+    // finds a matching with approximate minimum weight in the COMPLETE GRAPH using the greedy approach
+    private GraphL greedyMatch(HashSet<Integer> vertices, GraphL g) {
+        LinkedList<Edge> matches = new LinkedList<Edge>();
+        HashMap<Integer, LinkedList<Edge>> adjList = g.getAdjList();
+        int num_matches = vertices.size() / 2;
 
-        // number of edges will be 1/2 of the number of vertices
-        Edge[] edges = new Edge[weights.length/2];
-        int edges_index = 0;
+        // delete all edges/vertices that are not incident on the given vertices
+        HashMap<Integer, LinkedList<Edge>> trash = new HashMap<Integer, LinkedList<Edge>>();
 
-        for (int iter = 0; iter < weights.length/2; iter++) {
-            // find lowest weight edge in the graph by iterating through all edges
-            // save the vertex ids of the lowest weight edge
-            double min = Double.MAX_VALUE;
-            int min_id1 = -1;
-            int min_id2 = -1;
-            for (int i = 0; i < weights.length; i++) {
-                for (int j = i + 1; j < weights.length; j++) {
-                    if (weights[i][j] < min) {
-                        min_id1 = i;
-                        min_id2 = j;
+        Iterator e_iter = adjList.entrySet().iterator();
+        while (e_iter.hasNext()) {
+            Map.Entry pair = (Map.Entry)e_iter.next();
+            LinkedList<Edge> edges = (LinkedList<Edge>)(pair.getValue());
+            Integer key = (Integer)(pair.getKey());
+            outer:
+            for (Edge e : edges) {
+                Iterator<Integer> v_iter = e.getVertices().iterator();
+                while (v_iter.hasNext()) {
+                    int v = v_iter.next();
+                    if (!vertices.contains(v)) {
+                        // save for later removal
+                        if (trash.get(key) == null) {
+                            trash.put(key, new LinkedList<Edge>());
+                        }
+                        trash.get(key).add(e);
+                        continue outer;
                     }
                 }
             }
-            // remove all edges incident on the two vertices by setting weight to infinity
-            for (int i = 0; i < weights.length; i++) {
-                weights[min_id1][i] = Double.MAX_VALUE;
-                weights[i][min_id1] = Double.MAX_VALUE;
-                weights[min_id2][i] = Double.MAX_VALUE;
-                weights[i][min_id2] = Double.MAX_VALUE;
+        }
+
+        // delete all the edges marked
+        Iterator iterator0 = trash.entrySet().iterator();
+
+        while (iterator0.hasNext()) {
+            Map.Entry pair = (Map.Entry)iterator0.next();
+            Integer key = (Integer)(pair.getKey());
+            LinkedList<Edge> edge_list = (LinkedList<Edge>)(pair.getValue());
+            if (!vertices.contains(key)) {
+                adjList.remove(key);
             }
-            // add a new Edge to the result array
-            try {
-                edges[edges_index++] = new Edge(new Vertex(min_id1),
-                        new Vertex(min_id2), min);
-            }
-            catch(Exception e) {
-                e.printStackTrace();
+            else {
+                for (Edge e : edge_list) {
+                    adjList.get(key).remove(e);
+                }
             }
         }
-        return edges;
+
+        // while we can still match two vertices
+        while (matches.size() < num_matches) {
+            // find the lowest weight edge
+            Iterator it = adjList.entrySet().iterator();
+            Integer key = -1;
+            Edge emin = new Edge(0, 1, Double.MAX_VALUE);
+
+            while (it.hasNext()) {
+                Map.Entry pair = (Map.Entry)it.next();
+                LinkedList<Edge> edges = (LinkedList<Edge>)(pair.getValue());
+                outer:
+                for (Edge e : edges) {
+                    // ignore edge if it is not incident on any of the given vertices
+                    Iterator<Integer> itr = e.getVertices().iterator();
+                    while (itr.hasNext()) {
+                        int v = itr.next();
+                        if (!vertices.contains(v)) {
+                            continue outer;
+                        }
+                    }
+
+                    if (e.getWeight() < emin.getWeight()) {
+                        emin = e;
+                        key = (Integer)(pair.getKey());
+                    }
+                }
+            }
+
+            // add the edge to the result graph
+             matches.add(emin);
+
+            // delete the edges and vertices from the original graph
+            if (key == -1) {
+                System.out.println("Invalid key");
+                return null;
+            }
+            adjList.get(key).remove(emin);
+
+            Iterator<Integer> itr = emin.getVertices().iterator();
+            while (itr.hasNext()) {
+                int v = itr.next();
+                adjList.remove(v);
+            }
+
+            HashMap<Integer, LinkedList<Edge>> deathRow = new HashMap<Integer, LinkedList<Edge>>();
+
+            // remove all edges incident on the vertices
+            Iterator edge_iter = adjList.entrySet().iterator();
+            while (edge_iter.hasNext()) {
+                Map.Entry pair = (Map.Entry)edge_iter.next();
+                LinkedList<Edge> edges = (LinkedList<Edge>)(pair.getValue());
+                Integer currkey = (Integer)(pair.getKey());
+                System.out.println("Current key: " + currkey);
+                for (Edge e : edges) {
+                    Iterator<Integer> vertex_iter = emin.getVertices().iterator();
+                    while (vertex_iter.hasNext()) {
+                        int v = vertex_iter.next();
+                        if (e.getVertices().contains(v)) {
+                            // save for later removal
+                            if (deathRow.get(currkey) == null) {
+                                deathRow.put(currkey, new LinkedList<Edge>());
+                            }
+                            deathRow.get(currkey).add(e);
+                            Vertex[] arr = e.getVArray();
+                            int id1 = arr[0].getId();
+                            int id2 = arr[1].getId();
+                            System.out.println("Sentenced (" + id1 + ", " + id2 + ") to execution");
+                        }
+                    }
+                }
+            }
+
+            // delete all the edges marked on death row
+            Iterator iterator = deathRow.entrySet().iterator();
+            while (iterator.hasNext()) {
+                Map.Entry pair = (Map.Entry)iterator.next();
+                Integer key1 = (Integer)(pair.getKey());
+                LinkedList<Edge> edges = (LinkedList<Edge>)(pair.getValue());
+                for (Edge e : edges) {
+                    adjList.get(key1).remove(e);
+                }
+            }
+        }
+        return new GraphL(matches);
     }
 
-    // combines the edges of the MST and the matching into a new graph
-    private GraphL combineGraphs(Graph mst, Edge[] matches) {
-        GraphL g = new GraphL(mst);
-        g.addEdges(matches);
-        return g;
+    // combines two GraphL's. Supports multiple edges between two vertices.
+    private GraphL combineGraphs(GraphL a, GraphL b) {
+        HashMap<Integer, LinkedList<Edge>> map_combined = new HashMap<Integer, LinkedList<Edge>>();
+        HashMap<Integer, LinkedList<Edge>> a_list = a.getAdjList();
+        map_combined.putAll(a_list);
+        Iterator it = b.getAdjList().entrySet().iterator();
+        while (it.hasNext()) {
+            Map.Entry pair = (Map.Entry)it.next();
+            Integer key = (Integer)pair.getKey();
+            LinkedList<Edge> edges = (LinkedList<Edge>)(pair.getValue());
+            if (map_combined.get(key) == null) {
+                map_combined.put(key, edges);
+            }
+            else {
+                for (Edge e : edges) {
+                    LinkedList ll = map_combined.get(key);
+                    ll.add(e);
+                }
+            }
+        }
+        return new GraphL(map_combined);
     }
 
     // uses Hierholzer's Algorithm to find a Eulerian circuit
     private LinkedList<Edge> Hierholzer (GraphL g) {
-        HashMap<Vertex, LinkedList<Edge>> adjList = g.getAdjList();
+        HashMap<Integer, LinkedList<Edge>> adjList = g.getAdjList();
         LinkedList<Edge> edgeList = new LinkedList<Edge>();
         Vertex v = g.getRandomVertex();
         LinkedList<Edge> cycle = makeCycle(g, v);
 
         // while the cycle does not contain all edges of G
-        while(!containsAllEdges(g, cycle)) {
+        while(!g.containsAllEdges(cycle)) {
             Edge neighbor = findCycleNeighborEdge(g, cycle);
             Vertex v1 = neighbor.getFirstVertex();
 
@@ -184,14 +286,20 @@ public class Christofides implements TSP_I {
 
     // constructs a cycle in graph g starting from vertex v_source
     private LinkedList<Edge> makeCycle(GraphL g, Vertex v_source) {
+        if (g.numVertices() < 3) {
+            System.out.println("Impossible");
+            return null;
+        }
+
         LinkedList<Edge> edgeList = new LinkedList<Edge>();
-        HashMap<Vertex, Boolean> discovered_v = new HashMap<Vertex, Boolean>();
+        HashMap<Integer, Boolean> discovered_v = new HashMap<Integer, Boolean>();
         HashMap<Edge, Boolean> discovered_e = new HashMap<Edge, Boolean>();
         // need to do DFS until return to original vertex and keep track of order visited
         Stack<Vertex> s = new Stack<Vertex>();
+        s.push(v_source);
 
         // label v as discovered
-        discovered_v.put(v_source, Boolean.TRUE);
+        discovered_v.put(v_source.getId(), Boolean.TRUE);
 
         // while the stack is not empty
         outer:
@@ -199,28 +307,35 @@ public class Christofides implements TSP_I {
             Vertex v = s.pop();
 
             // if we are back at the source vertex, return our cycle
-            if (v == v_source) {
+            if (v == v_source && edgeList.size() > 1) {
                 return edgeList;
             }
 
             // for all edges e adjacent to v
             for (Edge e : g.edgesOf(v)) {
                 // if edge e is already labeled continue with next edge
-                if (discovered_e.get(e))
+                if (discovered_e.get(e) != null)
                     continue;
 
-                Vertex w = e.getSecondVertex();
+                Vertex[] v_array = e.getVArray();
+                Vertex w;
+                if (v_array[0].getId() == v.getId()) {
+                    w = v_array[1];
+                }
+                else {
+                    w = v_array[0];
+                }
 
                 // if we are back at the source vertex, return our cycle
-                if (w == v_source) {
+                if (edgeList.size() > 1 && e.getVertices().contains(v_source.getId())) {
                     edgeList.add(e);
                     return edgeList;
                 }
 
                 // if vertex w is not discovered and not the source vertex
-                if (!discovered_v.get(w)) {
+                if (discovered_v.get(w)==null) {
                     // label w and e as discovered
-                    discovered_v.put(w, Boolean.TRUE);
+                    discovered_v.put(w.getId(), Boolean.TRUE);
                     discovered_e.put(e, Boolean.TRUE);
 
                     // push w onto the stack and and e to the list
@@ -230,7 +345,7 @@ public class Christofides implements TSP_I {
                 }
             }
             // label v as explored
-            discovered_v.put(v, Boolean.TRUE);
+            discovered_v.put(v.getId(), Boolean.TRUE);
         }
         return edgeList;
     }
@@ -257,22 +372,12 @@ public class Christofides implements TSP_I {
         return result;
     }
 
-    // returns true if all edges in 'edges' are contained in graph 'g', false otherwise
-    private boolean containsAllEdges(GraphL g, LinkedList<Edge>edges) {
-        HashMap<Vertex, LinkedList<Edge>> adjList = g.getAdjList();
-        for (Edge e : edges) {
-            Vertex v = e.getFirstVertex();
-            if (!(adjList.get(v).contains(e))) {
-                return false;
-            }
-        }
-        return true;
-    }
+
 
     // turns a Eulerian circuit into a Hamiltonian path by skipping visited nodes
     private LinkedList<Edge> shortcutPaths(LinkedList<Edge>edges, GraphL g) {
         Vertex source = edges.getFirst().getFirstVertex();
-        HashMap<Vertex, LinkedList<Edge>> adjList = g.getAdjList();
+        HashMap<Integer, LinkedList<Edge>> adjList = g.getAdjList();
 
         LinkedList<Edge> hamiltonian_path = new LinkedList<Edge>();
         LinkedList<Vertex> vs = new LinkedList<Vertex>();

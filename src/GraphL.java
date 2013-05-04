@@ -1,10 +1,7 @@
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.util.HashMap;
-import java.util.LinkedList;
-import java.util.Random;
-import java.util.Set;
+import java.util.*;
 
 /**
  * Created with IntelliJ IDEA.
@@ -16,16 +13,16 @@ import java.util.Set;
 public class GraphL implements Graph_I {
 
     private int numVertices;
-    private HashMap<Vertex, LinkedList<Edge>> adjList;
+    private HashMap<Integer, LinkedList<Edge>> adjList;
     private Random rand;
 
     GraphL(EuclideanVertex_2D[] vertices)
     {
         rand = new Random();
         numVertices = vertices.length;
-        adjList = new HashMap<Vertex, LinkedList<Edge>>();
+        adjList = new HashMap<Integer, LinkedList<Edge>>();
         for (EuclideanVertex_2D v : vertices) {
-            adjList.put(v, new LinkedList<Edge>());
+            adjList.put(v.getId(), new LinkedList<Edge>());
             for (EuclideanVertex_2D v2 : vertices) {
                 if (!(v2==v)) {
                     adjList.get(v).add(new Edge(v, v2, v.dist(v2)));
@@ -38,41 +35,54 @@ public class GraphL implements Graph_I {
     GraphL(double[][] matrix) {
         rand = new Random();
         numVertices = matrix.length;
-        adjList = new HashMap<Vertex, LinkedList<Edge>>();
+        adjList = new HashMap<Integer, LinkedList<Edge>>();
         for (int i = 0; i < matrix.length; i++) {
-            Vertex v1 = new Vertex(i);
             for (int j = 0; j < matrix.length; j++) {
-                Vertex v2 = new Vertex(j);
-                if (matrix[i][j] < Double.MAX_VALUE)
-                    adjList.get(v1).add(new Edge(v1, v2, matrix[i][j]));
+                if (matrix[i][j] > 0)
+                    adjList.get(i).add(new Edge(i, j, matrix[i][j]));
             }
         }
+    }
+
+    GraphL(HashMap<Integer, LinkedList<Edge>> map) {
+        rand = new Random();
+        numVertices = map.size();
+        adjList = map;
     }
 
     // generates a GraphL given a Graph
     GraphL(Graph g) {
         rand = new Random();
         double[][] matrix = g.getAdjMat();
-        numVertices = g.numVertices();
-        adjList = new HashMap<Vertex, LinkedList<Edge>>();
-        for (int i = 0; i < numVertices; i++) {
-            Vertex v1 = new Vertex(i);
-            for (int j = 0; j < numVertices; j++) {
-                Vertex v2 = new Vertex(j);
-                if (matrix[i][j] < Double.MAX_VALUE)
-                    adjList.get(v1).add(new Edge(v1, v2, matrix[i][j]));
+        adjList = new HashMap<Integer, LinkedList<Edge>>();
+        for (int i = 0; i < matrix.length; i++) {
+            for (int j = 0; j < matrix.length; j++) {
+                if (matrix[i][j] > 0) {
+                    if (adjList.get(i) == null) {
+                        adjList.put(i, new LinkedList<Edge>());
+                    }
+                    adjList.get(i).add(new Edge(i, j, matrix[i][j]));
+                }
             }
         }
+        numVertices = adjList.size();
     }
 
-    GraphL(Edge[] edges) {
+    GraphL(LinkedList<Edge> edges) {
         rand = new Random();
-        adjList = new HashMap<Vertex, LinkedList<Edge>>();
+        adjList = new HashMap<Integer, LinkedList<Edge>>();
         for (Edge e : edges) {
-            Vertex v1 = e.getFirstVertex();
-            Vertex v2 = e.getSecondVertex();
-            adjList.get(v1).add(e);
-            adjList.get(v2).add(e);
+            HashSet<Integer> vertices = e.getVertices();
+            Iterator<Integer> itr = vertices.iterator();
+            while (itr.hasNext()) {
+                int v = itr.next();
+                if (adjList.get(v) == null) {
+                    adjList.put(v, new LinkedList<Edge>());
+                }
+                LinkedList<Edge> edgeList = adjList.get(v);
+                edgeList.add(e);
+                adjList.put(v, edgeList);
+            }
         }
         numVertices = adjList.size();
     }
@@ -80,13 +90,10 @@ public class GraphL implements Graph_I {
     public Edge getEdge(Vertex v1, Vertex v2) {
         try {
             double weight = -1;
-
-            LinkedList<Edge> edges = adjList.get(v1);
+            LinkedList<Edge> edges = adjList.get(v1.getId());
             for (Edge e : edges) {
-                Vertex w = e.getSecondVertex();
-                if (w == v2) {
+                if (e.getVertices().contains(v2.getId()))
                     return e;
-                }
             }
         }
         catch (Exception e) {
@@ -95,27 +102,27 @@ public class GraphL implements Graph_I {
         return null;
     }
 
-    public void addEdges(Edge[] edges) {
-        for (Edge e : edges) {
-            Vertex v1 = e.getFirstVertex();
-            Vertex v2 = e.getSecondVertex();
-            adjList.get(v1).add(e);
-            adjList.get(v2).add(e);
-        }
-    }
-
-    public HashMap<Vertex, LinkedList<Edge>> getAdjList() {
+    public HashMap<Integer, LinkedList<Edge>> getAdjList() {
         return adjList;
     }
 
-    public int getDegree(Vertex v) {
+    public int getDegree(Integer v) {
         return adjList.get(v).size();
+    }
+
+    public HashSet<Integer> getOddVertices() {
+        HashSet<Integer> result = new HashSet<Integer>();
+        for (Integer i : adjList.keySet()) {
+            if (getDegree(i) % 2 != 0)
+                result.add(i);
+        }
+        return result;
     }
 
     // checks if a Eulerian cycle exists if each vertex is of even degree
     public boolean isEulerian() {
-        Set<Vertex> vertices = adjList.keySet();
-        for (Vertex v: vertices) {
+        Set<Integer> vertices = adjList.keySet();
+        for (Integer v: vertices) {
             if (getDegree(v) % 2 != 0) {
                 return false;
             }
@@ -123,14 +130,32 @@ public class GraphL implements Graph_I {
         return true;
     }
 
-    public Edge[] edgesOf(Vertex v) {
-        LinkedList<Edge> edgeList = adjList.get(v);
-        return (Edge[])(edgeList.toArray());
+    public LinkedList<Edge> edgesOf(Vertex v) {
+        LinkedList<Edge> edgeList = adjList.get(v.getId());
+        return edgeList;
     }
 
     public Edge edgeBetween(Vertex v1, Vertex v2) {
-        LinkedList<Edge> edgeList = adjList.get(v1);
-        return edgeList.get(edgeList.indexOf(v2));
+        LinkedList<Edge> edgeList = adjList.get(v1.getId());
+        for (Edge e : edgeList) {
+            if (e.getVertices().contains(v2.getId()))
+                return e;
+        }
+        return null;
+    }
+
+    // returns true if all edges are contained in the graph, false otherwise
+    public boolean containsAllEdges(LinkedList<Edge>edges) {
+        for (Edge e : edges) {
+            Iterator<Integer> itr = e.getVertices().iterator();
+            while (itr.hasNext()) {
+                int v = itr.next();
+                if (!(adjList.get(v).contains(e))) {
+                    return false;
+                }
+            }
+        }
+        return true;
     }
 
     public Edge getRandomNeighborEdge(Vertex v) {
@@ -143,7 +168,7 @@ public class GraphL implements Graph_I {
     }
 
     public LinkedList<Edge> getNeighbors(Vertex v) {
-        return adjList.get(v);
+        return adjList.get(v.getId());
     }
 
     public boolean isNotMemberOf(Vertex v, Vertex[] all)
@@ -158,8 +183,8 @@ public class GraphL implements Graph_I {
     }
 
     public Edge getShortestNeighborEdge (Vertex v,Vertex[] already) {
-        Edge minEdge = new Edge(new Vertex(0), new Vertex(1), Double.MAX_VALUE);
-        LinkedList<Edge> edgeList = adjList.get(v);
+        Edge minEdge = new Edge(0, 1, -1);
+        LinkedList<Edge> edgeList = adjList.get(v.getId());
         for (Edge e : edgeList) {
             if (isNotMemberOf(e.getFirstVertex(), already)) {
                 if (e.getWeight() < minEdge.getWeight()) {
@@ -172,20 +197,18 @@ public class GraphL implements Graph_I {
 
     public void deleteEdges (LinkedList<Edge> edgeList) {
         for (Edge e : edgeList) {
-            Vertex v1 = e.getFirstVertex();
-            Vertex v2 = e.getSecondVertex();
-            adjList.get(v1).remove(e);
-            LinkedList<Edge> edges = adjList.get(v2);
-            for (Edge e2 : edges) {
-                if (e2.getSecondVertex() == v1)
-                    edges.remove(e2);
+            Iterator<Integer> itr = e.getVertices().iterator();
+            while (itr.hasNext()) {
+                int v = itr.next();
+                adjList.get(v).remove(e);
             }
         }
     }
 
     public Vertex getRandomVertex() {
-        int randomNum = rand.nextInt(numVertices);
-        return new Vertex(randomNum);
+        List<Integer> keys = new ArrayList<Integer>(adjList.keySet());
+        Integer randomKey = keys.get(rand.nextInt(keys.size()));
+        return new Vertex(randomKey);
     }
 
     public int numVertices() {

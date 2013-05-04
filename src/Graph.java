@@ -2,6 +2,7 @@ import javax.swing.plaf.BorderUIResource;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.PrintWriter;
+import java.util.LinkedList;
 import java.util.Random;
 import java.io.IOException;
 /**
@@ -51,7 +52,7 @@ public class Graph implements Graph_I {
         adjMat = new double [numVertices][numVertices];
         for (int i = 0; i < numVertices; i++) {
             for (int j = 0; j < numVertices; j++) {
-                adjMat[i][j] = Double.MAX_VALUE;
+                adjMat[i][j] = -1;
             }
         }
         for (int i = 0; i < edges.length; i++) {
@@ -72,7 +73,7 @@ public class Graph implements Graph_I {
     public int getDegree(int id) {
         int degree = 0;
         for (int i = 0; i < adjMat.length; i++) {
-            if (adjMat[id][i] != 0) {
+            if (adjMat[id][i] > 0) {
                 degree++;
             }
         }
@@ -102,6 +103,14 @@ public class Graph implements Graph_I {
         return new Edge(v1,v2,adjMat[v1.getId()][v2.getId()]);
     }
 
+//    public Vertex[] getNeighbors(Vertex v) {
+//        int id = v.getId();
+//        LinkedList<Vertex> neighbors = new LinkedList<Vertex>();
+//        for (int i = 0; i < adjMat.length; i++) {
+//            if ()
+//        }
+//    }
+//
     public Edge getRandomNeighborEdge(Vertex v)
     {
         int x = v.getId();
