@@ -24,7 +24,7 @@ public class TwoDimParser {
     Graph g = new Graph(hello.allVertices());
 
     int numtrials = 10;
-    SimulatedAnnealing sim = new SimulatedAnnealing(100000, 1, 0.95);
+    SimulatedAnnealing sim = new SimulatedAnnealing(1000000, 1, 0.99);
     double toursum = 0;
     double timesum = 0;
     for(int i = 0; i < numtrials; i++)
