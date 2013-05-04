@@ -14,7 +14,6 @@ public class TSPDisplay extends JFrame {
     private JButton greedyb, simb, geneticb, twooptb;
     private JPanel panel2;
     private MainWindow mwin;
-    private JLabel nameOfTour;
     private Tour[] tours;
     private Graph gr;
     private int x,y;
@@ -22,14 +21,15 @@ public class TSPDisplay extends JFrame {
     {
         Tour[] results = new Tour[5];
 
-        TwoDimParser hello = new TwoDimParser("test38.txt", 38);
+        TwoDimParser hello = new TwoDimParser("test194.txt", 194);
+        //TwoDimParser hello = new TwoDimParser(args[1],Integer.parseInt(args[2]));
 
         Graph g = new Graph(hello.allVertices());
 
-        SimulatedAnnealing sim = new SimulatedAnnealing(2000000, 1, 0.995);
+        SimulatedAnnealing sim = new SimulatedAnnealing(4000000, 1, 0.995);
         TwoOpt twoopt = new TwoOpt();
         Greedy greed = new Greedy();
-        Genetic genes = new Genetic(100,10000);
+        Genetic genes = new Genetic(1000,30000);
 
         results[0] = greed.findShortestPath(g);
         results[1] = twoopt.findShortestPath(g);
@@ -40,7 +40,6 @@ public class TSPDisplay extends JFrame {
         frame.setTitle("TSP Graphics");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setSize(700, 500);
-        frame.setMinimumSize(new Dimension(400,400));
         //frame.getContentPane().setBackground(Color.black);
         frame.setVisible(true);
     }
@@ -62,12 +61,10 @@ public class TSPDisplay extends JFrame {
         geneticb = new JButton("Genetic");
         twooptb = new JButton("Two Opt");
 
-        greedyb.addActionListener(new TourListener(tours[0], "Greedy"));
-        twooptb.addActionListener(new TourListener(tours[1], "Two Opt"));
-        simb.addActionListener(new TourListener(tours[2], "Simulated Annealing"));
-        geneticb.addActionListener(new TourListener(tours[3], "Genetic"));
-
-        nameOfTour = new JLabel("Tour: ");
+        greedyb.addActionListener(new TourListener(tours[0]));
+        twooptb.addActionListener(new TourListener(tours[1]));
+        simb.addActionListener(new TourListener(tours[2]));
+        geneticb.addActionListener(new TourListener(tours[3]));
 
         panel2.add(greedyb);
         panel2.add(twooptb);
@@ -82,11 +79,9 @@ public class TSPDisplay extends JFrame {
     public class TourListener implements ActionListener {
 
         private Tour here;
-        private String name;
-        public TourListener(Tour t, String name)
+        public TourListener(Tour t)
         {
             here = t;
-            this.name = name;
         }
 
         public void update(Tour t)
@@ -94,16 +89,10 @@ public class TSPDisplay extends JFrame {
             here = t;
         }
 
-
-
         public void actionPerformed(ActionEvent e) {
             remove(mwin);
             mwin = new MainWindow(gr, here,x,y);
             getContentPane().add(mwin,BorderLayout.WEST);
-
-            panel2.remove(nameOfTour);
-            nameOfTour = new JLabel(name);
-            panel2.add(nameOfTour);
             revalidate();
 
         }
