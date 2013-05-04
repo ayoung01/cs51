@@ -20,12 +20,16 @@ public interface Graph_I {
 
     Vertex getRandomVertex();
 
-//    Tour getRandomTour();
+    //Tour getRandomTour();
 
     int numVertices();
 
-//    void printGraphToFile(String file);
+    //double[] getMins();
 
-//    String display();
+    //double[] getMaxes();
+
+    //void printGraphToFile(String file);
+
+    //String display();
 
 }

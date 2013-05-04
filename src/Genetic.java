@@ -17,14 +17,16 @@ import java.util.Random;
 
 public class Genetic implements TSP_I{
 
-    private final double mutationRate = 0.05;
+    private final double mutationRate = 0.04;
+    private final double mutationSwapProbability = 0.85;
     private final int tournamentSize = 7;
 
-
-    private Random rand;
     private int popSize;
     private int generations;
 
+    private Random rand;
+
+    // new Genetic (population size, number of generations to go through)
     public Genetic (int popSize, int generations) {
         rand = new Random();
         this.popSize = popSize;
@@ -37,7 +39,6 @@ public class Genetic implements TSP_I{
         Tour[] population = generatePopulation(g);
         Tour[] newPopulation = population;
 
-
         // tournament selection: select 7 random tours, pick the best of 7 random tours
         for (int j=0;j<generations;j++) {
             //System.out.println("Beginning generation " + (j+1) + "...");
@@ -46,20 +47,26 @@ public class Genetic implements TSP_I{
             Tour temp = population[0];
             population[0] = elite;
             population[elitePlace] = temp;
-
+            newPopulation[0] = population[0];
+            // next child in the population will be formed from two parent tours crossed over with a chance of mutation
             for (int i=1;i<population.length;i++) {
+                // create two parents
+                Tour[] parents;
+
                 //System.out.println("Obtaining first parent in " +(i+1)+ "th place of the " + (j+1) + "th generation...");
-                Tour a = tournament(population);
-                //System.out.println("Obtaining second parent in " +(i+1)+ "th place of the "+ (j+1) + "th generation...");
-                Tour b = tournament(population);
-                while (b == a) {
-                    b = tournament(population);
-                }
+
+                //parents = tournamentSelection(population);
+                parents = rouletteSelection(population);
+
                 //System.out.println("Beginning crossover of parents with tours of vertex length "
-                 //   +a.verticesSoFar().length+ " and " + b.verticesSoFar().length);
-                newPopulation[i] = greedyCrossover(a,b,g);
+                //   +a.verticesSoFar().length+ " and " + b.verticesSoFar().length);
+
+                // crossover parents to make child
+                newPopulation[i] = greedyCrossover(parents[rand.nextInt(2)],parents[rand.nextInt(2)],g);
                 //System.out.println("Successful crossover. Created child of vertex length " +
                  //   newPopulation[i].verticesSoFar().length);
+
+                // mutate child
                 newPopulation[i] = mutate(newPopulation[i],g);
                 //System.out.println("Successful child created.");
             }
@@ -69,36 +76,16 @@ public class Genetic implements TSP_I{
         //System.out.println("Finished genetic algorithm!");
         return getFittest(population);
 
-        // select higher fitness tours from population, crossbreed them with higher fitness ones being more likely
-        // to be crossbred, with some chance of mutation, and generate a next generation population.
-        // continue for a specified number of times, then return the current most fit tour in the population, which
-        // will hopefully be a very close approximation to the real solution.
-
-        // at each generation, pick two parents and create two new child tours (perform two crossovers)
-        // and replace the two parents in the population
-
-    }
-
-
-    public double timeAlgorithm(Graph g) {
-        return 0;  //To change body of implemented methods use File | Settings | File Templates.
     }
 
     private Tour[] generatePopulation (Graph g) {
-        int initialPopulationSize = popSize;
-        Tour[] population = new Tour[initialPopulationSize];
-        for (int i=0;i<initialPopulationSize;i++) {
+        Tour[] population = new Tour[popSize];
+        for (int i=0;i<popSize;i++) {
             population[i] = g.getRandomTour();
-            //System.out.print(i+ " ");
         }
-        //System.out.println();
         return population;
     }
 
-    private Tour[] rankFitness(Tour[] population) {
-
-        return null;
-    }
     private Tour fittest(Tour[] population) {
         Tour a = population[0];
         for(int i=1;i<population.length;i++) {
@@ -277,25 +264,21 @@ public class Genetic implements TSP_I{
             }
         }
         mutated = new Tour(v,g);
-        if (mutated.getLength()<a.getLength()) {
-            return mutated;
-        }
-        else return a;
-        /*
-        double chance = rand.nextDouble();
-        if (chance < mutationRate) {
-            int index1 = rand.nextInt(a.verticesSoFar().length);
-            int index2 = rand.nextInt(a.verticesSoFar().length);
-            Vertex[] swappedVertices = a.verticesSoFar();
-            Vertex temp = swappedVertices[index1];
-            swappedVertices[index1] = a.verticesSoFar()[index2];
-            swappedVertices[index2] = temp;
-            mutated = new Tour(swappedVertices,g);
-            if (mutated.getLength() < a.getLength()) {
+        double mutatedLength = mutated.getLength();
+        double originalLength = a.getLength();
+        if (rand.nextDouble() < mutationSwapProbability) {
+            if (mutatedLength < originalLength) {
                 return mutated;
             }
+            else return a;
         }
-        */
+        else {
+            if (mutatedLength < originalLength) {
+                return a;
+            }
+            else return mutated;
+        }
+
 
     }
 
@@ -310,21 +293,112 @@ public class Genetic implements TSP_I{
         else return i;
     }
 
-    // performs tournament selection from a population and returns a tour
+    // returns two parent tours selected by roulette selection
+    private Tour[] rouletteSelection(Tour[] population) {
+        // two parents to be returned
+        Tour[] parents = new Tour[2];
+        int length = population.length;
+        // sort the population best to worst
+        Tour[] sorted = mergeSort(population);
+        // sum of all the fitnesses of the sorted population
+        double totalFitness = 0;
+        for(int i=0;i<length;i++) {
+            totalFitness += sorted[length-1].getLength()/sorted[i].getLength();
+        }
+        // accumulatedFitness is each tour's accumulatedfitness value, adding up all the fitnesses preceding and itself
+        double accumulatedFitness[] = new double[length];
+        double accumulatingSum = 0;
+        for(int i=0;i<length;i++) {
+            double fitness = sorted[length-1].getLength()/sorted[i].getLength();
+            accumulatedFitness[i] = accumulatingSum + fitness/totalFitness;
+            accumulatingSum += fitness/totalFitness;
+        }
+
+        double place;
+        for(int j=0;j<2;j++) {
+            place = rand.nextDouble();
+            int i=0;
+            while (place>=accumulatedFitness[i] && i<length) {
+                i++;
+            }
+            parents[j] = sorted[i];
+        }
+        return parents;
+    }
+
+
+    // mergeSort has been tested in a separate file with integer arrays
+    private Tour[] mergeSort(Tour[] a) {
+        if (a.length == 1) {
+            return a;
+        }
+        Tour[] left = new Tour[a.length/2];
+        Tour[] right = new Tour[a.length-left.length];
+        for(int i=0;i<left.length;i++) {
+            left[i] = a[i];
+        }
+        for(int i=0;i<right.length;i++) {
+            right[i] = a[i+a.length/2];
+        }
+        return merge(mergeSort(left), mergeSort(right));
+
+    }
+    private Tour[] merge(Tour[] a, Tour[] b) {
+        Tour[] c = new Tour[a.length+b.length];
+        int l=0,r=0;
+        for(int i=0;i<c.length;i++) {
+            if (l >=a.length) {
+                c[i] = b[r];
+                r++;
+            }
+            else if (r >= b.length) {
+                c[i] = a[l];
+                l++;
+            }
+            else if (a[l].getLength() <= b[r].getLength()) {
+                c[i] = a[l];
+                l++;
+            }
+            else {
+                c[i] = b[r];
+                r++;
+            }
+        }
+        return c;
+    }
+
+    // pick two parents using tournament selection
+    private Tour[] tournamentSelection(Tour[] population) {
+        Tour[] a = new Tour[2];
+        a[0] = tournament(population);
+        a[1] = tournament(population);
+        while (a[1] == a[0]) {
+            a[1] = tournament(population);
+        }
+        return a;
+    }
+
+
+    // performs deterministic tournament selection from a population and returns a tour
     private Tour tournament(Tour[] population) {
-        Tour a = population[rand.nextInt(population.length)];
-        //System.out.println("Obtained random tour from initial population");
-        Tour next = population[rand.nextInt(population.length)];
+        Tour[] a = new Tour[tournamentSize];
+        for(int i=0;i<tournamentSize;i++) {
+            a[i] = population[rand.nextInt(population.length)];
+        }
+        return getFittest(a);
+
+        /*
         for (int i=0;i<tournamentSize;i++) {
+            next = population[tournamentRand.nextInt(population.length)];
             while (next==a) {
-                next = population[rand.nextInt(population.length)];
+                next = population[tournamentRand.nextInt(population.length)];
             }
             if (next.getLength() < a.getLength()) {
                 a = next;
             }
         }
         return a;
-
+        */
     }
     private Tour getFittest(Tour[] population) {
         Tour a = population[0];
@@ -335,4 +409,5 @@ public class Genetic implements TSP_I{
         }
         return a;
     }
+
 }

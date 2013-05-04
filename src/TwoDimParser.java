@@ -19,28 +19,45 @@ public class TwoDimParser {
     long startTime;
     long endTime;
     double duration;
-    TwoDimParser hello = new TwoDimParser("test.txt", 29);
+    TwoDimParser hello = new TwoDimParser("test929.txt", 929);
     hello.printEverything();
     Graph g = new Graph(hello.allVertices());
 
-
-    SimulatedAnnealing sim = new SimulatedAnnealing(2000000, 1, 0.995);
-    startTime = System.nanoTime();
-    Tour bestsim = sim.findShortestPath(g);
-    endTime = System.nanoTime();
-    duration = (endTime - startTime)/1000000000.0;
-    System.out.printf("Simulated Annealing: %.2f in %.5f s\n ", bestsim.getLength(), duration);
-    bestsim.printGraphToFile("simbest.txt");
-
-    TwoOpt twoopt = new TwoOpt();
-    startTime = System.nanoTime();
-    Tour besttwoopt = twoopt.findShortestPath(g);
-    endTime = System.nanoTime();
+    int numtrials = 10;
+    SimulatedAnnealing sim = new SimulatedAnnealing(1000000, 1, 0.99);
+    double toursum = 0;
+    double timesum = 0;
+    for(int i = 0; i < numtrials; i++)
+    {
+        startTime = System.nanoTime();
+        Tour bestsim = sim.findShortestPath(g);
+        endTime = System.nanoTime();
         duration = (endTime - startTime)/1000000000.0;
-    System.out.printf("Two Opt: %.2f in %.5f s\n", besttwoopt.getLength(), duration);
-    besttwoopt.printGraphToFile("twooptbest.txt");
+        timesum+=duration;
+        toursum+=bestsim.getLength();
+    }
 
-    Greedy greedisgood = new Greedy();
+    System.out.printf("Simulated Annealing Average over %d trials: %.2f in %.5f s\n ",
+            numtrials, toursum/numtrials, timesum/numtrials);
+    //bestsim.printGraphToFile("simbest.txt");
+
+
+    /*TwoOpt twoopt = new TwoOpt();
+    for(int i = 0; i < numtrials; i++)
+    {
+        startTime = System.nanoTime();
+        Tour besttwoopt = twoopt.findShortestPath(g);
+        endTime = System.nanoTime();
+        duration = (endTime - startTime)/1000000000.0;
+        timesum+=duration;
+        toursum+=besttwoopt.getLength();
+    }
+
+        System.out.printf("Two Opt Average over %d trials: %.2f in %.5f s\n ",
+                numtrials, toursum/numtrials, timesum/numtrials);
+    //besttwoopt.printGraphToFile("twooptbest.txt");
+    */
+    /*Greedy greedisgood = new Greedy();
     startTime = System.nanoTime();
     Tour bestgreedy = greedisgood.findShortestPath(g);
     endTime = System.nanoTime();
@@ -48,13 +65,13 @@ public class TwoDimParser {
     System.out.printf("Greedy: %.2f in %.5f s\n", bestgreedy.getLength(), duration);
     bestgreedy.printGraphToFile("Greedybest.txt");
 
-    /*Christofides christofides = new Christofides();
+    Christofides christofides = new Christofides();
     startTime = System.nanoTime();
     Tour bestchrist = christofides.findShortestPath(g);
     endTime = System.nanoTime();
     duration = (endTime-startTime)/1000000000.0;
     System.out.printf("Christofides: %.2f in %.5f s\n", bestchrist.getLength(),duration);
-    bestchrist.printGraphToFile("christbest.txt");  */
+    bestchrist.printGraphToFile("christbest.txt");
 
     Genetic genetic = new Genetic(100,30000);
     startTime = System.nanoTime();
@@ -62,7 +79,7 @@ public class TwoDimParser {
     endTime = System.nanoTime();
     duration = (endTime-startTime)/1000000000.0;
     System.out.printf("Genetic: %.2f in %.5f s\n", bestgenetic.getLength(),duration);
-    bestgenetic.printGraphToFile("Geneticbest.txt");
+    bestgenetic.printGraphToFile("Geneticbest.txt");*/
 
     }
 

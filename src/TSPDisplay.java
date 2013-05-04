@@ -21,14 +21,15 @@ public class TSPDisplay extends JFrame {
     {
         Tour[] results = new Tour[5];
 
-        TwoDimParser hello = new TwoDimParser("test.txt", 29);
+        TwoDimParser hello = new TwoDimParser("test194.txt", 194);
+        //TwoDimParser hello = new TwoDimParser(args[1],Integer.parseInt(args[2]));
 
         Graph g = new Graph(hello.allVertices());
 
-        SimulatedAnnealing sim = new SimulatedAnnealing(2000000, 1, 0.995);
+        SimulatedAnnealing sim = new SimulatedAnnealing(4000000, 1, 0.995);
         TwoOpt twoopt = new TwoOpt();
         Greedy greed = new Greedy();
-        Genetic genes = new Genetic(100,3000);
+        Genetic genes = new Genetic(1000,30000);
 
         results[0] = greed.findShortestPath(g);
         results[1] = twoopt.findShortestPath(g);
@@ -38,7 +39,7 @@ public class TSPDisplay extends JFrame {
         TSPDisplay frame = new TSPDisplay(g, results);
         frame.setTitle("TSP Graphics");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setSize(600,500);
+        frame.setSize(700, 500);
         //frame.getContentPane().setBackground(Color.black);
         frame.setVisible(true);
     }
@@ -49,8 +50,8 @@ public class TSPDisplay extends JFrame {
 
         tours = results;
         gr = g;
-        x = 400;
-        y = 400;
+        x = 500;
+        y = 500;
 
         mwin = new MainWindow(gr, tours[0],x,y);
         panel2 = new JPanel();
