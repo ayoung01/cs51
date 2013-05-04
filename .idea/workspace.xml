@@ -2,12 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f30b32a5-b2ea-43fe-9d6f-e9a5228dd111" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TSPReport.doc" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="TSP.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="f30b32a5-b2ea-43fe-9d6f-e9a5228dd111" time="1367656162763" ignored="false" />
+    <file path="/Dummy.txt" changelist="f30b32a5-b2ea-43fe-9d6f-e9a5228dd111" time="1367656247473" ignored="false" />
     <file path="/TSP_I.java" changelist="f30b32a5-b2ea-43fe-9d6f-e9a5228dd111" time="1366502890654" ignored="false" />
     <file path="/fragment.java" changelist="f30b32a5-b2ea-43fe-9d6f-e9a5228dd111" time="1367521492573" ignored="false" />
     <file path="/Graph_I.java" changelist="f30b32a5-b2ea-43fe-9d6f-e9a5228dd111" time="1366506045304" ignored="false" />
@@ -668,7 +667,11 @@
       <created>1367656167783</created>
       <updated>1367656167783</updated>
     </task>
-    <option name="localTasksCounter" value="48" />
+    <task id="LOCAL-00048" summary="Added to genetic part of final report take 2">
+      <created>1367656249067</created>
+      <updated>1367656249067</updated>
+    </task>
+    <option name="localTasksCounter" value="49" />
     <servers />
   </component>
   <component name="TodoView" selected-index="4">
@@ -760,7 +763,7 @@
     <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added to genetic part of final report" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added to genetic part of final report take 2" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -774,7 +777,6 @@
     <option name="UPDATE_FILTER_BY_SCOPE" value="false" />
     <option name="SHOW_FILE_HISTORY_AS_TREE" value="false" />
     <option name="FILE_HISTORY_SPLITTER_PROPORTION" value="0.6" />
-    <MESSAGE value="Added some graph functions, created Vertex interface" />
     <MESSAGE value="More graph fns" />
     <MESSAGE value="Finished Greedy implementation, added some functionality to Tour and stuff" />
     <MESSAGE value="Made a file parser, trying to make graph work properly" />
@@ -799,6 +801,7 @@
     <MESSAGE value="Crude graphics work now" />
     <MESSAGE value="Implemented genetic with roulette selection, messed with graphics, labels not working" />
     <MESSAGE value="Added to genetic part of final report" />
+    <MESSAGE value="Added to genetic part of final report take 2" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
