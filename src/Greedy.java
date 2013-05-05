@@ -1,12 +1,8 @@
-/**
- * Created with IntelliJ IDEA.
- * User: mgentili
- * Date: 4/20/13
- * Time: 7:59 PM
- * To change this template use File | Settings | File Templates.
- */
+/*Greedy Algorithm: Starts at a random vertex and at each
+ * step finds the closest non-traversed vertex, and adds it to the tour */
 public class Greedy implements TSP_I {
 
+    //finds the shortest path using the Greedy algorithm given a graph
     public Tour findShortestPath(Graph g) {
         Vertex start = g.getRandomVertex();
         int numVertices = g.numVertices();

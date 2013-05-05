@@ -1,17 +1,18 @@
-/**
- * Created with IntelliJ IDEA.
- * User: mgentili
- * Date: 4/14/13
- * Time: 8:52 PM
- * To change this template use File | Settings | File Templates.
- */
-import java.util.Random;
+/* Simulated Annealing: Starts with a random tour, and at each step
+* swaps the order of two vertices in the tour, accepting it 100% if it
+* leads to a better tour or with some decreasing percentage over time
+* even if it is worse*/
+
+ import java.util.Random;
 public class SimulatedAnnealing implements TSP_I {
 
     private int maxIter;
     private int reheat;
     private Random rand;
     private double annealrate;
+
+    //Initializes the algorithm with the number of iterations, the number of
+    //times to restart the algorithm, and the anneal rate (a value between 0 and 1)
     public SimulatedAnnealing(int numTimes, int numReheats, double annealRate)
     {
        maxIter = numTimes;
@@ -20,11 +21,11 @@ public class SimulatedAnnealing implements TSP_I {
        rand = new Random();
     }
 
+    //returns a tour of the shortest path
     public Tour findShortestPath(Graph g)
     {
-        //Greedy gree = new Greedy();
-        //Tour start = gree.findShortestPath(g);
-        Tour start = g.getRandomTour();
+
+      Tour start = g.getRandomTour();
       Tour best = start;
       Tour comparison;
       int counter;
@@ -50,12 +51,14 @@ public class SimulatedAnnealing implements TSP_I {
         return best;
     }
 
+    //returns a neighboring tour of a given tour
     Tour getNeighborTour(Tour t, Graph g)
     {
         Vertex[] vertices = t.verticesSoFar();
         return new Tour(neighborVertexSet(vertices), g);
     }
 
+    //returns a reordering of the vertices with two vertices swapped
     Vertex[] neighborVertexSet(Vertex[] vertices)
     {
         int len = vertices.length;
@@ -96,6 +99,9 @@ public class SimulatedAnnealing implements TSP_I {
         return newv;
     }
 
+    //returns the probability of accepting a worse tour given
+    //the number of iterations done so far and the weights of the
+    //two tours
     double anneal(int iter, double a, double b)
     {
         double t = Math.pow(10,10)*Math.pow(annealrate,iter/100);

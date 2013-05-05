@@ -3,13 +3,7 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-/**
- * Created with IntelliJ IDEA.
- * User: mgentili
- * Date: 5/1/13
- * Time: 5:10 PM
- * To change this template use File | Settings | File Templates.
- */
+//contains the main method to create a GUI for our algorithms
 public class TSPDisplay extends JFrame {
     private JButton greedyb, simb, geneticb, twooptb;
     private JPanel panel2;
@@ -17,6 +11,7 @@ public class TSPDisplay extends JFrame {
     private Tour[] tours;
     private Graph gr;
     private int x,y;
+
     public static void main(String args[])
     {
         Tour[] results = new Tour[5];
@@ -44,6 +39,8 @@ public class TSPDisplay extends JFrame {
         frame.setVisible(true);
     }
 
+    //takes in a graph and an array of tours resulting from the different algorithms
+    //and displays them graphically
     public TSPDisplay(Graph g, Tour[] results)
     {
         getContentPane().setLayout(new BorderLayout());
@@ -75,7 +72,8 @@ public class TSPDisplay extends JFrame {
         getContentPane().add(panel2, BorderLayout.EAST);
     }
 
-
+    //creates a listener that updates which graph is displayed when
+    //the corresponding button is clicked
     public class TourListener implements ActionListener {
 
         private Tour here;

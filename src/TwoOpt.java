@@ -1,12 +1,11 @@
-/**
- * Created with IntelliJ IDEA.
- * User: mgentili
- * Date: 4/26/13
- * Time: 11:15 AM
- * To change this template use File | Settings | File Templates.
- */
+/*Two Opt Algorithm: Takes a given tour, and at each step,
+  swaps the order the tour goes through two vertices, until
+  the tour cannot be improved any more*/
+
 public class TwoOpt {
     private int numVertices;
+
+    //returns a tour containing the shortest path TwoOpt finds
     public Tour findShortestPath(Graph g)
     {
         numVertices = g.numVertices();
@@ -18,9 +17,9 @@ public class TwoOpt {
         while(c > 0)
         {
             c = 0;
-            for(int i = 1; i < numVertices; i++)
+            for(int i = 0; i < numVertices; i++)
             {
-                for(int j = 1; j < i; j++)
+                for(int j = 0; j < i; j++)
                 {
                     comparison = new Tour(neighborVertexSet(start.verticesSoFar(),j,i),g);
                     //System.out.printf("%s", comparison.toString());
@@ -36,6 +35,8 @@ public class TwoOpt {
         return start;
     }
 
+    //returns a rearrangement of the vertices in a tour, with the vertices
+    //at a and b swapped
     Vertex[] neighborVertexSet(Vertex[] vertices, int a, int b)
     {
         if(a == b)

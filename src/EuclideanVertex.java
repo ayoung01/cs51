@@ -1,25 +1,22 @@
-/**
- * Created with IntelliJ IDEA.
- * User: mgentili
- * Date: 4/30/13
- * Time: 4:16 PM
- * To change this template use File | Settings | File Templates.
- */
+
 public class EuclideanVertex extends Vertex {
 
     private double[] coords;
     private int dim;
 
+    //initializes a EuclideanVertex with a unique id and a double array of coordinates
     public EuclideanVertex (int i, double[] coordinates) {
         coords = coordinates;
         dim = coords.length;
         this.setId(i);
     }
 
+    //returns the ith coordinate of the vertex
     public double getCoord(int i) {
             return coords[i];
     }
 
+    //returns the number of coordinates of the vertex
     public int getDim()
     {
         return dim;
