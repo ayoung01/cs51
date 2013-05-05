@@ -10,6 +10,7 @@ import java.util.*;
  * Time: 9:41 AM
  * To change this template use File | Settings | File Templates.
  */
+// adjacency list representation of graph
 public class GraphL {
 
     private int numVertices;

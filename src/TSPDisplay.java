@@ -16,7 +16,7 @@ public class TSPDisplay extends JFrame {
     {
         Tour[] results = new Tour[5];
 
-        TwoDimParser hello = new TwoDimParser("test29.txt", 29);
+        TwoDimParser hello = new TwoDimParser("test29.txt");
         //TwoDimParser hello = new TwoDimParser(args[1],Integer.parseInt(args[2]));
 
         Graph g = new Graph(hello.allVertices());

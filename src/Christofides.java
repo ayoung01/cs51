@@ -399,7 +399,6 @@ public class Christofides implements TSP_I {
         return edgeList;
     }
 
-    // going off example here http://web.info.uvt.ro/~mmarin/lectures/GTC/c-09-new.pdf
     // merges tours by adding edges of list2 in order to list1
     private LinkedList<Edge> mergeTours(LinkedList<Edge> list1, LinkedList<Edge> list2, Edge test) {
 
@@ -466,8 +465,6 @@ public class Christofides implements TSP_I {
         result.addAll(index + 1, list2);
         return result;
     }
-
-
 
     // turns a Eulerian circuit into a Hamiltonian path by skipping visited nodes
     private LinkedList<Edge> shortcutPaths(LinkedList<Edge>edges, GraphL g) {

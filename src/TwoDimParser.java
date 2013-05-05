@@ -4,21 +4,29 @@ import java.io.File;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.ArrayList;
+
 public class TwoDimParser {
 
     EuclideanVertex[] vertices;
 
     //main method for testing running time of the algorithms
+    /*
+        Usage: java TwoDimParser input_file.txt numtrials
+    */
     public static void main(String[] args){
 
     long startTime;
     long endTime;
     double duration;
-    TwoDimParser hello = new TwoDimParser("test29.txt", 29);
+
+    String input_file = args[0];
+    int numtrials = Integer.parseInt(args[1]);
+
+    TwoDimParser hello = new TwoDimParser(input_file);
     hello.printEverything();
     Graph g = new Graph(hello.allVertices());
 
-    int numtrials = 1;
     SimulatedAnnealing sim = new SimulatedAnnealing(2000000, 1, 0.999);
     double toursum = 0;
     double timesum = 0;
@@ -50,7 +58,7 @@ public class TwoDimParser {
         toursum+=besttwoopt.getLength();
     }
 
-        System.out.printf("Two Opt Average over %d trials: %.2f in %.5f s\n ",
+    System.out.printf("Two Opt Average over %d trials: %.2f in %.5f s\n ",
                 numtrials, toursum/numtrials, timesum/numtrials);
     //besttwoopt.printGraphToFile("twooptbest.txt");
 
@@ -99,28 +107,29 @@ public class TwoDimParser {
     }
 
     //initializes the TwoDimParser with the file name and the number of vertices
-    public TwoDimParser(String f, int numEntries)
+    public TwoDimParser(String f)
     {
-      vertices = new EuclideanVertex[numEntries];
-
+        ArrayList<EuclideanVertex> vlist = new ArrayList<EuclideanVertex>();
         try
         {
             BufferedReader br = new BufferedReader(new FileReader(f));
             String sCurrentLine;
             String[] xy;
             int i = 0;
-            while ((sCurrentLine = br.readLine()) != null && i < numEntries) {
+            while ((sCurrentLine = br.readLine()) != null) {
                 System.out.println(sCurrentLine);
                 xy = sCurrentLine.trim().split("\\s+");
                 double[] coords = {Double.parseDouble(xy[1]), Double.parseDouble(xy[2])};
-                vertices[i] = new EuclideanVertex(i, coords);
-                i++;
+                vlist.add(new EuclideanVertex(i++, coords));
             }
 
         } catch (IOException e) {
             e.printStackTrace();
         }
-
+        vertices = new EuclideanVertex[vlist.size()];
+        for (int i = 0; i < vlist.size(); i++) {
+            vertices[i] = vlist.get(i);
+        }
     }
 
     //returns the parsed vertex array
