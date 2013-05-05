@@ -3,13 +3,6 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.Arrays;
 
-/**
- * Created with IntelliJ IDEA.
- * User: Brian
- * Date: 4/14/13
- * Time: 7:46 PM
- * To change this template use File | Settings | File Templates.
- */
 public class Tour {
     private double length;
     private Edge[] touredges;
@@ -18,6 +11,7 @@ public class Tour {
     private int currpos;
     private int num;
 
+    //initializes a tour with a set of edges (doesn't need to be complete)
     public Tour (Edge[] edges) {
         length = 0;
         touredges = edges;
@@ -31,6 +25,7 @@ public class Tour {
         currpos = num;
     }
 
+    //initializes a tour with the vertices (in order) of a tour
     public Tour(Vertex[] allVertices, Graph g)
     {
         num = g.numVertices();
@@ -47,6 +42,7 @@ public class Tour {
         currpos = num;
     }
 
+    //initializes a tour with a starting vertex and total number of vertices
     public Tour (Vertex v, int numVertices)
     {
         this.length = 0;
@@ -57,6 +53,7 @@ public class Tour {
         currpos = 0;
     }
 
+    //returns true if the tour contains a certain vertex
     boolean containsVertex(Vertex v)
     {
         int x = v.getId();
@@ -71,6 +68,7 @@ public class Tour {
         return false;
     }
 
+    //adds an edge to the tour, returning false if unsuccessful
     boolean addEdge(Edge e)
     {
         if( (e.getFirstVertex().getId() != vertices[currpos].getId()
@@ -92,6 +90,7 @@ public class Tour {
         }
     }
 
+    //returns the last vertex that is part of the tour so far
     Vertex getCurrentVertex()
     {
         return vertices[currpos];
@@ -114,10 +113,12 @@ public class Tour {
         return soFar;
     }
 
+    //returns a double containing the length of the tour
     double getLength() {
         return length;
     }
 
+    //creates a string representing the tour
     public String toString() {
         StringBuilder builder = new StringBuilder();
         for(int i = 0; i < currpos; i++)
@@ -128,7 +129,8 @@ public class Tour {
         return builder.toString();
     }
 
-    void printGraphToFile(String file)
+    //prints the tour to a given file
+    void printTourToFile(String file)
     {
         try
         {
