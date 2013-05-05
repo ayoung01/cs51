@@ -18,11 +18,11 @@ public class TwoDimParser {
     hello.printEverything();
     Graph g = new Graph(hello.allVertices());
 
-    int numtrials = 50;
-    SimulatedAnnealing sim = new SimulatedAnnealing(4000000, 1, 0.999);
+    int numtrials = 1;
+    SimulatedAnnealing sim = new SimulatedAnnealing(2000000, 1, 0.999);
     double toursum = 0;
     double timesum = 0;
-    /*for(int i = 0; i < numtrials; i++)
+    for(int i = 0; i < numtrials; i++)
     {
         startTime = System.nanoTime();
         Tour bestsim = sim.findShortestPath(g);
@@ -33,7 +33,7 @@ public class TwoDimParser {
     }
 
     System.out.printf("Simulated Annealing Average over %d trials: %.2f in %.5f s\n ",
-            numtrials, toursum/numtrials, timesum/numtrials);    */
+            numtrials, toursum/numtrials, timesum/numtrials);
     //bestsim.printGraphToFile("simbest.txt");
 
 

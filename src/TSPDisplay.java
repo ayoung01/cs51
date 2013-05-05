@@ -5,7 +5,7 @@ import java.awt.event.ActionListener;
 
 //contains the main method to create a GUI for our algorithms
 public class TSPDisplay extends JFrame {
-    private JButton greedyb, simb, geneticb, twooptb;
+    private JButton greedyb, simb, geneticb, twooptb, christofidesb;
     private JPanel panel2;
     private MainWindow mwin;
     private Tour[] tours;
@@ -16,7 +16,7 @@ public class TSPDisplay extends JFrame {
     {
         Tour[] results = new Tour[5];
 
-        TwoDimParser hello = new TwoDimParser("test194.txt", 194);
+        TwoDimParser hello = new TwoDimParser("test.txt", 29);
         //TwoDimParser hello = new TwoDimParser(args[1],Integer.parseInt(args[2]));
 
         Graph g = new Graph(hello.allVertices());
@@ -24,12 +24,14 @@ public class TSPDisplay extends JFrame {
         SimulatedAnnealing sim = new SimulatedAnnealing(4000000, 1, 0.995);
         TwoOpt twoopt = new TwoOpt();
         Greedy greed = new Greedy();
-        Genetic genes = new Genetic(1000,30000);
+        Genetic genes = new Genetic(1000,300);
+        //Christofides christofides = new Christofides();
 
         results[0] = greed.findShortestPath(g);
         results[1] = twoopt.findShortestPath(g);
         results[2] = sim.findShortestPath(g);
         results[3] = genes.findShortestPath(g);
+        //results[4] = christofides.findShortestPath(g);
 
         TSPDisplay frame = new TSPDisplay(g, results);
         frame.setTitle("TSP Graphics");
@@ -57,16 +59,19 @@ public class TSPDisplay extends JFrame {
         greedyb = new JButton("Greedy");
         geneticb = new JButton("Genetic");
         twooptb = new JButton("Two Opt");
+        christofidesb = new JButton("Christofides");
 
         greedyb.addActionListener(new TourListener(tours[0]));
         twooptb.addActionListener(new TourListener(tours[1]));
         simb.addActionListener(new TourListener(tours[2]));
         geneticb.addActionListener(new TourListener(tours[3]));
+        //christofidesb.addActionListener(new TourListener(tours[4]));
 
         panel2.add(greedyb);
         panel2.add(twooptb);
         panel2.add(simb);
         panel2.add(geneticb);
+        panel2.add(christofidesb);
 
         getContentPane().add(mwin, BorderLayout.WEST);
         getContentPane().add(panel2, BorderLayout.EAST);

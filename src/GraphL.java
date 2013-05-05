@@ -10,7 +10,7 @@ import java.util.*;
  * Time: 9:41 AM
  * To change this template use File | Settings | File Templates.
  */
-public class GraphL implements Graph_I {
+public class GraphL {
 
     private int numVertices;
     private HashMap<Integer, LinkedList<Edge>> adjList;

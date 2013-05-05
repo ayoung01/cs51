@@ -10,6 +10,7 @@ import java.util.HashSet;
 public class Edge implements Comparable {
 
     private HashSet<Integer> set;
+    private Vertex[] vertices;
     private double weight;
 
     public Edge(Integer a, Integer b, double w) {
@@ -20,9 +21,9 @@ public class Edge implements Comparable {
     }
 
     public Edge(Vertex v1, Vertex v2, double w) {
-        set = new HashSet<Integer>();
-        set.add(v1.getId());
-        set.add(v2.getId());
+        vertices = new Vertex[2];
+        vertices[0] = v1;
+        vertices[1] = v2;
         weight = w;
     }
 
@@ -45,11 +46,11 @@ public class Edge implements Comparable {
     }
 
     public Vertex getFirstVertex() {
-        return getVArray()[0];
+        return vertices[0];
     }
 
     public Vertex getSecondVertex() {
-        return getVArray()[1];
+        return vertices[1];
     }
 
     public void setWeight(double x) {
