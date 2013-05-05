@@ -16,22 +16,22 @@ public class TSPDisplay extends JFrame {
     {
         Tour[] results = new Tour[5];
 
-        TwoDimParser hello = new TwoDimParser("test.txt", 29);
+        TwoDimParser hello = new TwoDimParser("text.txt", 38);
         //TwoDimParser hello = new TwoDimParser(args[1],Integer.parseInt(args[2]));
 
         Graph g = new Graph(hello.allVertices());
 
-        SimulatedAnnealing sim = new SimulatedAnnealing(4000000, 1, 0.995);
+        SimulatedAnnealing sim = new SimulatedAnnealing(2000000, 1, 0.995);
         TwoOpt twoopt = new TwoOpt();
         Greedy greed = new Greedy();
-        Genetic genes = new Genetic(1000,300);
-        //Christofides christofides = new Christofides();
+        Genetic genes = new Genetic(100,10000);
+        Christofides christofides = new Christofides();
 
         results[0] = greed.findShortestPath(g);
         results[1] = twoopt.findShortestPath(g);
         results[2] = sim.findShortestPath(g);
         results[3] = genes.findShortestPath(g);
-        //results[4] = christofides.findShortestPath(g);
+        results[4] = christofides.findShortestPath(g);
 
         TSPDisplay frame = new TSPDisplay(g, results);
         frame.setTitle("TSP Graphics");
@@ -65,7 +65,7 @@ public class TSPDisplay extends JFrame {
         twooptb.addActionListener(new TourListener(tours[1]));
         simb.addActionListener(new TourListener(tours[2]));
         geneticb.addActionListener(new TourListener(tours[3]));
-        //christofidesb.addActionListener(new TourListener(tours[4]));
+        christofidesb.addActionListener(new TourListener(tours[4]));
 
         panel2.add(greedyb);
         panel2.add(twooptb);

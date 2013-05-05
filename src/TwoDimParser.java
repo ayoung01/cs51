@@ -14,7 +14,7 @@ public class TwoDimParser {
     long startTime;
     long endTime;
     double duration;
-    TwoDimParser hello = new TwoDimParser("test.txt", 29);
+    TwoDimParser hello = new TwoDimParser("test29.txt", 29);
     hello.printEverything();
     Graph g = new Graph(hello.allVertices());
 
@@ -22,6 +22,7 @@ public class TwoDimParser {
     SimulatedAnnealing sim = new SimulatedAnnealing(2000000, 1, 0.999);
     double toursum = 0;
     double timesum = 0;
+
     for(int i = 0; i < numtrials; i++)
     {
         startTime = System.nanoTime();
@@ -36,7 +37,8 @@ public class TwoDimParser {
             numtrials, toursum/numtrials, timesum/numtrials);
     //bestsim.printGraphToFile("simbest.txt");
 
-
+        toursum = 0;
+        timesum = 0;
     TwoOpt twoopt = new TwoOpt();
     for(int i = 0; i < numtrials; i++)
     {
@@ -53,8 +55,9 @@ public class TwoDimParser {
     //besttwoopt.printGraphToFile("twooptbest.txt");
 
 
-
-    /*Greedy greedisgood = new Greedy();
+        toursum = 0;
+        timesum = 0;
+    Greedy greedisgood = new Greedy();
     for(int i = 0; i < numtrials; i++)
     {
         startTime = System.nanoTime();
@@ -67,23 +70,31 @@ public class TwoDimParser {
 
         System.out.printf("Greedy Average over %d trials: %.2f in %.5f s\n ",
                 numtrials, toursum/numtrials, timesum/numtrials);
-    //bestgreedy.printGraphToFile("Greedybest.txt"); */
+    //bestgreedy.printGraphToFile("Greedybest.txt");
 
-    /*Christofides christofides = new Christofides();
+    Christofides christofides = new Christofides();
     startTime = System.nanoTime();
     Tour bestchrist = christofides.findShortestPath(g);
     endTime = System.nanoTime();
     duration = (endTime-startTime)/1000000000.0;
     System.out.printf("Christofides: %.2f in %.5f s\n", bestchrist.getLength(),duration);
-    bestchrist.printGraphToFile("christbest.txt");
+    //bestchrist.printGraphToFile("christbest.txt");
 
-    Genetic genetic = new Genetic(100,30000);
-    startTime = System.nanoTime();
-    Tour bestgenetic = genetic.findShortestPath(g);
-    endTime = System.nanoTime();
-    duration = (endTime-startTime)/1000000000.0;
-    System.out.printf("Genetic: %.2f in %.5f s\n", bestgenetic.getLength(),duration);
-    bestgenetic.printGraphToFile("Geneticbest.txt");         */
+        toursum = 0;
+        timesum = 0;
+        Genetic genetic = new Genetic(100,30000);
+    for(int i = 0; i < numtrials; i++)
+    {
+        startTime = System.nanoTime();
+        Tour bestgenetic = genetic.findShortestPath(g);
+        endTime = System.nanoTime();
+        duration = (endTime - startTime)/1000000000.0;
+        toursum+=bestgenetic.getLength();
+        timesum+=duration;
+    }
+        System.out.printf("Genetic Average over %d trials: %.2f in %.5f s\n ",
+                numtrials, toursum/numtrials, timesum/numtrials);
+    //bestgenetic.printGraphToFile("Geneticbest.txt");         */
 
     }
 
