@@ -8,8 +8,7 @@ import java.util.HashSet;
  * To change this template use File | Settings | File Templates.
  */
 public class Edge implements Comparable {
-    private Vertex vertex1;
-    private Vertex vertex2;
+
     private HashSet<Integer> set;
     private double weight;
 
@@ -20,16 +19,16 @@ public class Edge implements Comparable {
         weight = w;
     }
 
-    public Edge(Vertex v1, Vertex v2, double w)
-    {
-      vertex1 = v1;
-      vertex2 = v2;
-      weight = w;
+    public Edge(Vertex v1, Vertex v2, double w) {
+        set = new HashSet<Integer>();
+        set.add(v1.getId());
+        set.add(v2.getId());
+        weight = w;
     }
 
     public double getWeight()
     {
-      return weight;
+        return weight;
     }
 
     public HashSet<Integer> getVertices() {
@@ -46,23 +45,15 @@ public class Edge implements Comparable {
     }
 
     public Vertex getFirstVertex() {
-        return vertex1;
+        return getVArray()[0];
     }
 
     public Vertex getSecondVertex() {
-        return vertex2;
+        return getVArray()[1];
     }
 
     public void setWeight(double x) {
         weight = x;
-    }
-
-    public void setVertex1(Vertex v) {
-        vertex1 = v;
-    }
-
-    public void setVertex2(Vertex v) {
-        vertex2 = v;
     }
 
     @Override
@@ -95,9 +86,11 @@ public class Edge implements Comparable {
         return (int)(Math.round(weight * 351) % 2353419);
     }
 
-    public String toString()
-    {
-        return getFirstVertex().toString() + " " + getSecondVertex().toString() + " " + weight;
+    public String toString() {
+        Vertex[] arr = getVArray();
+        int id1 = arr[0].getId();
+        int id2 = arr[1].getId();
+        return "(" + id1 + ", " + id2 + "): " + weight;
     }
 }
 

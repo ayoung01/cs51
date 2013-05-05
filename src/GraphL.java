@@ -87,18 +87,17 @@ public class GraphL implements Graph_I {
         numVertices = adjList.size();
     }
 
-    public Edge getEdge(Vertex v1, Vertex v2) {
+    public Edge getEdge(Integer v1, Integer v2) {
         try {
-            double weight = -1;
-            LinkedList<Edge> edges = adjList.get(v1.getId());
+            LinkedList<Edge> edges = adjList.get(v1);
             for (Edge e : edges) {
-                if (e.getVertices().contains(v2.getId()))
+                if (e.getVertices().contains(v2))
                     return e;
             }
         }
         catch (Exception e) {
-            System.out.println("No edge found!");
         }
+        System.out.println("No edge found!");
         return null;
     }
 
@@ -145,14 +144,22 @@ public class GraphL implements Graph_I {
     }
 
     // returns true if all edges are contained in the graph, false otherwise
-    public boolean containsAllEdges(LinkedList<Edge>edges) {
+    public boolean containsAllVertices(LinkedList<Edge>edges) {
+        Set<Integer> vertices = new HashSet<Integer>();
+
+        // add all vertices contained by the cycle to a set
         for (Edge e : edges) {
             Iterator<Integer> itr = e.getVertices().iterator();
             while (itr.hasNext()) {
                 int v = itr.next();
-                if (!(adjList.get(v).contains(e))) {
-                    return false;
-                }
+                vertices.add(v);
+            }
+        }
+
+        // check to see if each cycle in the graph is contained by the vertex
+        for (Integer key : adjList.keySet()) {
+            if (!vertices.contains(key)) {
+                return false;
             }
         }
         return true;
@@ -196,11 +203,30 @@ public class GraphL implements Graph_I {
     }
 
     public void deleteEdges (LinkedList<Edge> edgeList) {
+        // for each edge, iterate through each vertex and remove the edge from its edge list if the edge exists
         for (Edge e : edgeList) {
             Iterator<Integer> itr = e.getVertices().iterator();
             while (itr.hasNext()) {
                 int v = itr.next();
-                adjList.get(v).remove(e);
+                try{
+                    // removes only the first occurrence, so supporting duplicates should be okay
+                    adjList.get(v).remove(e);
+                }
+                catch(Exception ex) {
+                    ex.printStackTrace();
+                }
+            }
+        }
+
+        // remove any vertices that are no longer connected with the graph
+        Iterator iter = adjList.entrySet().iterator();
+        while (iter.hasNext()) {
+            Map.Entry pair = (Map.Entry)iter.next();
+            LinkedList<Edge> edges = (LinkedList<Edge>)(pair.getValue());
+            Integer key = (Integer)(pair.getKey());
+            // if its edge list is of size zero, it must be disconnected
+            if (edges.size() == 0) {
+                iter.remove();
             }
         }
     }
@@ -212,6 +238,6 @@ public class GraphL implements Graph_I {
     }
 
     public int numVertices() {
-        return numVertices;
+        return adjList.size();
     }
 }

@@ -12,7 +12,11 @@ public class Christofides implements TSP_I {
     public Tour findShortestPath(Graph g)
     {
         LinkedList<Edge> christofides_solution = Christofides(g);
-        return new Tour((Edge[])(christofides_solution.toArray()));
+        Edge[] tsp_tour = new Edge[christofides_solution.size()];
+        for (int i = 0; i < tsp_tour.length; i++) {
+            tsp_tour[i] = christofides_solution.get(i);
+        }
+        return new Tour(tsp_tour);
     }
 
     private LinkedList<Edge> Christofides(Graph g) {
@@ -24,14 +28,14 @@ public class Christofides implements TSP_I {
         Make the circuit found in previous step Hamiltonian by skipping visited nodes (shortcutting).
          */
         GraphL gL = new GraphL(g);
+        GraphL gL_orig = new GraphL(g);
         Graph mst = PrimMST(g);
         GraphL mstL = new GraphL(mst);
         HashSet<Integer> oddVertices = mstL.getOddVertices();
         GraphL matches = greedyMatch(oddVertices, gL);
         GraphL multigraph = combineGraphs(mstL, matches);
         LinkedList<Edge> euler = Hierholzer(multigraph);
-//        return shortcutPaths(euler, new GraphL(g));
-        return new LinkedList<Edge>();
+        return shortcutPaths(euler, gL_orig);
     }
 
     // source: http://cs.fit.edu/~ryan/java/programs/graph/Prim-java.html
@@ -143,9 +147,7 @@ public class Christofides implements TSP_I {
         while (matches.size() < num_matches) {
             // find the lowest weight edge
             Iterator it = adjList.entrySet().iterator();
-            Integer key = -1;
             Edge emin = new Edge(0, 1, Double.MAX_VALUE);
-
             while (it.hasNext()) {
                 Map.Entry pair = (Map.Entry)it.next();
                 LinkedList<Edge> edges = (LinkedList<Edge>)(pair.getValue());
@@ -162,26 +164,12 @@ public class Christofides implements TSP_I {
 
                     if (e.getWeight() < emin.getWeight()) {
                         emin = e;
-                        key = (Integer)(pair.getKey());
                     }
                 }
             }
 
             // add the edge to the result graph
              matches.add(emin);
-
-            // delete the edges and vertices from the original graph
-            if (key == -1) {
-                System.out.println("Invalid key");
-                return null;
-            }
-            adjList.get(key).remove(emin);
-
-            Iterator<Integer> itr = emin.getVertices().iterator();
-            while (itr.hasNext()) {
-                int v = itr.next();
-                adjList.remove(v);
-            }
 
             HashMap<Integer, LinkedList<Edge>> deathRow = new HashMap<Integer, LinkedList<Edge>>();
 
@@ -191,7 +179,6 @@ public class Christofides implements TSP_I {
                 Map.Entry pair = (Map.Entry)edge_iter.next();
                 LinkedList<Edge> edges = (LinkedList<Edge>)(pair.getValue());
                 Integer currkey = (Integer)(pair.getKey());
-                System.out.println("Current key: " + currkey);
                 for (Edge e : edges) {
                     Iterator<Integer> vertex_iter = emin.getVertices().iterator();
                     while (vertex_iter.hasNext()) {
@@ -205,7 +192,7 @@ public class Christofides implements TSP_I {
                             Vertex[] arr = e.getVArray();
                             int id1 = arr[0].getId();
                             int id2 = arr[1].getId();
-                            System.out.println("Sentenced (" + id1 + ", " + id2 + ") to execution");
+//                            System.out.println("Sentenced (" + id1 + ", " + id2 + ") to execution");
                         }
                     }
                 }
@@ -250,30 +237,44 @@ public class Christofides implements TSP_I {
 
     // uses Hierholzer's Algorithm to find a Eulerian circuit
     private LinkedList<Edge> Hierholzer (GraphL g) {
-        HashMap<Integer, LinkedList<Edge>> adjList = g.getAdjList();
-        LinkedList<Edge> edgeList = new LinkedList<Edge>();
+        if (!g.isEulerian()) {
+            System.out.println("Invalid non-Eulerian input");
+            return null;
+        }
         Vertex v = g.getRandomVertex();
-        LinkedList<Edge> cycle = makeCycle(g, v);
 
-        // while the cycle does not contain all edges of G
-        while(!g.containsAllEdges(cycle)) {
+        // initialize the complete cycle and the next cycle to be merged
+        LinkedList<Edge> cycle = makeCycle(g, v);
+        LinkedList<Edge> next_cycle = cycle;
+
+        // while the complete cycle does not contain all vertices of G
+        while(!g.containsAllVertices(cycle)) {
+            // find an edge neighboring the cycle
             Edge neighbor = findCycleNeighborEdge(g, cycle);
+            // start on a vertex on the cycle
             Vertex v1 = neighbor.getFirstVertex();
 
-            // remove the edges of the cycle to avoid turning them up again
-            g.deleteEdges(cycle);
+            // remove the edges and vertices of the cycle to avoid turning them up again
+            if (!(cycle == null))
+                g.deleteEdges(next_cycle);
 
             // continue building the circuit
-            cycle = mergeTours(cycle, makeCycle(g, v1));
+            next_cycle = makeCycle(g, v1);
+            cycle = mergeTours(cycle, next_cycle);
         }
 
-        return edgeList;
+        return cycle;
     }
 
     private Edge findCycleNeighborEdge(GraphL g, LinkedList<Edge> cycle) {
         // Find a vertex v1 on the cycle that is incident with an unmarked edge
         for (Edge e : cycle) {
-            LinkedList<Edge> neighbors = g.getNeighbors(e.getFirstVertex());
+            Vertex[] arr = e.getVArray();
+            LinkedList<Edge> neighbors = g.getNeighbors(arr[0]);
+            if (neighbors == null)
+                neighbors = g.getNeighbors(arr[1]);
+            if (neighbors == null)
+                continue;
             for (Edge neighbor : neighbors) {
                 if (!(cycle.contains(neighbor))) {
                     return neighbor;
@@ -286,25 +287,28 @@ public class Christofides implements TSP_I {
 
     // constructs a cycle in graph g starting from vertex v_source
     private LinkedList<Edge> makeCycle(GraphL g, Vertex v_source) {
-        if (g.numVertices() < 3) {
-            System.out.println("Impossible");
+        if (g.numVertices() < 2) {
+            System.out.println("Invalid input graph: cannot find cycle on single node");
             return null;
         }
 
         LinkedList<Edge> edgeList = new LinkedList<Edge>();
-        HashMap<Integer, Boolean> discovered_v = new HashMap<Integer, Boolean>();
-        HashMap<Edge, Boolean> discovered_e = new HashMap<Edge, Boolean>();
-        // need to do DFS until return to original vertex and keep track of order visited
+        Set<Integer> vs = new HashSet<Integer>();
+        Set<Edge> es = new HashSet<Edge>();
+
+        // need to do DFS until we return to original vertex and keep track of order visited
         Stack<Vertex> s = new Stack<Vertex>();
         s.push(v_source);
 
         // label v as discovered
-        discovered_v.put(v_source.getId(), Boolean.TRUE);
+        vs.add(v_source.getId());
 
         // while the stack is not empty
         outer:
         while(!s.empty()) {
             Vertex v = s.pop();
+            // label v as explored
+            vs.add(v.getId());
 
             // if we are back at the source vertex, return our cycle
             if (v == v_source && edgeList.size() > 1) {
@@ -314,11 +318,13 @@ public class Christofides implements TSP_I {
             // for all edges e adjacent to v
             for (Edge e : g.edgesOf(v)) {
                 // if edge e is already labeled continue with next edge
-                if (discovered_e.get(e) != null)
+                if (es.contains(e))
                     continue;
 
                 Vertex[] v_array = e.getVArray();
                 Vertex w;
+
+                // set w to the vertex of the edge that is not v
                 if (v_array[0].getId() == v.getId()) {
                     w = v_array[1];
                 }
@@ -333,10 +339,10 @@ public class Christofides implements TSP_I {
                 }
 
                 // if vertex w is not discovered and not the source vertex
-                if (discovered_v.get(w)==null) {
+                if (!vs.contains(w)) {
                     // label w and e as discovered
-                    discovered_v.put(w.getId(), Boolean.TRUE);
-                    discovered_e.put(e, Boolean.TRUE);
+                    vs.add(w.getId());
+                    es.add(e);
 
                     // push w onto the stack and and e to the list
                     s.push(w);
@@ -344,8 +350,10 @@ public class Christofides implements TSP_I {
                     continue outer;
                 }
             }
-            // label v as explored
-            discovered_v.put(v.getId(), Boolean.TRUE);
+        }
+        // if we have a single edge, then let's just duplicate it
+        if (edgeList.size() < 2) {
+            edgeList.add(edgeList.getFirst());
         }
         return edgeList;
     }
@@ -355,19 +363,65 @@ public class Christofides implements TSP_I {
     private LinkedList<Edge> mergeTours(LinkedList<Edge> list1, LinkedList<Edge> list2) {
 
         LinkedList<Edge> result = list1;
-        Vertex start2 = list2.getFirst().getFirstVertex();
-        int index = -1;
+
+        // take a vertex in the cycle that we're adding that is also in the first cycle
+        Vertex[] arr = list2.getFirst().getVArray();
+        int insert = arr[0].getId();
+        int index = -100;
 
         // figures out which index we want to start adding edges to
         ListIterator<Edge> iterator = list1.listIterator(0);
+
+        // iterate through edges of first cycle
         while (iterator.hasNext()) {
             Edge e = iterator.next();
-            Vertex v2 = e.getSecondVertex();
-            if (v2 == start2) {
-                index = list1.indexOf(e);
+
+            // if we have a first match
+            if (e.getVertices().contains(insert)) {
+                if (iterator.hasNext()) {
+                    e = iterator.next();
+                    // if we have as second match, take note of index
+                    if (e.getVertices().contains(insert)) {
+                        index = list1.indexOf(e) - 1;
+                    }
+                }
+                else {
+                    // we must be at the last vertex in the cycle--which wraps around to the first
+                    index = list1.indexOf(e);
+                }
             }
         }
+        if (index < 0) {
+            // we'll try again with the other vertex!~
+            insert = arr[1].getId();
 
+            // figures out which index we want to start adding edges to
+            ListIterator<Edge> iterator2 = list1.listIterator(0);
+
+            // iterate through edges of first cycle
+            while (iterator2.hasNext()) {
+                Edge e = iterator2.next();
+
+                // if we have a first match
+                if (e.getVertices().contains(insert)) {
+                    if (iterator2.hasNext()) {
+                        e = iterator2.next();
+                        // if we have as second match, take note of index
+                        if (e.getVertices().contains(insert)) {
+                            index = list1.indexOf(e) - 1;
+                        }
+                    }
+                    else {
+                        // we must be at the last vertex in the cycle--which wraps around to the first
+                        index = list1.indexOf(e);
+                    }
+                }
+            }
+        }
+        if (index < 0) {
+            System.out.println("Couldn't figure out where to insert");
+            return null;
+        }
         result.addAll(index + 1, list2);
         return result;
     }
@@ -376,34 +430,59 @@ public class Christofides implements TSP_I {
 
     // turns a Eulerian circuit into a Hamiltonian path by skipping visited nodes
     private LinkedList<Edge> shortcutPaths(LinkedList<Edge>edges, GraphL g) {
-        Vertex source = edges.getFirst().getFirstVertex();
-        HashMap<Integer, LinkedList<Edge>> adjList = g.getAdjList();
+        // figure out which is the source vertex
+        Edge first_edge = edges.get(0);
+        Edge second_edge = edges.get(1);
+        Vertex[] arr = first_edge.getVArray();
+        int source;
+
+        int v1 = arr[0].getId();
+        int v2 = arr[1].getId();
+
+        if (second_edge.getVertices().contains(v1)) {
+            source = v1;
+        }
+        else {
+            source = v2;
+        }
 
         LinkedList<Edge> hamiltonian_path = new LinkedList<Edge>();
-        LinkedList<Vertex> vs = new LinkedList<Vertex>();
-        LinkedList<Vertex> shortcut_vs = new LinkedList<Vertex>();
+        LinkedList<Integer> vs = new LinkedList<Integer>();
+        LinkedList<Integer> shortcut_vs = new LinkedList<Integer>();
+
+        vs.add(source);
+        int curr_vertex = source;
 
         // create a list of vertices in the order in which they are visited
         for (Edge e : edges) {
-            vs.add(e.getFirstVertex());
+            // get the next vertex (of the edge) that is not the current vertex
+            Vertex[] v_arr = e.getVArray();
+            int v_1 = v_arr[0].getId();
+            int v_2 = v_arr[1].getId();
+            if (curr_vertex == v_1) {
+                vs.add(v_2);
+                curr_vertex = v_2;
+            }
+            else {
+                vs.add(v_1);
+                curr_vertex = v_1;
+            }
         }
 
         // copy the list of vertices but shortcut any nodes that have already been visited
-        for (Vertex v : vs) {
+        for (Integer v : vs) {
             if (!(shortcut_vs.contains(v))) {
                 shortcut_vs.add(v);
             }
         }
 
         // create the list of edges in the resultant Hamiltonian path
-        for (int i = 0; i < shortcut_vs.size()-1; i++) {
-            Vertex v1 = shortcut_vs.get(i);
-            Vertex v2 = shortcut_vs.get(i+1);
-            hamiltonian_path.add(g.getEdge(v1, v2));
+        for (int i = 0; i < shortcut_vs.size() - 1; i++) {
+            hamiltonian_path.add(g.getEdge(shortcut_vs.get(i), shortcut_vs.get(i+1)));
         }
 
         // add the last edge to close the cycle
-        hamiltonian_path.add(g.getEdge(hamiltonian_path.getLast().getSecondVertex(), source));
+        hamiltonian_path.add(g.getEdge(shortcut_vs.getLast(), source));
         return hamiltonian_path;
     }
 }
