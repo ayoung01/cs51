@@ -5,13 +5,7 @@ import java.io.PrintWriter;
 import java.util.LinkedList;
 import java.util.Random;
 import java.io.IOException;
-/**
- * Created with IntelliJ IDEA.
- * User: Albert Young
- * Date: 4/11/13
- * Time: 4:35 PM
- * To change this template use File | Settings | File Templates.
- */
+
 public class Graph implements Graph_I {
 
     private int numVertices;
@@ -80,6 +74,7 @@ public class Graph implements Graph_I {
         return degree;
     }
 
+    //returns an array of edges connected to a given vertex
     public Edge[] edgesOf(Vertex v)
     {
       int x = v.getId();
@@ -98,19 +93,13 @@ public class Graph implements Graph_I {
       return edgeList;
     }
 
+    //returns the edge between two given vertices
     public Edge edgeBetween(Vertex v1, Vertex v2)
     {
         return new Edge(v1,v2,adjMat[v1.getId()][v2.getId()]);
     }
 
-//    public Vertex[] getNeighbors(Vertex v) {
-//        int id = v.getId();
-//        LinkedList<Vertex> neighbors = new LinkedList<Vertex>();
-//        for (int i = 0; i < adjMat.length; i++) {
-//            if ()
-//        }
-//    }
-//
+    //returns a random edge connected to a given vertex
     public Edge getRandomNeighborEdge(Vertex v)
     {
         int x = v.getId();
@@ -124,6 +113,7 @@ public class Graph implements Graph_I {
 
     }
 
+    //returns a random vertex in the graph
     public Vertex getRandomVertex()
     {
         int randomNum = rand.nextInt(numVertices);
@@ -131,6 +121,7 @@ public class Graph implements Graph_I {
         return new Vertex(randomNum);
     }
 
+    //returns true is a vertex is not a member of the parameter vertex array
     public boolean isNotMemberOf(Vertex v, Vertex[] all)
     {
         int x = v.getId();
@@ -142,6 +133,8 @@ public class Graph implements Graph_I {
         return true;
     }
 
+    //returns the shortest edge connected to a given vertex
+    //that does not contain a vertex in the inputted vertex array
     public Edge getShortestNeighborEdge (Vertex v, Vertex[] already)
     {
         int x = v.getId();
@@ -162,6 +155,7 @@ public class Graph implements Graph_I {
         return new Edge(v, new Vertex(minvertex), minweight);
     }
 
+    //returns a random tour in the graph
     public Tour getRandomTour()
     {
         Vertex v = getRandomVertex();
@@ -188,11 +182,12 @@ public class Graph implements Graph_I {
         return numVertices;
     }
 
-
+    //returns an array of the vertices that make up the graph
     public EuclideanVertex[] getVertices() {
         return vertices;
     }
 
+    //returns a double array with the mins of the coordinates
     public double[] getMins()
     {
         double[] mins = new double[vertices[0].getDim()];
@@ -211,6 +206,7 @@ public class Graph implements Graph_I {
         return mins;
     }
 
+    //returns the maxes of each of the coordinates
     public double[] getMaxes()
     {
         double[] maxes = new double[vertices[0].getDim()];
@@ -229,7 +225,7 @@ public class Graph implements Graph_I {
         return maxes;
     }
 
-
+    //prints the graph to a given file
     public void printGraphToFile(String file)
     {
         try
@@ -243,6 +239,7 @@ public class Graph implements Graph_I {
         }
     }
 
+    //returns a stringified version of the graph
     public String display()
     {
         StringBuilder builder = new StringBuilder();
