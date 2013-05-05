@@ -44,6 +44,7 @@ public class Tour {
             Vertex[] v_arr = e.getVArray();
             int v_1 = v_arr[0].getId();
             int v_2 = v_arr[1].getId();
+            length+=e.getWeight();
             if (curr_vertex == v_1) {
                 vs.add(v_2);
                 curr_vertex = v_2;

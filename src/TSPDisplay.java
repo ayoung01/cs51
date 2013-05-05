@@ -16,7 +16,7 @@ public class TSPDisplay extends JFrame {
     {
         Tour[] results = new Tour[5];
 
-        TwoDimParser hello = new TwoDimParser("text.txt", 38);
+        TwoDimParser hello = new TwoDimParser("test29.txt", 29);
         //TwoDimParser hello = new TwoDimParser(args[1],Integer.parseInt(args[2]));
 
         Graph g = new Graph(hello.allVertices());
@@ -32,7 +32,7 @@ public class TSPDisplay extends JFrame {
         results[2] = sim.findShortestPath(g);
         results[3] = genes.findShortestPath(g);
         results[4] = christofides.findShortestPath(g);
-
+        System.out.printf("%s", results[4].toString());
         TSPDisplay frame = new TSPDisplay(g, results);
         frame.setTitle("TSP Graphics");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

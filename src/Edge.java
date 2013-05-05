@@ -31,9 +31,9 @@ public class Edge implements Comparable {
         vertices[0] = v1;
         vertices[1] = v2;
         weight = w;
-        set = new HashSet<Integer>();
+        /*set = new HashSet<Integer>();
         set.add(v1.getId());
-        set.add(v2.getId());
+        set.add(v2.getId());*/
     }
 
     public double getWeight()
