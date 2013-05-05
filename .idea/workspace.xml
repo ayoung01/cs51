@@ -2,17 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list id="f30b32a5-b2ea-43fe-9d6f-e9a5228dd111" name="Default" comment="" />
-    <list default="true" id="44e114f2-8314-43b9-9959-674f8cf9311a" name="Not committing" comment="Not committing">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sample.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/GraphL.java" afterPath="$PROJECT_DIR$/src/GraphL.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Graph_I.java" afterPath="$PROJECT_DIR$/src/Graph_I.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Tour.java" afterPath="$PROJECT_DIR$/src/Tour.java" />
+    <list default="true" id="44e114f2-8314-43b9-9959-674f8cf9311a" name="Not committing" comment="Organized TwoDim">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/TSPDisplay.java" afterPath="$PROJECT_DIR$/src/TSPDisplay.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/TwoDimParser.java" afterPath="$PROJECT_DIR$/src/TwoDimParser.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="TSP.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="44e114f2-8314-43b9-9959-674f8cf9311a" time="1367792319920" ignored="false" />
+    <file path="/Dummy.txt" changelist="44e114f2-8314-43b9-9959-674f8cf9311a" time="1367792783322" ignored="false" />
     <file path="/TSP_I.java" changelist="f30b32a5-b2ea-43fe-9d6f-e9a5228dd111" time="1366502890654" ignored="false" />
     <file path="/fragment.java" changelist="f30b32a5-b2ea-43fe-9d6f-e9a5228dd111" time="1367625096825" ignored="false" />
     <file path="/Graph_I.java" changelist="f30b32a5-b2ea-43fe-9d6f-e9a5228dd111" time="1366506045304" ignored="false" />
@@ -36,6 +33,7 @@
     <file path="/Timer.java" changelist="f30b32a5-b2ea-43fe-9d6f-e9a5228dd111" time="1366999854043" ignored="false" />
     <file path="/GraphL.java" changelist="44e114f2-8314-43b9-9959-674f8cf9311a" time="1367792274350" ignored="false" />
     <file path="/Main.java" changelist="f30b32a5-b2ea-43fe-9d6f-e9a5228dd111" time="1367193379476" ignored="false" />
+    <file path="/TSPDisplay.java" changelist="44e114f2-8314-43b9-9959-674f8cf9311a" time="1367793420570" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -128,95 +126,22 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="TwoDimParser.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="TwoDimParser.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/TwoDimParser.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="35" selection-start="600" selection-end="600" vertical-scroll-proportion="0.5575221">
+            <state line="16" column="0" selection-start="454" selection-end="541" vertical-scroll-proportion="0.0">
               <folding>
-                <element signature="e#0#6160#0" expanded="true" />
-                <element signature="imports" expanded="true" />
-                <element signature="e#1061#1078#0" expanded="true" />
+                <element signature="e#0#6138#0" expanded="true" />
+                <element signature="e#1040#1057#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="text.txt" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/text.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="37" column="14" selection-start="1078" selection-end="1078" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="EuclideanVertex.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/EuclideanVertex.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="13" selection-start="14" selection-end="14" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Christofides.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Christofides.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="53" selection-start="265" selection-end="265" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="workspace.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="14" selection-start="892" selection-end="892" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="GraphL.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/GraphL.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="86" selection-start="428" selection-end="428" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TSPDisplay.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="TSPDisplay.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/TSPDisplay.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="58" selection-start="559" selection-end="559" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Graph_I.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Graph_I.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="27" column="69" selection-start="499" selection-end="499" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Graph.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Graph.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="65" column="5" selection-start="1946" selection-end="1946" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Tour.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Tour.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="107" column="41" selection-start="2852" selection-end="2852" vertical-scroll-proportion="0.0">
+            <state line="23" column="65" selection-start="723" selection-end="723" vertical-scroll-proportion="0.53097343">
               <folding />
             </state>
           </provider>
@@ -251,12 +176,12 @@
         <option value="$PROJECT_DIR$/src/Vertex.java" />
         <option value="$PROJECT_DIR$/src/Edge.java" />
         <option value="$PROJECT_DIR$/src/Christofides.java" />
-        <option value="$PROJECT_DIR$/src/TSPDisplay.java" />
         <option value="$PROJECT_DIR$/src/Tour.java" />
         <option value="$PROJECT_DIR$/src/Graph_I.java" />
         <option value="$PROJECT_DIR$/src/GraphL.java" />
         <option value="$PROJECT_DIR$/.idea/workspace.xml" />
         <option value="$PROJECT_DIR$/src/TwoDimParser.java" />
+        <option value="$PROJECT_DIR$/src/TSPDisplay.java" />
       </list>
     </option>
   </component>
@@ -762,7 +687,11 @@
       <created>1367785897768</created>
       <updated>1367785897768</updated>
     </task>
-    <option name="localTasksCounter" value="45" />
+    <task id="LOCAL-00045" summary="Organized TwoDim">
+      <created>1367792795116</created>
+      <updated>1367792795116</updated>
+    </task>
+    <option name="localTasksCounter" value="46" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -853,7 +782,7 @@
     <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Christofides no longer crashes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Organized TwoDim" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -867,7 +796,6 @@
     <option name="UPDATE_FILTER_BY_SCOPE" value="false" />
     <option name="SHOW_FILE_HISTORY_AS_TREE" value="false" />
     <option name="FILE_HISTORY_SPLITTER_PROPORTION" value="0.6" />
-    <MESSAGE value="EuclideanVertex_2D renamed." />
     <MESSAGE value="Changed graph" />
     <MESSAGE value="Added some graph functions, created Vertex interface" />
     <MESSAGE value="More graph fns" />
@@ -892,6 +820,7 @@
     <MESSAGE value="added text.txt for 38 cities" />
     <MESSAGE value="Changed Tour constructor to order vertices correctly" />
     <MESSAGE value="Christofides no longer crashes" />
+    <MESSAGE value="Organized TwoDim" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -943,13 +872,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/TSPDisplay.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="58" selection-start="559" selection-end="559" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/text.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state line="37" column="14" selection-start="1078" selection-end="1078" vertical-scroll-proportion="0.0">
@@ -978,13 +900,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/GraphL.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="86" selection-start="428" selection-end="428" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Graph_I.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="27" column="69" selection-start="499" selection-end="499" vertical-scroll-proportion="0.0">
@@ -1001,19 +916,32 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="14" selection-start="892" selection-end="892" vertical-scroll-proportion="0.0">
+        <state line="5" column="14" selection-start="312" selection-end="312" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GraphL.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="86" selection-start="428" selection-end="428" vertical-scroll-proportion="0.34513274">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/TwoDimParser.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="35" selection-start="600" selection-end="600" vertical-scroll-proportion="0.5575221">
+        <state line="16" column="0" selection-start="454" selection-end="541" vertical-scroll-proportion="0.0">
           <folding>
-            <element signature="e#0#6160#0" expanded="true" />
-            <element signature="imports" expanded="true" />
-            <element signature="e#1061#1078#0" expanded="true" />
+            <element signature="e#0#6138#0" expanded="true" />
+            <element signature="e#1040#1057#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/TSPDisplay.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="65" selection-start="723" selection-end="723" vertical-scroll-proportion="0.53097343">
+          <folding />
         </state>
       </provider>
     </entry>

@@ -12,11 +12,15 @@ public class TSPDisplay extends JFrame {
     private Graph gr;
     private int x,y;
 
+    /*
+        Usage: java TSPDisplay input_file.txt
+     */
     public static void main(String args[])
     {
+        String input_file = args[0];
         Tour[] results = new Tour[5];
 
-        TwoDimParser hello = new TwoDimParser("test29.txt");
+        TwoDimParser hello = new TwoDimParser(input_file);
         //TwoDimParser hello = new TwoDimParser(args[1],Integer.parseInt(args[2]));
 
         Graph g = new Graph(hello.allVertices());

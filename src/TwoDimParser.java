@@ -1,6 +1,5 @@
 //Takes in a text file containing Euclidean Vertex information
 //and creates a Vertex array from it
-import java.io.File;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
