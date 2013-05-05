@@ -104,7 +104,6 @@ public class Tour {
                 return true;
             }
         }
-
         return false;
     }
 

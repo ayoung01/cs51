@@ -20,7 +20,7 @@ public interface Graph_I {
 
     Vertex getRandomVertex();
 
-    Tour getRandomTour();
+//    Tour getRandomTour();
 
     int numVertices();
 

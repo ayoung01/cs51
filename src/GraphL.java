@@ -11,7 +11,7 @@ import java.util.*;
  * To change this template use File | Settings | File Templates.
  */
 // adjacency list representation of graph
-public class GraphL {
+public class GraphL implements Graph_I {
 
     private int numVertices;
     private HashMap<Integer, LinkedList<Edge>> adjList;
