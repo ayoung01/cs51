@@ -18,6 +18,12 @@ public class Edge implements Comparable {
         set.add(a);
         set.add(b);
         weight = w;
+        Object[] arr = set.toArray();
+        Vertex res[] = new Vertex[2];
+        for (int i=0; i<arr.length; i++) {
+            res[i] = new Vertex((Integer)arr[i]);
+        }
+        vertices = res;
     }
 
     public Edge(Vertex v1, Vertex v2, double w) {
@@ -25,6 +31,9 @@ public class Edge implements Comparable {
         vertices[0] = v1;
         vertices[1] = v2;
         weight = w;
+        set = new HashSet<Integer>();
+        set.add(v1.getId());
+        set.add(v2.getId());
     }
 
     public double getWeight()
@@ -37,12 +46,7 @@ public class Edge implements Comparable {
     }
 
     public Vertex[] getVArray() {
-        Object[] arr = set.toArray();
-        Vertex res[] = new Vertex[2];
-        for (int i=0; i<arr.length; i++) {
-            res[i] = new Vertex((Integer)arr[i]);
-        }
-        return res;
+        return vertices;
     }
 
     public Vertex getFirstVertex() {
