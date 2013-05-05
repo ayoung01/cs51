@@ -2,6 +2,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.Arrays;
+import java.util.LinkedList;
 
 public class Tour {
     private double length;
@@ -16,13 +17,51 @@ public class Tour {
         length = 0;
         touredges = edges;
         num = edges.length;
+        // figure out which is the source vertex
+        Edge first_edge = edges[0];
+        Edge second_edge = edges[1];
+        Vertex[] arr = first_edge.getVArray();
+        int source;
+
+        int v1 = arr[0].getId();
+        int v2 = arr[1].getId();
+
+        if (second_edge.getVertices().contains(v1)) {
+            source = v1;
+        }
+        else {
+            source = v2;
+        }
+
+        LinkedList<Integer> vs = new LinkedList<Integer>();
+
+        vs.add(source);
+        int curr_vertex = source;
+
+        // create a list of vertices in the order in which they are visited
+        for (Edge e : edges) {
+            // get the next vertex (of the edge) that is not the current vertex
+            Vertex[] v_arr = e.getVArray();
+            int v_1 = v_arr[0].getId();
+            int v_2 = v_arr[1].getId();
+            if (curr_vertex == v_1) {
+                vs.add(v_2);
+                curr_vertex = v_2;
+            }
+            else {
+                vs.add(v_1);
+                curr_vertex = v_1;
+            }
+        }
         vertices = new Vertex[num];
         for(int i = 0; i < num; i++)
         {
-            vertices[i] = edges[i].getFirstVertex();
-            length+= edges[i].getWeight();
+            vertices[i] = new Vertex(vs.get(i));
         }
         currpos = num;
+
+
+
     }
 
     //initializes a tour with the vertices (in order) of a tour
