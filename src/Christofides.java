@@ -251,8 +251,25 @@ public class Christofides implements TSP_I {
         while(!g.containsAllVertices(cycle)) {
             // find an edge neighboring the cycle
             Edge neighbor = findCycleNeighborEdge(g, cycle);
-            // start on a vertex on the cycle
-            Vertex v1 = neighbor.getFirstVertex();
+
+            // figure out which of neighbor's vertices are on the cycle
+            Vertex[] arr = neighbor.getVArray();
+            int id1 = arr[0].getId();
+            int id2 = arr[1].getId();
+            Vertex v1 = new Vertex(-1);
+
+            for (Edge e : cycle) {
+                if (e.getVertices().contains(id1)) {
+                    v1 = arr[0];
+                    break;
+                }
+                else {
+                    if (e.getVertices().contains(id2)) {
+                        v1 = arr[1];
+                        break;
+                    }
+                }
+            }
 
             // remove the edges and vertices of the cycle to avoid turning them up again
             if (!(cycle == null))
@@ -260,7 +277,7 @@ public class Christofides implements TSP_I {
 
             // continue building the circuit
             next_cycle = makeCycle(g, v1);
-            cycle = mergeTours(cycle, next_cycle);
+            cycle = mergeTours(cycle, next_cycle, neighbor);
         }
 
         return cycle;
@@ -268,16 +285,27 @@ public class Christofides implements TSP_I {
 
     private Edge findCycleNeighborEdge(GraphL g, LinkedList<Edge> cycle) {
         // Find a vertex v1 on the cycle that is incident with an unmarked edge
+        LinkedList<Edge> neighbors = new LinkedList<Edge>();
         for (Edge e : cycle) {
             Vertex[] arr = e.getVArray();
-            LinkedList<Edge> neighbors = g.getNeighbors(arr[0]);
-            if (neighbors == null)
-                neighbors = g.getNeighbors(arr[1]);
-            if (neighbors == null)
-                continue;
-            for (Edge neighbor : neighbors) {
-                if (!(cycle.contains(neighbor))) {
-                    return neighbor;
+            neighbors = g.getNeighbors(arr[0]);
+            if (neighbors != null) {
+                if (neighbors != null) {
+                    for (Edge neighbor : neighbors) {
+                        if (!(cycle.contains(neighbor))) {
+                            return neighbor;
+                        }
+                    }
+                }
+            }
+            neighbors = g.getNeighbors(arr[1]);
+            if (neighbors != null) {
+                if (neighbors != null) {
+                    for (Edge neighbor : neighbors) {
+                        if (!(cycle.contains(neighbor))) {
+                            return neighbor;
+                        }
+                    }
                 }
             }
         }
@@ -287,14 +315,23 @@ public class Christofides implements TSP_I {
 
     // constructs a cycle in graph g starting from vertex v_source
     private LinkedList<Edge> makeCycle(GraphL g, Vertex v_source) {
+        HashMap<Integer, LinkedList<Edge>> adjList = g.getAdjList();
         if (g.numVertices() < 2) {
             System.out.println("Invalid input graph: cannot find cycle on single node");
             return null;
         }
 
+        // contains our final list of edges comprising the cycle
         LinkedList<Edge> edgeList = new LinkedList<Edge>();
+
+        // keeps track of already-discovered vertices
         Set<Integer> vs = new HashSet<Integer>();
-        Set<Edge> es = new HashSet<Edge>();
+
+        // contains edges that we are still allowed to traverse (maintains two copies for each edge)
+        LinkedList<Edge> es = new LinkedList<Edge>();
+        for (LinkedList<Edge> edges : adjList.values()) {
+            es.addAll(edges);
+        }
 
         // need to do DFS until we return to original vertex and keep track of order visited
         Stack<Vertex> s = new Stack<Vertex>();
@@ -307,6 +344,7 @@ public class Christofides implements TSP_I {
         outer:
         while(!s.empty()) {
             Vertex v = s.pop();
+
             // label v as explored
             vs.add(v.getId());
 
@@ -317,8 +355,8 @@ public class Christofides implements TSP_I {
 
             // for all edges e adjacent to v
             for (Edge e : g.edgesOf(v)) {
-                // if edge e is already labeled continue with next edge
-                if (es.contains(e))
+                // if we have already used edge e continue with next edge
+                if (!es.contains(e))
                     continue;
 
                 Vertex[] v_array = e.getVArray();
@@ -340,9 +378,12 @@ public class Christofides implements TSP_I {
 
                 // if vertex w is not discovered and not the source vertex
                 if (!vs.contains(w)) {
-                    // label w and e as discovered
+                    // label w as discovered
                     vs.add(w.getId());
-                    es.add(e);
+
+                    // remove two copies of e from our allowed edges list
+                    es.remove(e);
+                    es.remove(e);
 
                     // push w onto the stack and and e to the list
                     s.push(w);
@@ -360,7 +401,7 @@ public class Christofides implements TSP_I {
 
     // going off example here http://web.info.uvt.ro/~mmarin/lectures/GTC/c-09-new.pdf
     // merges tours by adding edges of list2 in order to list1
-    private LinkedList<Edge> mergeTours(LinkedList<Edge> list1, LinkedList<Edge> list2) {
+    private LinkedList<Edge> mergeTours(LinkedList<Edge> list1, LinkedList<Edge> list2, Edge test) {
 
         LinkedList<Edge> result = list1;
 
