@@ -14,9 +14,11 @@ public class TwoDimParser {
         Usage: java TwoDimParser input_file.txt numtrials
     */
     public static void main(String[] args){
-        String input_file = args[0];
-        int numtrials = Integer.parseInt(args[1]);
+//        String input_file = args[0];
+//        int numtrials = Integer.parseInt(args[1]);
 
+        String input_file = "test29.txt";
+        int numtrials = 3;
 
         TwoDimParser hello = new TwoDimParser(input_file);
         hello.printEverything();
@@ -61,8 +63,8 @@ public class TwoDimParser {
         long endTime;
         double duration;
 
-        int toursum = 0;
-        int timesum = 0;
+        double toursum = 0;
+        double timesum = 0;
 
         Greedy greedisgood = new Greedy();
         for(int i = 0; i < numtrials; i++)
@@ -85,8 +87,8 @@ public class TwoDimParser {
         long endTime;
         double duration;
 
-        int toursum = 0;
-        int timesum = 0;
+        double toursum = 0;
+        double timesum = 0;
 
         SimulatedAnnealing sim = new SimulatedAnnealing(2000000, 1, 0.999);
         for(int i = 0; i < numtrials; i++)
@@ -109,8 +111,8 @@ public class TwoDimParser {
         long endTime;
         double duration;
 
-        int toursum = 0;
-        int timesum = 0;
+        double toursum = 0;
+        double timesum = 0;
 
         Christofides christofides = new Christofides();
         for (int i = 0; i < numtrials; i++) {
@@ -132,8 +134,8 @@ public class TwoDimParser {
         long endTime;
         double duration;
 
-        int toursum = 0;
-        int timesum = 0;
+        double toursum = 0;
+        double timesum = 0;
 
         Genetic genetic = new Genetic(100,30000);
         for(int i = 0; i < numtrials; i++)
@@ -155,8 +157,8 @@ public class TwoDimParser {
         long endTime;
         double duration;
 
-        int toursum = 0;
-        int timesum = 0;
+        double toursum = 0;
+        double timesum = 0;
 
         TwoOpt twoopt = new TwoOpt();
         for(int i = 0; i < numtrials; i++)
